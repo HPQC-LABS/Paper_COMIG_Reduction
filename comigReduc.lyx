@@ -127,24 +127,6 @@ Andreas Soteriou
 Cambridge University, Department of Mathematics, UK
 \end_layout
 
-\begin_layout Standard
-\begin_inset VSpace -2mm
-\end_inset
-
-
-\end_layout
-
-\begin_layout Abstract
-\begin_inset VSpace -2.5mm
-\end_inset
-
-
-\begin_inset VSpace -2.5mm
-\end_inset
-
-
-\end_layout
-
 \begin_layout Section
 
 \lang british
@@ -185,7 +167,28 @@ b_{1}b_{2}b_{3}b_{4}=\min\left(b_{1}b_{2},b_{3}b_{4}\right)
 
 \end_inset
 
-3-runs/0-aux case to be applied in Computer Vision:
+3-runs/0-aux case to be applied in Computer Vision and LHZ lattice:
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+LHZ costs a factor of 2^N (for N = # of quartic terms) more than it would
+ if there were no auxiliaries needed, and this method requires < 3^(N/2)
+ = 2^0.78N.
+ I use a 
+\begin_inset Quotes eld
+\end_inset
+
+less than
+\begin_inset Quotes erd
+\end_inset
+
+ sign because 2/3 of the COMIG cases cost significantly than the worst case.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
