@@ -212,6 +212,20 @@ b_{1}b_{2}b_{3}\ldots b_{k}=\min\left(b_{1},b_{2},b_{3},\ldots,b_{k}\right)
 
 \end_inset
 
+3-runs/0-aux case:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{flalign}
+ & \negthickspace\negthickspace\negthickspace\negthickspace\negthickspace b_{1}b_{2}b_{3}b_{4}+b_{2}b_{3}b_{4}b_{5}+b_{3}b_{4}b_{5}b_{6}: & \text{ \ensuremath{(k,n)=(4,6)}.}\\
+\longrightarrow & \,\,\,3b_{3}b_{4}+b_{3}b_{5}+b_{4}b_{5}-b_{3}-b_{4}-b_{5}+1\\
+\longrightarrow & \,\,\,b_{1}b_{4}+b_{3}b_{5}+b_{4}b_{5}\\
+\longrightarrow & \,\,\,b_{1}b_{2}+b_{2}b_{6}+b_{3}b_{5}+b_{5}b_{6}+b_{2}-b_{3}-b_{4}-b_{5}+2
+\end{flalign}
+
+\end_inset
+
 
 \end_layout
 
