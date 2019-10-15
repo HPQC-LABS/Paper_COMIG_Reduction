@@ -96,7 +96,30 @@
 \begin_body
 
 \begin_layout Title
-Multi-run quads
+\begin_inset Quotes eld
+\end_inset
+
+Exrtaordinarily compact and efficient quadratizations
+\begin_inset Quotes erd
+\end_inset
+
+ or 
+\begin_inset Quotes eld
+\end_inset
+
+Multi-run quadratizations
+\begin_inset Quotes erd
+\end_inset
+
+ or 
+\begin_inset Quotes eld
+\end_inset
+
+Quadratization by minimizing over multiple functions
+\begin_inset Quotes erd
+\end_inset
+
+
 \end_layout
 
 \begin_layout Author
@@ -124,29 +147,57 @@ Andreas Soteriou
 \begin_layout Affiliation
 
 \lang british
-Cambridge University, Department of Mathematics, UK
+Surrey University, Department of Mathematics, UK
+\end_layout
+
+\begin_layout Abstract
+
+\lang british
+We present a quadratization method that, for all of the many cases considered,
+ provides quadratizations that require fewer auxiliary variables, less connectiv
+ity between the variables, and 
+\emph on
+much
+\emph default
+ smaller coefficients than any previously known quadratization method.
+ The quadratizations presented in this work, are also obtainable much more
+ quickly (in terms of computation runtime) than quadratizatons have traditionall
+y in the past for functions of similar complexity.
+ The idea is that many 
+\emph on
+very
+\emph default
+ simple quadratic functions might 
+\emph on
+almost 
+\emph default
+reproduce a degree-
+\begin_inset Formula $k$
+\end_inset
+
+ function perfectly, but each of these 
+\emph on
+almost
+\emph default
+ perfect quadratic functions can compensate for each others imperfections,
+ hence leading to a perfect quadratization when all such quadratic functions
+ are considered collectively.
+ We are able to quadratize positive monomials with quadratic functions that
+ have exponentially smaller coefficients than in [Boros 
+\emph on
+et al.
+ 
+\emph default
+(2018)], while also having far less connectivity between the variables of
+ the quadratics, and with up to a factor of 2 improvement in terms of the
+ efficiency.
+ 
 \end_layout
 
 \begin_layout Section
 
 \lang british
 Introduction
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-\begin_inset Newpage newpage
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Section
