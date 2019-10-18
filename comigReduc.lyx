@@ -166,7 +166,19 @@ quadratic envelope.
 
 \emph default
  We are able to quadratize positive monomials with quadratic functions that
- have exponentially smaller coefficients than in [Boros 
+ have exponentially
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\lang british
+double check this
+\end_layout
+
+\end_inset
+
+ smaller coefficients than in [Boros 
 \emph on
 et al.
  
@@ -197,6 +209,149 @@ exactly
 
 \lang british
 Introduction
+\end_layout
+
+\begin_layout Standard
+
+\lang british
+Any real-valued function of binary variables can be turned into a quadratic
+ one that maintains all the desired properties of the original degree-
+\begin_inset Formula $k$
+\end_inset
+
+ function.
+ We call this a 
+\emph on
+`
+\emph default
+quadratization' of the degree-
+\begin_inset Formula $k$
+\end_inset
+
+ function.
+ The first quadratization technique of which we are aware, is Rosenberg's
+ substitution method from 1975 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Rosenberg1975"
+literal "false"
+
+\end_inset
+
+, which for quadratizing a single positive monomial of degree-
+\begin_inset Formula $k$
+\end_inset
+
+, would need 
+\begin_inset Formula $k-2$
+\end_inset
+
+ auxiliary variables (meaning that the quadratic function obtained after
+ the quadratization, would involve 
+\begin_inset Formula $k-2$
+\end_inset
+
+ more auxiliary variables than the original degree-
+\begin_inset Formula $k$
+\end_inset
+
+ monomial).
+ This was cut by roughly one half in 2011 by Ishikawa, who introduced a
+ quadratization for a positive degree-
+\begin_inset Formula $k$
+\end_inset
+
+ monomial, which needed only 
+\begin_inset Formula $\frac{k-1}{2}$
+\end_inset
+
+ auxiliary variables (rounded down if 
+\begin_inset Formula $k$
+\end_inset
+
+ were even).
+ In 2018 several new quadratizations were introduced for positive degree-
+\begin_inset Formula $k$
+\end_inset
+
+ monomials: one required only 
+\begin_inset Formula $\nicefrac{k}{4}$
+\end_inset
+
+ auxiliary variables, one required only 
+\begin_inset Formula $\log k$
+\end_inset
+
+, and while it might be surprising that an improvement can be made over
+ 
+\begin_inset Formula $\log k$
+\end_inset
+
+, a quadratization was finally shown which required only 
+\begin_inset Formula $\log\left(\nicefrac{k}{2}\right)$
+\end_inset
+
+ (all three of these were presented in 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Boros2018,Boros2018a"
+literal "false"
+
+\end_inset
+
+, and the numbers are rounded 
+\emph on
+up
+\emph default
+ to the nearest integer).
+ While it was astonishing that any positive monomial can be quadratized
+ with only 
+\begin_inset Formula $\log\left(\nicefrac{k}{2}\right)$
+\end_inset
+
+ auxiliary variables, the resulting quadratic function would have very large
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\lang british
+exponentially?
+\end_layout
+
+\end_inset
+
+ coefficients and all possible quadratic terms over all original and auxiliary
+ variables; and since large coefficients and a large number of quadratic
+ terms, are two of the factors which most severely increase the cost when
+ optimizing a quadratic discrete function, one may hesitate to use such
+ quadratizations in practice.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang british
+Quadratization is also possible without the addition of any `auxiliary variables
+' 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Ishikawa2014,Tanburn2015d,Okada2015b,Dridi2017,Dattani2019"
+literal "false"
+
+\end_inset
+
+, and while these techniques should always be attempted, they all have limitatio
+ns 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Dattani2019"
+literal "false"
+
+\end_inset
+
+.
+ 
 \end_layout
 
 \begin_layout Standard
