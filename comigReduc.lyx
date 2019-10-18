@@ -96,30 +96,8 @@
 \begin_body
 
 \begin_layout Title
-\begin_inset Quotes eld
-\end_inset
-
-Exrtaordinarily compact and efficient quadratizations
-\begin_inset Quotes erd
-\end_inset
-
- or 
-\begin_inset Quotes eld
-\end_inset
-
-Multi-run quadratizations
-\begin_inset Quotes erd
-\end_inset
-
- or 
-\begin_inset Quotes eld
-\end_inset
-
-Quadratization by minimizing over multiple functions
-\begin_inset Quotes erd
-\end_inset
-
-
+Quadratic Envelopes: A method that can quadratize with a negative number
+ of auxiliary variables
 \end_layout
 
 \begin_layout Author
@@ -161,8 +139,8 @@ much
 \emph default
  smaller coefficients than any previously known quadratization method.
  The quadratizations presented in this work, are also obtainable much more
- quickly (in terms of computation runtime) than quadratizatons have traditionall
-y in the past for functions of similar complexity.
+ quickly (in terms of computation runtime) than quadratizatons for functions
+ of similar complexity have traditionally been in the past.
  The idea is that many 
 \emph on
 very
@@ -182,6 +160,11 @@ almost
  perfect quadratic functions can compensate for each others imperfections,
  hence leading to a perfect quadratization when all such quadratic functions
  are considered collectively.
+ This collection is called a 
+\emph on
+quadratic envelope.
+
+\emph default
  We are able to quadratize positive monomials with quadratic functions that
  have exponentially smaller coefficients than in [Boros 
 \emph on
@@ -189,15 +172,35 @@ et al.
  
 \emph default
 (2018)], while also having far less connectivity between the variables of
- the quadratics, and with up to a factor of 2 improvement in terms of the
- efficiency.
- 
+ the quadratics, in addition to requiring fewer auxiliary variables.
+ We will also show examples in which an envelope of quadratic functions,
+ each with 
+\emph on
+fewer
+\emph default
+ total variables than the original degree-
+\begin_inset Formula $k$
+\end_inset
+
+ function, collectively can be made to 
+\emph on
+exactly
+\emph default
+ reproduce the degree-
+\begin_inset Formula $k$
+\end_inset
+
+ function.
 \end_layout
 
 \begin_layout Section
 
 \lang british
 Introduction
+\end_layout
+
+\begin_layout Standard
+
 \end_layout
 
 \begin_layout Section
