@@ -2650,17 +2650,274 @@ Usage
 \end_layout
 
 \begin_layout Standard
-2-runs/0-aux case:
+
+\lang british
+If we wished to minimize the function of binary variables:
 \end_layout
 
 \begin_layout Standard
+
+\lang british
 \begin_inset Formula 
 \begin{equation}
-b_{1}b_{2}b_{3}b_{4}=\min\left(b_{1}b_{2},b_{3}b_{4}\right)
+b_{1}b_{2}b_{3}-b_{1}b_{2}...,
 \end{equation}
 
 \end_inset
 
+using the wealth of techniques we have available for minimizing 
+\emph on
+quadratic 
+\emph default
+functions of binary variables (such as the classical algorithm `QPBO' and
+ extensions of it 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Rother2007"
+literal "false"
+
+\end_inset
+
+, or quantum annealing using thousands of qubits 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "King2018"
+literal "false"
+
+\end_inset
+
+ connected by graphs as complicated as Pegasus 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Dattani2019b,Dattani2019c"
+literal "false"
+
+\end_inset
+
+), we can quadratize the cubic term with the quadratic envelope...., and we
+ get two optimization problems:
+\end_layout
+
+\begin_layout Standard
+
+\lang british
+\begin_inset Formula 
+\begin{equation}
+b_{1}b_{2}b_{3}-b_{1}b_{2}...,
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Running the optimization procedure on both functions would result in the
+ following two minima:
+\end_layout
+
+\begin_layout Standard
+
+\lang british
+\begin_inset Formula 
+\begin{equation}
+b_{1}b_{2}b_{3}-b_{1}b_{2}...,
+\end{equation}
+
+\end_inset
+
+
+\lang english
+The lower minimum is 
+\begin_inset Formula $()$
+\end_inset
+
+, so this is the minimum of the original cubic function (this can be verified
+ by simply optimizing the original cubic function, but for more complicated
+ super-quadratic functions, the algorithms to optimize a super-quadratic
+ function can be very costly and it would be 
+\emph on
+preferred
+\emph default
+ to optimize the quadratic problem instead).
+\end_layout
+
+\begin_layout Subsection
+Quadratizing multiple parts of a function using quadratic envelopes
+\end_layout
+
+\begin_layout Standard
+To show that the method of using quadratic envelopes can be applied many
+ times for the same degree-
+\begin_inset Formula $k$
+\end_inset
+
+ objective function, consider the example:
+\end_layout
+
+\begin_layout Standard
+
+\lang british
+\begin_inset Formula 
+\begin{equation}
+b_{1}b_{2}b_{3}-b_{1}b_{2}...,
+\end{equation}
+
+\end_inset
+
+Here we quadratize 
+\begin_inset Formula $bbb$
+\end_inset
+
+ with the envelope 
+\begin_inset Formula $\{bb,bb\}$
+\end_inset
+
+ and 
+\begin_inset Formula $bbb$
+\end_inset
+
+ with the envelope 
+\begin_inset Formula $\{bb,bb\}$
+\end_inset
+
+.
+ This gives us four possible objective functions to consider:
+\end_layout
+
+\begin_layout Standard
+
+\lang british
+\begin_inset Formula 
+\begin{align}
+b_{1}b_{2}b_{3}-b_{1}b_{2}...,\\
+b_{1}b_{2}b_{3}-b_{1}b_{2}...,\\
+b_{1}b_{2}b_{3}-b_{1}b_{2}...,\\
+b_{1}b_{2}b_{3}-b_{1}b_{2}...,.
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Running the optimization procedure on all four functions would result in
+ the following four minima:
+\end_layout
+
+\begin_layout Standard
+
+\lang british
+\begin_inset Formula 
+\begin{equation}
+b_{1}b_{2}b_{3}-b_{1}b_{2}...,
+\end{equation}
+
+\end_inset
+
+
+\lang english
+The lowest minimum is 
+\begin_inset Formula $()$
+\end_inset
+
+, so this is the minimum of the original degree-
+\begin_inset Formula $k$
+\end_inset
+
+ function (again, this can be verified by simply optimizing the original
+ cubic function, but for more complicated super-quadratic functions, the
+ algorithms to optimize a super-quadratic function can be very costly and
+ it would be 
+\emph on
+preferred
+\emph default
+ to optimize the quadratic problem instead).
+\end_layout
+
+\begin_layout Section
+
+\lang british
+Cost analysis and claims of superiority over all
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\lang british
+?
+\end_layout
+
+\end_inset
+
+ previously known methods
+\end_layout
+
+\begin_layout Standard
+
+\lang british
+The cost is ....
+\end_layout
+
+\begin_layout Standard
+
+\lang british
+Compare BCR to ours (20 vs 32 and connectivity etc.).
+\end_layout
+
+\begin_layout Section
+
+\lang british
+More examples and potential applications
+\end_layout
+
+\begin_layout Subsection
+
+\lang british
+Positive degree-8 monimial
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\lang british
+ with only 1-auxiliary variable and 2 functions
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang british
+One of our favorite examples is:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{flalign}
+ & \negthickspace\negthickspace\negthickspace\negthickspace\negthickspace b_{1}b_{2}b_{3}b_{4}b_{5}b_{6}b_{7}b_{8}:\\
+\longrightarrow & \,\,\,3b_{a}+b_{1}b_{2}+b_{1}b_{3}+b_{1}b_{4}+b_{2}b_{3}+b_{2}b_{4}\\
+ & +b_{3}b_{4}-2b_{a}(b_{1}+b_{2}+b_{3}+b_{4})\\
+\longrightarrow & \,\,\,3b_{a}+b_{5}b_{6}+b_{5}b_{7}+b_{5}b_{8}+b_{6}b_{7}+b_{6}b_{8}\\
+ & +b_{7}b_{8}-2b_{a}(b_{5}+b_{6}+b_{7}+b_{8})
+\end{flalign}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+
+\lang british
+Computer vision problem and LHZ lattice
+\end_layout
+
+\begin_layout Standard
 3-runs/0-aux case to be applied in Computer Vision and LHZ lattice:
 \begin_inset Note Note
 status open
@@ -2687,6 +2944,11 @@ less than
 
 \begin_layout Standard
 \align left
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\align left
 \begin_inset Formula 
 \begin{equation}
 b_{1}b_{2}b_{3}b_{4}+b_{3}b_{4}b_{5}b_{6}=\min\left(b_{2}b_{3}+b_{3}b_{6},b_{1}b_{4}+b_{4}b_{5},b_{1}b_{2}+b_{5}b_{6}-b_{3}-b_{4}+2\right)
@@ -2694,28 +2956,38 @@ b_{1}b_{2}b_{3}b_{4}+b_{3}b_{4}b_{5}b_{6}=\min\left(b_{2}b_{3}+b_{3}b_{6},b_{1}b
 
 \end_inset
 
-Linearization:
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace b_{1}b_{2}b_{3}b_{4}+b_{3}b_{4}b_{5}b_{6}= & \min\left(b_{2}b_{3}+b_{3}b_{6},b_{1}b_{4}+b_{4}b_{5},\right.\\
+ & \left.b_{1}b_{2}+b_{5}b_{6}-b_{3}-b_{4}+2\right)
+\end{align}
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 \align left
-\begin_inset Formula 
-\begin{equation}
-b_{1}b_{2}b_{3}\ldots b_{k}=\min\left(b_{1},b_{2},b_{3},\ldots,b_{k}\right)
-\end{equation}
-
-\end_inset
-
 3-runs/0-aux case:
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{flalign}
- & \negthickspace\negthickspace\negthickspace\negthickspace\negthickspace b_{1}b_{2}b_{3}b_{4}+b_{2}b_{3}b_{4}b_{5}+b_{3}b_{4}b_{5}b_{6}: & \text{ \ensuremath{(k,n)=(4,6)}.}\\
-\longrightarrow & \,\,\,3b_{3}b_{4}+b_{3}b_{5}+b_{4}b_{5}-b_{3}-b_{4}-b_{5}+1\\
-\longrightarrow & \,\,\,b_{1}b_{4}+b_{3}b_{5}+b_{4}b_{5}\\
-\longrightarrow & \,\,\,b_{1}b_{2}+b_{2}b_{6}+b_{3}b_{5}+b_{5}b_{6}+b_{2}-b_{3}-b_{4}-b_{5}+2
+\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace & \negthickspace\negthickspace\negthickspace\negthickspace\negthickspace b_{1}b_{2}b_{3}b_{4}+b_{2}b_{3}b_{4}b_{5}+b_{3}b_{4}b_{5}b_{6}:\\
+\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\longrightarrow & \,3b_{3}b_{4}+b_{3}b_{5}+b_{4}b_{5}-b_{3}-b_{4}-b_{5}+1\\
+\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\longrightarrow & \,b_{1}b_{4}+b_{3}b_{5}+b_{4}b_{5}\\
+\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\longrightarrow & \,b_{1}b_{2}\negthinspace+\negthinspace b_{2}b_{6}\negthinspace+\negthinspace b_{3}b_{5}\negthinspace+\negthinspace b_{5}b_{6}\negthinspace+\negthinspace b_{2}\negthinspace-\negthinspace b_{3}\negthinspace-\negthinspace b_{4}\negthinspace-\negthinspace b_{5}\negthinspace+\negthinspace2
 \end{flalign}
 
 \end_inset
@@ -2723,16 +2995,21 @@ b_{1}b_{2}b_{3}\ldots b_{k}=\min\left(b_{1},b_{2},b_{3},\ldots,b_{k}\right)
 
 \end_layout
 
-\begin_layout Section
-
-\lang british
-Examples
+\begin_layout Standard
+One more example which is the best one we can come up with for cost savings.
 \end_layout
 
 \begin_layout Section
 
 \lang british
 Discussion
+\end_layout
+
+\begin_layout Standard
+
+\lang british
+Negative variables.
+ Reinforcement learning.
 \end_layout
 
 \begin_layout Section
@@ -2742,14 +3019,20 @@ Acknowledgments
 \end_layout
 
 \begin_layout Standard
+
+\lang british
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-\begin_inset Newpage newpage
-\end_inset
 
-
+\lang british
+We thank Endre Boros for suggesting the name 
+\emph on
+quadratic envelopes
+\emph default
+.
+ We originally called it COMIGs.
 \end_layout
 
 \end_inset
