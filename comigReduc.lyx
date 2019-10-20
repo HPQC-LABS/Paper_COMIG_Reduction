@@ -151,7 +151,7 @@ restoregeometry
 \begin_layout Title
 
 \size normal
-Quadratic Envelopes: A method that can quadratize with a negative number
+Envelope Quadratizations: A method that can quadratize with a negative number
  of auxiliary variables
 \end_layout
 
@@ -496,6 +496,57 @@ Let us review the idea behind most known quadratizations.
 \lang british
 \begin_inset Formula 
 \begin{equation}
+b_{1}b_{2}b_{3}=\min_{b_{a}}\left(b_{1}b_{a}+b_{2}b_{3}-2b_{2}b_{a}-2b_{3}b_{a}+3b_{a}\right),\label{eq:KZ-1}
+\end{equation}
+
+\end_inset
+
+where all 
+\begin_inset Formula $b_{i}$
+\end_inset
+
+ are either 0 or 1 and the subscript 
+\begin_inset Formula $a$
+\end_inset
+
+ in 
+\begin_inset Formula $b_{a}$
+\end_inset
+
+ indicates that this is an `auxiliary' variable because it does not appear
+ in the original cubic function on the left side.
+ For clarity we explicitly show why Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:KZ-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ is true by constructing the truth tables for the left and right sides:
+\end_layout
+
+\begin_layout Standard
+
+\lang british
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\lang british
+Let us review the idea behind most known quadratizations.
+ Consider the equality:
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang british
+\begin_inset Formula 
+\begin{equation}
 -b_{1}b_{2}b_{3}=\min_{b_{a}}\left(2b_{a}-b_{1}b_{a}-b_{2}b_{a}-b_{3}b_{a}\right),\label{eq:KZ}
 \end{equation}
 
@@ -524,8 +575,15 @@ literal "false"
 
 \end_inset
 
- and generalized by Freedman and Drineas in 2005 beyond cubics and to negative
- monomials of any degree 
+ and generalized by Freedman and Drineas in 2005 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Freedman2005"
+literal "false"
+
+\end_inset
+
+ beyond cubics and to negative monomials of any degree 
 \begin_inset Formula $k$
 \end_inset
 
@@ -542,6 +600,11 @@ noprefix "false"
 \end_inset
 
  is true by constructing the truth tables for the left and right sides:
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -596,7 +659,7 @@ noprefix "false"
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $-b_{1}b_{2}b_{3}$
+\begin_inset Formula $b_{1}b_{2}b_{3}$
 \end_inset
 
 
@@ -919,7 +982,7 @@ noprefix "false"
 \begin_layout Plain Layout
 
 \series bold
--1
+1
 \end_layout
 
 \end_inset
@@ -998,7 +1061,7 @@ noprefix "false"
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $2b_{a}-b_{1}b_{a}-b_{2}b_{a}-b_{3}b_{a}$
+\begin_inset Formula $b_{1}b_{a}+b_{2}b_{3}-2b_{2}b_{a}-2b_{3}b_{a}+3b_{a}$
 \end_inset
 
 
@@ -1122,7 +1185,7 @@ noprefix "false"
 \begin_inset Text
 
 \begin_layout Plain Layout
-0
+3
 \end_layout
 
 \end_inset
@@ -1180,7 +1243,7 @@ noprefix "false"
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0
 \end_layout
 
 \end_inset
@@ -1240,7 +1303,7 @@ noprefix "false"
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+1
 \end_layout
 
 \end_inset
@@ -1298,7 +1361,7 @@ noprefix "false"
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0
 \end_layout
 
 \end_inset
@@ -1358,7 +1421,7 @@ noprefix "false"
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+1
 \end_layout
 
 \end_inset
@@ -1416,7 +1479,7 @@ noprefix "false"
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+1
 \end_layout
 
 \end_inset
@@ -1476,7 +1539,7 @@ noprefix "false"
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0
 \end_layout
 
 \end_inset
@@ -1534,7 +1597,7 @@ noprefix "false"
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0
 \end_layout
 
 \end_inset
@@ -1594,7 +1657,7 @@ noprefix "false"
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+4
 \end_layout
 
 \end_inset
@@ -1652,7 +1715,7 @@ noprefix "false"
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0
 \end_layout
 
 \end_inset
@@ -1712,7 +1775,7 @@ noprefix "false"
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+2
 \end_layout
 
 \end_inset
@@ -1770,7 +1833,7 @@ noprefix "false"
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0
 \end_layout
 
 \end_inset
@@ -1830,7 +1893,7 @@ noprefix "false"
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+2
 \end_layout
 
 \end_inset
@@ -1888,7 +1951,7 @@ noprefix "false"
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+1
 \end_layout
 
 \end_inset
@@ -2540,9 +2603,9 @@ We call the set
 \begin_inset Formula $\{b_{1}b_{2},b_{3}\}$
 \end_inset
 
- a 
+ an 
 \emph on
-quadratic envelope 
+envelope quadratization 
 \emph default
 for 
 \emph on
@@ -2557,8 +2620,7 @@ At each point
 \begin_inset Formula $(b_{1},b_{2},b_{3})$
 \end_inset
 
-, the minimum over all functions in the quadratic envelope is equal to the
- degree-
+, the minimum (common tangent) over all functions is equal to the degree-
 \begin_inset Formula $k$
 \end_inset
 
@@ -3710,6 +3772,9 @@ Discussion
 \lang british
 Negative variables.
  Reinforcement learning.
+ Conjecture about this always being better than other methods.
+ This is still not the end of the journey because we're reproducing the
+ full spectrum which is too much.
 \end_layout
 
 \begin_layout Section
