@@ -2769,29 +2769,29 @@ To show that the method of using quadratic envelopes can be applied many
 \lang british
 \begin_inset Formula 
 \begin{equation}
-b_{1}b_{2}b_{3}-b_{1}b_{2}...,
+{\color{blue}b_{1}b_{2}b_{3}b_{4}+b_{2}b_{3}b_{4}b_{5}+b_{3}b_{4}b_{5}b_{6}}{\color{green}{\color{red}+b_{5}b_{6}b_{7}b_{8}+2b_{5}b_{6}b_{7}+b_{5}b_{7}b_{8}}}-2b_{3}b_{5}+b_{8}
 \end{equation}
 
 \end_inset
 
 Here we quadratize 
-\begin_inset Formula $bbb$
+\begin_inset Formula ${\color{red}{\color{red}{\color{green}{\color{red}{\color{blue}b_{1}b_{2}b_{3}b_{4}+b_{2}b_{3}b_{4}b_{5}+b_{3}b_{4}b_{5}b_{6}}}}}}$
 \end_inset
 
  with the envelope 
-\begin_inset Formula $\{bb,bb\}$
+\begin_inset Formula ${\color{magenta}{\color{magenta}{\color{green}{\color{magenta}{\color{red}{\color{blue}\{3b_{3}b_{4}+b_{3}b_{5}+b_{4}b_{5}-b_{3}-b_{4}-b_{5}+1,b_{1}b_{4}+b_{3}b_{5}+b_{4}b_{5},b_{1}b_{2}+b_{2}b_{6}+b_{3}b_{5}+b_{5}b_{6}+b_{2}-b_{3}-b_{4}-b_{5}+2\}}}}}}}$
 \end_inset
 
  and 
-\begin_inset Formula $bbb$
+\begin_inset Formula ${\color{blue}{\color{red}b_{5}b_{6}b_{7}b_{8}+2b_{5}b_{6}b_{7}+b_{5}b_{7}b_{8}}}$
 \end_inset
 
  with the envelope 
-\begin_inset Formula $\{bb,bb\}$
+\begin_inset Formula ${\color{blue}{\color{red}\{4b_{1}b_{3},2b_{1}b_{2}+b_{1}b_{4}+b_{2}b_{4}\}}}$
 \end_inset
 
 .
- This gives us four possible objective functions to consider:
+ This gives us six possible objective functions to consider:
 \end_layout
 
 \begin_layout Standard
@@ -2799,10 +2799,12 @@ Here we quadratize
 \lang british
 \begin_inset Formula 
 \begin{align}
-b_{1}b_{2}b_{3}-b_{1}b_{2}...,\\
-b_{1}b_{2}b_{3}-b_{1}b_{2}...,\\
-b_{1}b_{2}b_{3}-b_{1}b_{2}...,\\
-b_{1}b_{2}b_{3}-b_{1}b_{2}...,.
+{\color{blue}3b_{3}b_{4}+b_{3}b_{5}+b_{4}b_{5}-b_{3}-b_{4}-b_{5}+1{\color{red}+4b_{1}b_{3}}}-2b_{3}b_{5}+b_{8}\\
+{\color{red}{\color{blue}3b_{3}b_{4}+b_{3}b_{5}+b_{4}b_{5}-b_{3}-b_{4}-b_{5}+1}+2b_{1}b_{2}+b_{1}b_{4}+b_{2}b_{4}}-2b_{3}b_{5}+b_{8} & {\color{red}}\\
+{\color{red}{\color{blue}b_{1}b_{4}+b_{3}b_{5}+b_{4}b_{5}}{\color{red}+4b_{1}b_{3}}}-2b_{3}b_{5}+b_{8} & {\color{red}}\\
+{\color{red}{\color{blue}b_{1}b_{4}+b_{3}b_{5}+b_{4}b_{5}}+2b_{1}b_{2}+b_{1}b_{4}+b_{2}b_{4}}-2b_{3}b_{5}+b_{8} & {\color{red}}\\
+{\color{red}{\color{blue}b_{1}b_{2}+b_{2}b_{6}+b_{3}b_{5}+b_{5}b_{6}+b_{2}-b_{3}-b_{4}-b_{5}+2{\color{red}+4b_{1}b_{3}}}}-2b_{3}b_{5}+b_{8} & {\color{red}}\\
+{\color{red}{\color{blue}b_{1}b_{2}+b_{2}b_{6}+b_{3}b_{5}+b_{5}b_{6}+b_{2}-b_{3}-b_{4}-b_{5}+2}+2b_{1}b_{2}+b_{1}b_{4}+b_{2}b_{4}}-2b_{3}b_{5}+b_{8} & {\color{red}}
 \end{align}
 
 \end_inset
@@ -2811,8 +2813,8 @@ b_{1}b_{2}b_{3}-b_{1}b_{2}...,.
 \end_layout
 
 \begin_layout Standard
-Running the optimization procedure on all four functions would result in
- the following four minima:
+Running the optimization procedure on all six functions would result in
+ the following six minima:
 \end_layout
 
 \begin_layout Standard
@@ -2820,7 +2822,7 @@ Running the optimization procedure on all four functions would result in
 \lang british
 \begin_inset Formula 
 \begin{equation}
-b_{1}b_{2}b_{3}-b_{1}b_{2}...,
+-2,-2,-1,-1,-2,-2
 \end{equation}
 
 \end_inset
@@ -2828,7 +2830,7 @@ b_{1}b_{2}b_{3}-b_{1}b_{2}...,
 
 \lang english
 The lowest minimum is 
-\begin_inset Formula $()$
+\begin_inset Formula $(-2)$
 \end_inset
 
 , so this is the minimum of the original degree-
@@ -2836,7 +2838,7 @@ The lowest minimum is
 \end_inset
 
  function (again, this can be verified by simply optimizing the original
- cubic function, but for more complicated super-quadratic functions, the
+ quartic function, but for more complicated super-quadratic functions, the
  algorithms to optimize a super-quadratic function can be very costly and
  it would be 
 \emph on
