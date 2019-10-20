@@ -18,7 +18,7 @@
 }
 %\usepackage[backend=biber,style=ieee, maxnames=1]{biblatex}
 \end_preamble
-\options showpacs,preprintnumbers,amsmath,amssymb,aps,notitlepage,prl,superscriptaddress,Hyperref,twocolumn
+\options nofootinbib,showpacs,preprintnumbers,amsmath,amssymb,aps,notitlepage,prl,superscriptaddress,Hyperref,twocolumn
 \use_default_options false
 \maintain_unincluded_children false
 \language english
@@ -337,19 +337,28 @@ literal "false"
 \begin_inset Formula $\log k$
 \end_inset
 
-, and while it might be surprising that an improvement can be made over
+ (both of these were presented in
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Boros2018"
+literal "false"
+
+\end_inset
+
+), and while it might be surprising that an improvement can be made over
  
 \begin_inset Formula $\log k$
 \end_inset
 
-, a quadratization was finally shown which required only 
+, a subsequent 2018 paper finally showed a quadratization which required
+ only 
 \begin_inset Formula $\log\left(\nicefrac{k}{2}\right)$
 \end_inset
 
- (all three of these were presented in 
+ 
 \begin_inset CommandInset citation
 LatexCommand citep
-key "Boros2018,Boros2018a"
+key "Boros2018a"
 literal "false"
 
 \end_inset
@@ -2591,13 +2600,13 @@ g
 \begin_inset Formula 
 \begin{align}
 \negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace b_{1}b_{2}b_{3}\ldots b_{k}= & \min\left(b_{1}b_{2}\ldots b_{k_{1}}\,\textcolor{red}{\textcolor{blue}{\boldsymbol{,}}\,}b_{k_{1}+1}b_{k_{1}+2}\ldots b_{k_{2}}\textcolor{red}{\,\textcolor{blue}{\boldsymbol{,\,}}}\right.\label{eq:general}\\
- & \left.b_{k_{2}+1}b_{k_{2}+2}\ldots b_{k_{3}}\,\textcolor{red}{\textcolor{blue}{\boldsymbol{,\,}}}...\,\textcolor{red}{\textcolor{blue}{\boldsymbol{,\,}}}b_{k_{n}+1}b_{k_{n}+2}...b_{k}\right),\nonumber 
+ & \left.b_{k_{2}+1}b_{k_{2}+2}\ldots b_{k_{3}}\,\textcolor{red}{\textcolor{blue}{\boldsymbol{,\,}}}...\,\textcolor{red}{\textcolor{blue}{\boldsymbol{,\,}}}b_{k_{p}+1}b_{k_{p}+2}...b_{k}\right),\nonumber 
 \end{align}
 
 \end_inset
 
 where 
-\begin_inset Formula $k_{1},k_{2},\ldots,k_{n}$
+\begin_inset Formula $k_{1},k_{2},\ldots,k_{p}$
 \end_inset
 
  can be chosen arbitrarily between 1 and 
@@ -2839,7 +2848,7 @@ preferred
 \begin_layout Section
 
 \lang british
-Cost analysis and claims of superiority over all
+Worst-case cost analysis and claims of superiority over all
 \begin_inset Note Note
 status open
 
@@ -2857,13 +2866,509 @@ status open
 \begin_layout Standard
 
 \lang british
-The cost is ....
+Envelope quadratizations can 
+\emph on
+always
+\emph default
+ be better than (or at least as efficient as) the previous state-of-the-art
+ quadratization method for quadratizing a single positive degree-
+\begin_inset Formula $k$
+\end_inset
+
+ monomial.
+ The state-of-the-art method for this was the 2018 method requiring only
+ 
+\begin_inset Formula $\log_{2}(\nicefrac{k}{2})$
+\end_inset
+
+ auxiliary variables (rounded up) 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Boros2018,Boros2018a"
+literal "false"
+
+\end_inset
+
+, and in the handbook of quadratizations 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Dattani2019"
+literal "false"
+
+\end_inset
+
+ it was called PTR-BCR-4.
+ 
 \end_layout
 
 \begin_layout Standard
 
 \lang british
-Compare BCR to ours (20 vs 32 and connectivity etc.).
+Unless there is some property of the function making it easier, optimizing
+ a function of 
+\begin_inset Formula $n$
+\end_inset
+
+ binary variables by brute force requires 
+\begin_inset Formula $2^{n}$
+\end_inset
+
+ queries, so if 
+\begin_inset Formula $m$
+\end_inset
+
+ binary variables are added in the quadratization process, the cost becomes
+ 
+\begin_inset Formula $2^{n}2^{m}$
+\end_inset
+
+ (meaning the cost is increased by a factor of 
+\begin_inset Formula $2^{m}$
+\end_inset
+
+).
+ While it is true that better optimization algorithms exist than doing brute
+ force queries (hence the reason for quadratizing the original function
+ at the expense of a possible 
+\begin_inset Formula $2^{m}$
+\end_inset
+
+ increase in cost!), all general-purpose methods for optimizing such functions
+ still cost 
+\begin_inset Formula $\mathcal{O}(2^{x})$
+\end_inset
+
+ for 
+\begin_inset Formula $x$
+\end_inset
+
+ binary variables (this includes quantum annealing, where the scaling up
+ to ~1000 variables can be seen in the figures of 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Denchev2016a"
+literal "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Mandra2016a"
+literal "false"
+
+\end_inset
+
+), so we claim that a factor of 
+\begin_inset Formula $2^{m}$
+\end_inset
+
+ increase in cost is not unfair (especially in the absence of any better
+ measure of the added cost to the optimization due to adding auxiliary variables
+) for analyzing costs of quadratizations.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\lang british
+If a function of 
+\begin_inset Formula $n$
+\end_inset
+
+ binary variables has a degree-
+\begin_inset Formula $k$
+\end_inset
+
+ positive monomial quadratized with PTR-BCR-4, it would have 
+\begin_inset Formula $n+\lceil\log_{2}(\nicefrac{k}{2})\rceil$
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\log_{2}\lceil\nicefrac{k}{2}\rceil$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ variables.
+ Unless there is some property of the function making it easier, optimizing
+ a function of 
+\begin_inset Formula $n+\lceil\log_{2}(\nicefrac{k}{2})\rceil$
+\end_inset
+
+ variables by brute force would require up to 
+\begin_inset Formula $2^{n}k$
+\end_inset
+
+ queries
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang british
+Having established our notion of how much adding 
+\begin_inset Formula $m$
+\end_inset
+
+ auxiliary variables increases the cost of optimizing a quadratic function
+ of binary variables, for the positive degree-
+\begin_inset Formula $k$
+\end_inset
+
+ monomial we compare the added cost of envelope quadratizations to the added
+ cost of PTR-BCR-4 (which was previously the state-of-the-art).
+ PTR-BCR-4 adds 
+\begin_inset Formula $m=\lceil\log_{2}(\nicefrac{k}{2})\rceil$
+\end_inset
+
+ auxiliary variables, which means that the added cost of optimization can
+ be increased by up to a factor of 
+\begin_inset Formula $k$
+\end_inset
+
+ (see footnote: 
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $x\le\lceil x\rceil\le1+\lfloor x\rfloor$
+\end_inset
+
+, because if 
+\begin_inset Formula $x$
+\end_inset
+
+ is an integer then 
+\begin_inset Formula $\lceil x\rceil=x=\min\lceil x\rceil$
+\end_inset
+
+ and if 
+\begin_inset Formula $x$
+\end_inset
+
+ is not an integer then we have 
+\begin_inset Formula $\lceil x\rceil=1+\lfloor x\rfloor=\max\lceil x\rceil$
+\end_inset
+
+.
+ So if we have 
+\begin_inset Formula $m=\lceil\log_{2}\nicefrac{k}{2}\rceil=\lceil\log_{2}k\rceil-1$
+\end_inset
+
+ and we are interested in 
+\begin_inset Formula $2^{m}$
+\end_inset
+
+, we have 
+\begin_inset Formula $\min\left(2^{m}\right)=2^{\min\lceil\log_{2}k\rceil-1}=2^{\log_{2}k-1}=\nicefrac{k}{2}$
+\end_inset
+
+ in the case of 
+\begin_inset Formula $k$
+\end_inset
+
+ being a power of 2, and 
+\begin_inset Formula ${\rm \max}\left(2^{m}\right)$
+\end_inset
+
+=
+\begin_inset Formula $2^{\max\lceil\log_{2}k\rceil-1}=2^{1+\lfloor\log_{2}k\rfloor-1}=2^{\lfloor\log_{2}k\rfloor}=$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $2^{\lfloor\log_{2}x\rfloor}=2^{\log_{2}x}\le2^{\lceil\log_{2}x\rceil}\le2^{1+\lfloor\log_{2}x\rfloor}=2\times2^{\lfloor\log_{2}x\rfloor}$
+\end_inset
+
+.
+ This is because 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\log\lceil x\rceil$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\lceil\log x\rceil=\log x=\lfloor\log x\rfloor$
+\end_inset
+
+ if 
+\begin_inset Formula $\log x$
+\end_inset
+
+ is an integer, but if 
+\begin_inset Formula $\log x$
+\end_inset
+
+ is not an integer then we have 
+\begin_inset Formula $\lceil\log x\rceil=1+\lfloor\log x\rfloor$
+\end_inset
+
+.
+ So in the worst case we have 
+\begin_inset Formula $m=1+\lfloor\log_{2}\nicefrac{k}{2}\rfloor$
+\end_inset
+
+ and 
+\begin_inset Formula $2^{m}=2\times2^{\lfloor\log_{2}\nicefrac{k}{2}\rfloor}\le k.$
+\end_inset
+
+ which leads to 
+\begin_inset Formula $\max\left(2^{m}\right)=\max\left(2^{1+\lfloor\log_{2}\nicefrac{k}{2}\rfloor}\right)=\max\left(2\times2^{\lfloor\log_{2}\nicefrac{k}{2}\rfloor}\right)<k.$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $x\le\lceil x\rceil\le1+\lfloor x\rfloor$
+\end_inset
+
+, because if 
+\begin_inset Formula $x$
+\end_inset
+
+ is an integer then 
+\begin_inset Formula $\lceil x\rceil=x=\min\lceil x\rceil$
+\end_inset
+
+ and if 
+\begin_inset Formula $x$
+\end_inset
+
+ is not an integer then we have 
+\begin_inset Formula $\lceil x\rceil=1+\lfloor x\rfloor=\max\lceil x\rceil$
+\end_inset
+
+.
+ So if we have 
+\begin_inset Formula $m=\lceil\log_{2}\nicefrac{k}{2}\rceil$
+\end_inset
+
+ and we are interested in 
+\begin_inset Formula $2^{m}$
+\end_inset
+
+, we have 
+\begin_inset Formula $\min\left(2^{m}\right)=2^{\min\lceil\log_{2}\nicefrac{k}{2}\rceil}=2^{\log_{2}\nicefrac{k}{2}}=\nicefrac{k}{2}$
+\end_inset
+
+ in the case of 
+\begin_inset Formula $k>1$
+\end_inset
+
+ being a power of 2, and 
+\begin_inset Formula ${\rm \max}\left(2^{m}\right)$
+\end_inset
+
+=
+\begin_inset Formula $2^{\max\lceil\log_{2}\nicefrac{k}{2}\rceil}=2^{1+\lfloor\log_{2}\nicefrac{k}{2}\rfloor}=2\times2^{\lfloor\log_{2}\nicefrac{k}{2}\rfloor}=$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+).
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang british
+Using Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:general"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ we can split the positive monomial into 
+\begin_inset Formula $\nicefrac{k}{p}$
+\end_inset
+
+ pieces: 
+\begin_inset Formula $b_{1}b_{2}\ldots b_{\nicefrac{k}{p}}$
+\end_inset
+
+, and each piece can be quadratized with PTR-BCR-4 with 
+\begin_inset Formula $\log_{2}\lceil\nicefrac{k}{2p}\rceil$
+\end_inset
+
+ auxiliary variables, incurring a cost of 
+\begin_inset Formula $\lceil\nicefrac{k}{2p}\rceil$
+\end_inset
+
+ for each of the 
+\begin_inset Formula $\nicefrac{k}{p}$
+\end_inset
+
+ pieces.
+ Since to optimize the original function containing 
+\begin_inset Formula $b_{1}b_{2}\ldots b_{k}$
+\end_inset
+
+, we would need to do our optimization procedure once for each piece that
+ is being substituted, in the worst case the cost of the optimization procedure
+ will be increased by a factor equal to the number of pieces, which is 
+\begin_inset Formula $\nicefrac{k}{p}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\lang british
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\lang british
+, instead of just 
+\begin_inset Formula $2^{n}$
+\end_inset
+
+ which is what would be required if working with only the pre-quadratized
+ function, so the quadratization adds a cost of 
+\begin_inset Formula $\lceil\nicefrac{k}{2}\rceil$
+\end_inset
+
+ or 
+\begin_inset Formula $2^{m}$
+\end_inset
+
+ where 
+\begin_inset Formula $m$
+\end_inset
+
+ is the number of auxiliary variables.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang british
+For example if we wish to optimize a function in which we quadratize a positive
+ degree-40 monomial using PTR-BCR-4, we would be adding 
+\begin_inset Formula $\lceil\log_{2}\nicefrac{40}{2}\rceil=\lceil\log_{2}20\rceil=5$
+\end_inset
+
+ auxiliary variables, and therefore increase the cost of optimizing the
+ original function by a factor of 
+\begin_inset Formula $2^{5}=32.$
+\end_inset
+
+ However the positive degree-40 monomial can be split into 20 quadratic
+ pieces: 
+\begin_inset Formula $\{b_{1}b_{2},b_{3}b_{4},\cdots,b_{39}b_{40}\}$
+\end_inset
+
+, and doing 20 different optimizations (replacing 
+\begin_inset Formula $b_{1}b_{2}\ldots b_{40}$
+\end_inset
+
+ in the original function by one of each of the 20 total pieces) would cost
+ at most only 20 times more than doing one such optimization.
+ Likewise the positive degree-40 monomial can be split into 10 pieces, each
+ of degree-4: 
+\begin_inset Formula $\{b_{1}b_{2}b_{3}b_{4},b_{5}b_{6}b_{7}b_{8},\cdots,b_{37}b_{38}b_{39}b_{40}\}$
+\end_inset
+
+, and then each dergree-4 term can be quadratized using PTR-BCR-4 with only
+ 1 auxiliary variables (increasing the cost by a factor of 
+\begin_inset Formula $2$
+\end_inset
+
+, leading to having 10 optimization problems each being 
+\begin_inset Formula $2$
+\end_inset
+
+ times more expensive than they would have been without auxiliary variables,
+ meaning that again the cost is only increased by a factor of 20).
+ Finally the same would be true if we used 5 pieces, each of degree-8: 
+\begin_inset Formula $\{b_{1}b_{2}\cdots b_{8},b_{9}b_{10}\cdots b_{16},\cdots,b_{33}b_{34}\cdots b_{40}\},$
+\end_inset
+
+and then quadratized each degree-8 term using PTR-BCR-4 with only 2 auxiliary
+ variables each (increasing the cost by a factor of 4, leading to having
+ 5 optimization problems each being 4 times more expensive than they would
+ have been without auxiliary variables, meaning that again the cost is only
+ increased by a factor of 20).
+\end_layout
+
+\begin_layout Standard
+
+\lang british
+In general we can get up to a factor of 2 improvement over BCR, equivalent
+ to effectively using only log(k/4) auxiliaries, and even better if the
+ other variables don't appear in positive/negative coefficients of other
+ terms? And what about cases that are not monomials? Furthermore compare
+ the coefficients and connectivity in BCR to COMIGs
 \end_layout
 
 \begin_layout Section
@@ -2893,7 +3398,25 @@ status open
 \begin_layout Standard
 
 \lang british
-One of our favorite examples is:
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\lang british
+It is interesting to note that, it was very recently proven that all 4-variable
+ functions of binary variables can be quadratized with only 1 auxiliary
+ variable, ....
+\end_layout
+
+\end_inset
+
+ It has been known for some time that no positive monomial with degree greater
+ than 4 can be quadratized by a single function with fewer than 2 auxiliary
+ variables.
+ We therefore found it quite fascinating that we could find an envelope
+ quadratization for the positive degree-8 monomial which involves at most
+ 1 auxiliary variable in the two pieces:
 \end_layout
 
 \begin_layout Standard
@@ -2908,17 +3431,187 @@ One of our favorite examples is:
 
 \end_inset
 
+Here the added cost of a factor of 4 is still the same as it would be with
+ PTR-BCR-4 (which would need only 2 auxiliary variables and therefore an
+ added cost of a factor of 
+\begin_inset Formula $2^{2}=4$
+\end_inset
 
+).
+ However the quadratic function arising from PTR-BCR-4 contains all possible
+ quadratic terms for the 8 original variables and the 2 auxiliary variables,
+ which would result in a 
+\emph on
+gadget graph
+\emph default
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Dattani2019c"
+literal "false"
+
+\end_inset
+
+ of 
+\begin_inset Formula $K_{10}$
+\end_inset
+
+, whereas the above envelope quadratization would for both quadratic functions
+ involve the much simpler gadget graph of 
+\begin_inset Formula $K_{5}$
+\end_inset
+
+.
+ Furthermore, the quadratic terms resulting from the PTR-BCR-4 quadratization
+ the above envelope quadratization would have coefficients ranging from
+ X to X, and in the above envelope quadratization, they range from -2 to
+ 1, which means the coefficient range is 
+\begin_inset Formula $X$
+\end_inset
+
+ times smaller in the envelope quadratization case.
+ Submodularity?
 \end_layout
 
 \begin_layout Subsection
 
 \lang british
-Computer vision problem and LHZ lattice
+Application to a computer vision algorithm
 \end_layout
 
 \begin_layout Standard
-3-runs/0-aux case to be applied in Computer Vision and LHZ lattice:
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+We now apply the idea of envelope quadratizations to a possible real-world
+ applications involving degree-4 functions.
+ 
+\end_layout
+
+\end_inset
+
+The image deblurring algorithm of [] 
+\lang british
+involves degree-
+\begin_inset Formula $k$
+\end_inset
+
+ terms with 
+\begin_inset Formula $k=d^{2}$
+\end_inset
+
+ with 
+\begin_inset Formula $d\ge2$
+\end_inset
+
+ being the length in pixels of the square-shaped mask
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\lang british
+or filter?
+\end_layout
+
+\end_inset
+
+) 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Ishikawa2011,Fix2011"
+literal "false"
+
+\end_inset
+
+.
+ In all known applications so far, 
+\begin_inset Formula $d=2$
+\end_inset
+
+ and 
+\begin_inset Formula $k=4$
+\end_inset
+
+ (though larger masks can be used, it would just be more difficult since
+ the optimization problem would involve much higher-degree terms).
+ With 
+\begin_inset Formula $d=2$
+\end_inset
+
+, this optimizaton problem involves degree-4 terms for every set of pixels
+ that can be covered by the 
+\begin_inset Formula $2\times2$
+\end_inset
+
+ pixel mask, so we can have neighboring degree-4 terms such as.....
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\lang british
+In this algorithm each pixel is represented by a binary variable and ....
+ well there's the conversion from 255 to binary
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Oops !!! We need a negative sign for LHZ terms !!! But after converting
+ from b to z what do we get?
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Likewise, the LHZ lattice 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Lechner2015"
+literal "false"
+
+\end_inset
+
+ is an interesting design for quantum annealing in which a complete graph
+ representing all possible quadratic terms, can be realized using only a
+ planar square lattice involving a degree-4 term in the center of every
+ set of every set of 4 qubits (binary variables)
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+check this
+\end_layout
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset Note Note
 status open
 
@@ -2995,7 +3688,7 @@ b_{1}b_{2}b_{3}b_{4}+b_{3}b_{4}b_{5}b_{6}=\min\left(b_{2}b_{3}+b_{3}b_{6},b_{1}b
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subsection
 One more example which is the best one we can come up with for cost savings.
 \end_layout
 
