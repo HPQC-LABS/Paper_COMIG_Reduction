@@ -2669,7 +2669,7 @@ If we wished to minimize the function of binary variables:
 \lang british
 \begin_inset Formula 
 \begin{equation}
-b_{1}b_{2}b_{3}-b_{1}b_{2}...,
+b_{1}b_{2}b_{3}b_{4}+b_{1}b_{2}b_{3}+3b_{2}b_{3}b_{4}+b_{3}b_{4}-b_{4}
 \end{equation}
 
 \end_inset
@@ -2703,17 +2703,22 @@ literal "false"
 
 \end_inset
 
-), we can quadratize the cubic term with the quadratic envelope...., and we
- get two optimization problems:
+), we can quadratize the quartic and cubic terms with the quadratic envelope
+ 
+\begin_inset Formula $\{b_{2}b_{3}+4b_{3}b_{4},2b_{1}b_{2}+3b_{2}b_{4}-b_{3}b_{4}+b_{4}\}$
+\end_inset
+
+, and we get two objective functions to consider:
 \end_layout
 
 \begin_layout Standard
 
 \lang british
 \begin_inset Formula 
-\begin{equation}
-b_{1}b_{2}b_{3}-b_{1}b_{2}...,
-\end{equation}
+\begin{align}
+b_{2}b_{3}+5b_{3}b_{4}-b_{4}\\
+2b_{1}b_{2}+3b_{2}b_{4}
+\end{align}
 
 \end_inset
 
@@ -2730,7 +2735,7 @@ Running the optimization procedure on both functions would result in the
 \lang british
 \begin_inset Formula 
 \begin{equation}
-b_{1}b_{2}b_{3}-b_{1}b_{2}...,
+-1,0
 \end{equation}
 
 \end_inset
@@ -2738,11 +2743,11 @@ b_{1}b_{2}b_{3}-b_{1}b_{2}...,
 
 \lang english
 The lower minimum is 
-\begin_inset Formula $()$
+\begin_inset Formula $(-1)$
 \end_inset
 
-, so this is the minimum of the original cubic function (this can be verified
- by simply optimizing the original cubic function, but for more complicated
+, so this is the minimum of the original quartic function (this can be verified
+ by simply optimizing the original quartic function, but for more complicated
  super-quadratic functions, the algorithms to optimize a super-quadratic
  function can be very costly and it would be 
 \emph on
