@@ -186,13 +186,23 @@ Surrey University, Department of Mathematics, UK
 \begin_layout Abstract
 
 \lang british
-We present a quadratization method that, for all of the many cases considered,
- provides quadratizations that require fewer auxiliary variables, less connectiv
-ity between the variables, and 
-\emph on
-much
-\emph default
- smaller coefficients than any previously known quadratization method.
+We present a quadratization method that we have found to be superior to
+ all previously known quadratization methods for every case tested so far,
+ in terms of requiring fewer auxiliary variables, less connectivity between
+ the variables, and/or smaller coefficients
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\lang british
+, and/or fewer non-submodular terms, and number of runs, in the case of
+ split-reduc
+\end_layout
+
+\end_inset
+
+.
  The quadratizations presented in this work, are also obtainable much more
  quickly (in terms of computation runtime) than quadratizatons for functions
  of similar complexity have traditionally been in the past.
@@ -212,14 +222,22 @@ reproduce a degree-
 \emph on
 almost
 \emph default
- perfect quadratic functions can compensate for each others imperfections,
+ perfect quadratic functions can compensate for each other's imperfections,
  hence leading to a perfect quadratization when all such quadratic functions
  are considered collectively.
- This collection is called a 
+ It is the 
 \emph on
-quadratic envelope.
-
+envelope 
 \emph default
+of multiple quadratic functions which reproduces the original degree-
+\begin_inset Formula $k$
+\end_inset
+
+ function, so we call our method 
+\emph on
+envelope quadratizations
+\emph default
+.
  We are able to quadratize positive monomials with quadratic functions that
  have exponentially
 \begin_inset Note Note
@@ -238,10 +256,23 @@ double check this
 et al.
  
 \emph default
-(2018)], while also having far less connectivity between the variables of
- the quadratics, in addition to requiring fewer auxiliary variables.
- We will also show examples in which an envelope of quadratic functions,
- each with 
+(2018) 
+\begin_inset Quotes eld
+\end_inset
+
+Compact quadratizations of symmetric pseudo-Boolean functions: sub-linear
+ bounds on the number of auxiliary variables
+\begin_inset Quotes erd
+\end_inset
+
+], while also having 
+\emph on
+far
+\emph default
+ less connectivity between the variables of the quadratics, in addition
+ to requiring fewer auxiliary variables.
+ We will show an example in which an envelope of quadratic functions, each
+ with 
 \emph on
 fewer
 \emph default
@@ -249,15 +280,17 @@ fewer
 \begin_inset Formula $k$
 \end_inset
 
- function, collectively can be made to 
-\emph on
-exactly
-\emph default
- reproduce the degree-
+ function, exactly reproduces the degree-
 \begin_inset Formula $k$
 \end_inset
 
- function.
+ function, meaning that we effectively have a `negative' number of auxiliary
+ variables.
+ We will also show an application of our method to the types of degee-
+\begin_inset Formula $k$
+\end_inset
+
+ functions arising in a computer vision algorithm for image deblurring.
 \end_layout
 
 \begin_layout Section
@@ -363,7 +396,7 @@ literal "false"
 
 \end_inset
 
-, and the numbers are rounded 
+ (all three of these numbers are rounded 
 \emph on
 up
 \emph default
@@ -396,8 +429,11 @@ exponentially?
 \begin_layout Standard
 
 \lang british
-Quadratization is also possible without the addition of any `auxiliary variables
-' 
+Quadratization is also possible without the addition of 
+\emph on
+any 
+\emph default
+auxiliary variables 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Ishikawa2014,Tanburn2015d,Okada2015b,Dridi2017,Dattani2019"
@@ -418,7 +454,7 @@ literal "false"
 
 \end_inset
 
-.
+, and in many cases they might be very expensive.
  One of these zero-auxiliary-variable methods that does reproduce the full
  spectrum, 
 \begin_inset Note Note
@@ -432,7 +468,7 @@ check this
 
 \end_inset
 
-the Split-Reduc method 
+the split-reduc method 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Okada2015s"
@@ -440,15 +476,19 @@ literal "false"
 
 \end_inset
 
-, can be very powerful when quadratizing multiple terms that have common
- variables, but for the degree-
+, can be considered a special case of our 
+\emph on
+envelope quadratization
+\emph default
+ method: While split-reduc can be very powerful when quadratizing multiple
+ terms that have common variables, for the degree-
 \begin_inset Formula $k$
 \end_inset
 
  positive monomial alone, its application can be far more costly than the
  methods described in the previous paragraph (this will be discussed more
- later in the paper when we compare and contrast Split-Reduc, methods involving
- auxiliaries, and our new concept of quadratic envelopes).
+ later in the paper when we compare and contrast split-reduc, methods involving
+ auxiliaries, and our new concept of envelope quadratizations).
 \begin_inset Note Note
 status open
 
@@ -467,15 +507,24 @@ status open
 \begin_layout Standard
 
 \lang british
-In this work we introduce the concept of quadratic envelopes, which seem
- to be capable of `perfectly' quadratizing functions more efficiently than
- any of the above methods (by `perfectly' we mean, reproducing the whole
- spectrum and not just the ground state).
- Even for just preserving the ground state, quadratic envelopes are often
- the most efficient way to quadratize a function, and in other cases should
- likely always be considered in combination with other methods in order
- to achieve the most efficient quadratization possible.
- 
+In this work we introduce the concept of envelope quadratizations, which
+ seem to be capable of `perfectly' quadratizing functions more efficiently
+ than any of the above methods (by `perfectly' we mean, reproducing the
+ whole spectrum and not just the ground state).
+ Even for just preserving the ground state, envelope quadratizations are
+ often the most efficient way to quadratize a function, and in other cases
+ should likely always be considered in combination with other methods in
+ order to achieve the most efficient quadratization possible.
+ We have not yet found a single case in which the envelope of more than
+ one quadratic function is not 
+\emph on
+strictly 
+\emph default
+more efficient than 
+\emph on
+all
+\emph default
+ of the previously known quadratization methods.
 \end_layout
 
 \begin_layout Section
@@ -2747,6 +2796,87 @@ If we wished to minimize the function of binary variables:
 \lang british
 \begin_inset Formula 
 \begin{equation}
+3{\color{red}{\color{green}{\color{red}{\color{blue}b_{1}b_{2}b_{3}}}}}-2b_{1}b_{2}-2b_{1}b_{3}+4b_{2}b_{4}-3b_{4}-3b_{2}b_{5}\label{eq:oneSubExample}
+\end{equation}
+
+\end_inset
+
+
+\lang english
+using the 
+\lang british
+wealth of techniques we have available for minimizing 
+\emph on
+quadratic 
+\emph default
+functions of binary variables (such as the classical algorithm `QPBO' and
+ extensions of it 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Rother2007"
+literal "false"
+
+\end_inset
+
+, or quantum annealing using thousands of qubits 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "King2018"
+literal "false"
+
+\end_inset
+
+ connected by graphs as complicated as Pegasus 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Dattani2019b,Dattani2019c"
+literal "false"
+
+\end_inset
+
+), we can quadratize the cubic term with the quadratic envelope 
+\begin_inset Formula $b_{1}b_{2}b_{3}={\displaystyle \min(b_{1}b_{2},b_{3})}$
+\end_inset
+
+, and we get two objective functions to consider:
+\end_layout
+
+\begin_layout Standard
+
+\lang british
+\begin_inset Formula 
+\begin{align}
+3{\color{red}{\color{green}{\color{red}{\color{blue}b_{1}b_{2}}}}}-2b_{1}b_{2}-2b_{1}b_{3}+4b_{2}b_{4}-3b_{4}-3b_{2}b_{5}\label{eq:oneSubExampleCase1}\\
+3{\color{red}{\color{green}{\color{red}{\color{blue}b_{3}}}}}-2b_{1}b_{2}-2b_{1}b_{3}+4b_{2}b_{4}-3b_{4}-3b_{2}b_{5}.\label{eq:oneSubExampleCase2}
+\end{align}
+
+\end_inset
+
+Running the optimization procedure (for example QPBO or quantum annealing)
+ on both functions would result in the following minima:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\text{\negthinspace\negthinspace\negthinspace Eq.\ref{eq:oneSubExampleCase1}}\negthinspace\,\,\,\hspace{-0.25mm}: & \text{\,{\color{blue}-}\,}{\color{blue}5}\,\,\,\,\text{at\,\,\, \ensuremath{b_{1}\hspace{-0.25mm},\hspace{-0.25mm}b_{2}\hspace{-0.25mm},\hspace{-0.25mm}b_{3}\hspace{-0.25mm},\hspace{-0.25mm}b_{4}\hspace{-0.25mm},\hspace{-0.25mm}b_{5}\hspace{-0.25mm}={\color{blue}10110}\,\,\text{\&\,\,{\color{blue}10111}}}}\\
+\negthinspace\negthinspace\negthinspace\text{Eq.\ref{eq:oneSubExampleCase2}}\negthinspace\hspace{-0.25mm}: & \text{\,{\color{blue}-}\,}{\color{blue}5}\,\,\,\,\text{at\,\,\, \ensuremath{b_{1}\hspace{-0.25mm},\hspace{-0.25mm}b_{2}\hspace{-0.25mm},\hspace{-0.25mm}b_{3}\hspace{-0.25mm},\hspace{-0.25mm}b_{4}\hspace{-0.25mm},\hspace{-0.25mm}b_{5}\hspace{-0.25mm}={\color{blue}11001}.}}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\lang british
+\begin_inset Formula 
+\begin{equation}
 b_{1}b_{2}b_{3}b_{4}+b_{1}b_{2}b_{3}+3b_{2}b_{3}b_{4}+b_{3}b_{4}-b_{4}
 \end{equation}
 
@@ -2789,7 +2919,7 @@ literal "false"
 , and we get two objective functions to consider:
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \lang british
 \begin_inset Formula 
@@ -2803,12 +2933,12 @@ b_{2}b_{3}+5b_{3}b_{4}-b_{4}\\
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Running the optimization procedure on both functions would result in the
  following two minima:
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \lang british
 \begin_inset Formula 
@@ -2832,6 +2962,11 @@ The lower minimum is
 preferred
 \emph default
  to optimize the quadratic problem instead).
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -3048,27 +3183,288 @@ Running the optimization procedure on all four functions would result in
 \end_layout
 
 \begin_layout Standard
-The lowest minimum is 
+\begin_inset Formula 
+\begin{align}
+\text{\negthinspace\negthinspace\negthinspace Eq.\ref{eq:2subCase1}}\negthinspace\,\,\,\hspace{-0.25mm}: & \text{\,{\color{blue}-}\,}{\color{blue}5}\,\,\,\,\text{at\,\,\, \ensuremath{b_{1}\hspace{-0.25mm},\hspace{-0.25mm}b_{2}\hspace{-0.25mm},\hspace{-0.25mm}b_{3}\hspace{-0.25mm},\hspace{-0.25mm}b_{4}\hspace{-0.25mm},\hspace{-0.25mm}b_{5}\hspace{-0.25mm},\hspace{-0.25mm}b_{6}={\color{blue}011101}}}\\
+\negthinspace\negthinspace\negthinspace\text{Eq.\ref{eq:2subCase2}}\negthinspace\hspace{-0.25mm}: & \text{\,-\,}4\,\,\,\,\text{at\,\,\, \ensuremath{b_{1}\hspace{-0.25mm},\hspace{-0.25mm}b_{2}\hspace{-0.25mm},\hspace{-0.25mm}b_{3}\hspace{-0.25mm},\hspace{-0.25mm}b_{4}\hspace{-0.25mm},\hspace{-0.25mm}b_{5}\hspace{-0.25mm},\hspace{-0.25mm}b_{6}=011100\,\,\text{\&\,\,\ensuremath{111110}}}}\\
+\negthinspace\negthinspace\negthinspace\text{Eq.}\ref{eq:2subCase3}\negthinspace\hspace{-0.25mm}: & \text{\,-}\,4\,\,\,\,\text{at\,\,\, \ensuremath{b_{1}\hspace{-0.25mm},\hspace{-0.25mm}b_{2}\hspace{-0.25mm},\hspace{-0.25mm}b_{3}\hspace{-0.25mm},\hspace{-0.25mm}b_{4}\hspace{-0.25mm},\hspace{-0.25mm}b_{5}\hspace{-0.25mm},\hspace{-0.25mm}b_{6}=101011\,\,\text{\&\,\,\ensuremath{111011}}}}\\
+\negthinspace\negthinspace\negthinspace\text{Eq.}\ref{eq:2subCase4}\negthinspace\hspace{-0.25mm}: & \text{\,{\color{blue}-}}\,{\color{blue}5}\,\,\,\,\text{at\,\,\, \ensuremath{b_{1}\hspace{-0.25mm},\hspace{-0.25mm}b_{2}\hspace{-0.25mm},\hspace{-0.25mm}b_{3}\hspace{-0.25mm},\hspace{-0.25mm}b_{4}\hspace{-0.25mm},\hspace{-0.25mm}b_{5}\hspace{-0.25mm},\hspace{-0.25mm}b_{6}={\color{blue}111011}.}}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{equation}
+\text{Eq. \ref{eq:2subCase1}}:-5\,\,\,\,\,\text{at \ensuremath{(b_{1},b_{2},b_{3},b_{4},b_{5},b_{6})=(0,1,1,1,0,1)}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:2subCase1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The functions which have the lowest minima have values of 
 \begin_inset Formula $-5$
 \end_inset
 
- which occurs at 
-\begin_inset Formula $ $
+ at 
+\begin_inset Formula $011101$
 \end_inset
 
  and 
-\begin_inset Formula $ $
+\begin_inset Formula $111011$
 \end_inset
 
- so these are the global minima of the original degree-
+ respectively, so these are the global minima of the original degree-
 \begin_inset Formula $k$
 \end_inset
 
  function (again, this can be verified by simply optimizing the original
  quartic function, but for more complicated functions, the algorithms to
  optimize a super-quadratic function can be much more costly than optimizing
- several quadratic functions or one quadratic function with auxiliary variables
- or even, several quadratic functions that each contain auxiliary variables).
+ several quadratic functions, or one quadratic function with auxiliary variables
+, or even several quadratic functions that each contain auxiliary variables).
 \end_layout
 
 \begin_layout Standard
@@ -3142,57 +3538,7 @@ noprefix "false"
 \begin_layout Section
 
 \lang british
-Worst-case cost analysis and claims of superiority over all
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\lang british
-?
-\end_layout
-
-\end_inset
-
- previously known methods
-\end_layout
-
-\begin_layout Standard
-
-\lang british
-Envelope quadratizations can 
-\emph on
-always
-\emph default
- be better than (or at least as efficient as) the previous state-of-the-art
- quadratization method for quadratizing a single positive degree-
-\begin_inset Formula $k$
-\end_inset
-
- monomial.
- The state-of-the-art method for this was the 2018 method requiring only
- 
-\begin_inset Formula $\log_{2}(\nicefrac{k}{2})$
-\end_inset
-
- auxiliary variables (rounded up) 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Boros2018,Boros2018a"
-literal "false"
-
-\end_inset
-
-, and in the handbook of quadratizations 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Dattani2019"
-literal "false"
-
-\end_inset
-
- it was called PTR-BCR-4.
- 
+Worst-case cost analysis
 \end_layout
 
 \begin_layout Standard
@@ -3228,7 +3574,7 @@ Unless there is some property of the function making it easier, optimizing
 \end_inset
 
  increase in cost!), all general-purpose methods for optimizing such functions
- still cost 
+ that are at least quadratic, still cost 
 \begin_inset Formula $\mathcal{O}(2^{x})$
 \end_inset
 
@@ -3236,8 +3582,8 @@ Unless there is some property of the function making it easier, optimizing
 \begin_inset Formula $x$
 \end_inset
 
- binary variables (this includes quantum annealing, where the scaling up
- to ~1000 variables can be seen in the figures of 
+ binary variables (this includes quantum annealing, where the exponential
+ scaling up to ~1000 variables can be seen in the figures of 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Denchev2016a"
@@ -3257,9 +3603,13 @@ literal "false"
 \begin_inset Formula $2^{m}$
 \end_inset
 
- increase in cost is not unfair (especially in the absence of any better
- measure of the added cost to the optimization due to adding auxiliary variables
-) for analyzing costs of quadratizations.
+ increase in cost is not unfair for analyzing costs of quadratizations that
+ add 
+\begin_inset Formula $m$
+\end_inset
+
+ auxiliary variables (especially in the absence of any better measure of
+ the added cost to the optimization due to adding auxiliary variables) .
 \begin_inset Note Note
 status open
 
@@ -3330,7 +3680,119 @@ Having established our notion of how much adding
 \end_inset
 
  auxiliary variables increases the cost of optimizing a quadratic function
- of binary variables, for the positive degree-
+ of binary variables, we will also mention that having to do 
+\begin_inset Formula $r$
+\end_inset
+
+ optimizations instead of 1, can be considered to increase the cost of the
+ overall process by 
+\begin_inset Formula $r$
+\end_inset
+
+ times the cost of doing one optimization.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang british
+So if a quadratization splits the original optimization problem into 
+\begin_inset Formula $r$
+\end_inset
+
+ cases (or `runs' of the optimization process) that each need to be optimized
+ in order to find the global optimum, and each of these runs involves 
+\begin_inset Formula $m$
+\end_inset
+
+ auxiliary variables, then the following is an upper bound on the added
+ cost 
+\begin_inset Formula $C$
+\end_inset
+
+ due to quadratizing:
+\end_layout
+
+\begin_layout Standard
+
+\lang british
+\begin_inset Formula 
+\begin{equation}
+C\le r2^{m}.\label{eq:cost}
+\end{equation}
+
+\end_inset
+
+In practice, some runs may require fewer auxiliary variables than others
+ (or none at all), so the added cost can be lower than 
+\begin_inset Formula $r2^{m}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+
+\lang british
+claims of superiority over all previously known methods
+\end_layout
+
+\begin_layout Subsection
+
+\lang british
+Positive degree-
+\begin_inset Formula $k$
+\end_inset
+
+ monomial
+\end_layout
+
+\begin_layout Standard
+
+\lang british
+Envelope quadratizations are able to 
+\emph on
+strictly
+\emph default
+ outperform the previous state-of-the-art quadratization method for quadratizing
+ a single positive degree-
+\begin_inset Formula $k$
+\end_inset
+
+ monomial.
+ The state-of-the-art method for this was the 2018 method requiring only
+ 
+\begin_inset Formula $\log_{2}(\nicefrac{k}{2})$
+\end_inset
+
+ auxiliary variables (rounded up) 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Boros2018,Boros2018a"
+literal "false"
+
+\end_inset
+
+, and in the handbook of quadratizations 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Dattani2019"
+literal "false"
+
+\end_inset
+
+ it was called 
+\series bold
+PTR-BCR-4
+\series default
+.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang british
+For the positive degree-
 \begin_inset Formula $k$
 \end_inset
 
@@ -3539,16 +4001,16 @@ noprefix "false"
 \begin_inset Formula $\nicefrac{k}{p}$
 \end_inset
 
- pieces: 
-\begin_inset Formula $b_{1}b_{2}\ldots b_{\nicefrac{k}{p}}$
+ pieces, each with maximum degree 
+\begin_inset Formula $p$
 \end_inset
 
 , and each piece can be quadratized with PTR-BCR-4 with 
-\begin_inset Formula $\log_{2}\lceil\nicefrac{k}{2p}\rceil$
+\begin_inset Formula $\log_{2}\lceil\nicefrac{p}{2}\rceil$
 \end_inset
 
  auxiliary variables, incurring a cost of 
-\begin_inset Formula $\lceil\nicefrac{k}{2p}\rceil$
+\begin_inset Formula $\lceil\nicefrac{p}{2}\rceil$
 \end_inset
 
  for each of the 
@@ -3560,10 +4022,13 @@ noprefix "false"
 \begin_inset Formula $b_{1}b_{2}\ldots b_{k}$
 \end_inset
 
-, we would need to do our optimization procedure once for each piece that
- is being substituted, in the worst case the cost of the optimization procedure
- will be increased by a factor equal to the number of pieces, which is 
-\begin_inset Formula $\nicefrac{k}{p}$
+, we would need to do 
+\begin_inset Formula $r=\nicefrac{k}{p}$
+\end_inset
+
+ runs of our optimization procedure, the total added cost would then be
+ 
+\begin_inset Formula $r2^{m}=\nicefrac{k}{p}\lceil\nicefrac{p}{2}\rceil=\nicefrac{k}{2}$
 \end_inset
 
 .
@@ -3622,6 +4087,66 @@ For example if we wish to optimize a function in which we quadratize a positive
 \begin_inset Formula $\{b_{1}b_{2},b_{3}b_{4},\cdots,b_{39}b_{40}\}$
 \end_inset
 
+, and doing 
+\begin_inset Formula $r=20$
+\end_inset
+
+ different optimizations (replacing 
+\begin_inset Formula $b_{1}b_{2}\ldots b_{40}$
+\end_inset
+
+ in the original function by one of each of the 20 total pieces) would cost
+ at most only 20 times more than doing one such optimization.
+ Likewise the positive degree-40 monomial can be split into 
+\begin_inset Formula $r=10$
+\end_inset
+
+ pieces, each of degree-4: 
+\begin_inset Formula $\{b_{1}b_{2}b_{3}b_{4},b_{5}b_{6}b_{7}b_{8},\cdots,b_{37}b_{38}b_{39}b_{40}\}$
+\end_inset
+
+, and then each dergree-4 term can be quadratized using PTR-BCR-4 with only
+ 
+\begin_inset Formula $m=1$
+\end_inset
+
+ auxiliary variable, resulting again in a cost of 
+\begin_inset Formula $10\times2^{1}=20$
+\end_inset
+
+.
+ Finally the same would be true if we used 
+\begin_inset Formula $r=5$
+\end_inset
+
+ pieces, each of degree-8: 
+\begin_inset Formula $\{b_{1}b_{2}\cdots b_{8},b_{9}b_{10}\cdots b_{16},\cdots,b_{33}b_{34}\cdots b_{40}\},$
+\end_inset
+
+and then quadratized each degree-8 term using PTR-BCR-4 with only 
+\begin_inset Formula $m=2$
+\end_inset
+
+ auxiliary variables each, resulting 
+\emph on
+again
+\emph default
+ in a cost of 
+\begin_inset Formula $5\times2^{2}=20$
+\end_inset
+
+.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\lang british
+However the positive degree-40 monomial can be split into 20 quadratic pieces:
+ 
+\begin_inset Formula $\{b_{1}b_{2},b_{3}b_{4},\cdots,b_{39}b_{40}\}$
+\end_inset
+
 , and doing 20 different optimizations (replacing 
 \begin_inset Formula $b_{1}b_{2}\ldots b_{40}$
 \end_inset
@@ -3634,7 +4159,7 @@ For example if we wish to optimize a function in which we quadratize a positive
 \end_inset
 
 , and then each dergree-4 term can be quadratized using PTR-BCR-4 with only
- 1 auxiliary variables (increasing the cost by a factor of 
+ 1 auxiliary variable (increasing the cost by a factor of 
 \begin_inset Formula $2$
 \end_inset
 
@@ -3655,14 +4180,100 @@ and then quadratized each degree-8 term using PTR-BCR-4 with only 2 auxiliary
  increased by a factor of 20).
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\color blue
+\lang british
+In general we can get up to a factor of 2 improvement over PTR-BCR-4, equivalent
+ to effectively using only log(k/4) auxiliaries? and even better if the
+ other variables don't appear in positive/negative coefficients of other
+ terms...
+ i.e.
+ negative number of auxiliaries...
+ Furthermore compare the coefficients and connectivity in BCR to COMIGs.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\color blue
+\lang british
+We note that we can also give COMIGs that are 
+\emph on
+not 
+\emph default
+strictly better in terms of the added cost in the spirit of Equation..., for
+ example for k=40 if we did r=8 instead, we would get C=32 which is the
+ same as PTR-BCR-4, but in that case our number of quadratic terms is, and
+ our gadget graph is, and the coefficients are.....
+ 
+\end_layout
+
+\begin_layout Subsection
+
+\lang british
+General functions of binary variables with real-valued coefficients
+\end_layout
+
 \begin_layout Standard
 
 \lang british
-In general we can get up to a factor of 2 improvement over BCR, equivalent
- to effectively using only log(k/4) auxiliaries, and even better if the
- other variables don't appear in positive/negative coefficients of other
- terms? And what about cases that are not monomials? Furthermore compare
- the coefficients and connectivity in BCR to COMIGs
+We have shown that when quadratizing a positive degree-
+\begin_inset Formula $k$
+\end_inset
+
+ monomial, envelope quadratizations are now the state-of-the-art in terms
+ of the cost added to the optimization process.
+ What about when quadratizing not only a single monomial but multiple terms
+ in a function? PTR-BCR-4 is no longer necessarily the state-of-the-art.
+ For example, quadratizing 
+\begin_inset Formula $b_{1}b_{2}b_{3}b_{4}b_{5}+b_{2}b_{3}b_{4}b_{5}b_{6}$
+\end_inset
+
+ would require 4 auxiliary variables, but Rosenberg's substitution would
+ only need two auxiliary variables: 
+\begin_inset Formula $b_{a_{1}}=b_{2}b_{3}$
+\end_inset
+
+ and 
+\begin_inset Formula $b_{a_{2}}=b_{4}b_{5}$
+\end_inset
+
+.
+ In this case we can make a `trivial' argument that envelope quadratizations
+ are at least as good as the previous state-of-the-art method, because the
+ previous state-of-the-art method is just an example of an envelope quadratizati
+on in which 
+\begin_inset Formula $r=1$
+\end_inset
+
+.
+ However, we have also found that for every case we have examined so far
+ [put book on arXiv and cite it], we are also able to obtain an envelope
+ quadratization with 
+\begin_inset Formula $r\ge1$
+\end_inset
+
+ that is strictly better than the previous state-of-the-art quadratization.
+ There are some cases in which the cost, in the spirit of Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:cost"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ can be matched by previously known methods, but in those cases we have
+ fewer quadratic terms and smaller coefficients and fewer non-submodular
+ terms, see below:
 \end_layout
 
 \begin_layout Section
@@ -3725,10 +4336,13 @@ It is interesting to note that, it was very recently proven that all 4-variable
 
 \end_inset
 
-Here the added cost of a factor of 4 is still the same as it would be with
- PTR-BCR-4 (which would need only 2 auxiliary variables and therefore an
- added cost of a factor of 
-\begin_inset Formula $2^{2}=4$
+Here the added cost of a factor of 
+\begin_inset Formula $2\times2^{1}=4$
+\end_inset
+
+ is still the same as it would be with PTR-BCR-4 (which would need only
+ 2 auxiliary variables and therefore an added cost of a factor of 
+\begin_inset Formula $1\times2^{2}=4$
 \end_inset
 
 ).
@@ -4048,6 +4662,26 @@ options "IEEEtran"
 \begin_layout Standard
 
 \lang british
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\lang british
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang british
 \begin_inset Newpage newpage
 \end_inset
 
@@ -4055,6 +4689,12 @@ options "IEEEtran"
 \end_layout
 
 \begin_layout Standard
+
+\lang american
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 
 \lang american
 \begin_inset ERT
@@ -4065,6 +4705,11 @@ status open
 
 \backslash
 newgeometry{top=0.3cm,bottom=0.3cm,right=2.0cm,left=2.0cm} 
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -12181,6 +12826,12 @@ noprefix "false"
 \begin_layout Standard
 
 \lang american
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\lang american
 \begin_inset ERT
 status open
 
@@ -12189,6 +12840,11 @@ status open
 
 \backslash
 restoregeometry 
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
