@@ -2846,8 +2846,8 @@ literal "false"
 \lang british
 \begin_inset Formula 
 \begin{align}
-3{\color{red}{\color{green}{\color{red}{\color{blue}b_{1}b_{2}}}}}-2b_{1}b_{2}-2b_{1}b_{3}+4b_{2}b_{4}-3b_{4}-3b_{2}b_{5}\label{eq:oneSubExampleCase1}\\
-3{\color{red}{\color{green}{\color{red}{\color{blue}b_{3}}}}}-2b_{1}b_{2}-2b_{1}b_{3}+4b_{2}b_{4}-3b_{4}-3b_{2}b_{5}.\label{eq:oneSubExampleCase2}
+3{\color{red}{\color{green}{\color{red}{\color{blue}b_{1}b_{2}}}}}-2b_{1}b_{2}-2b_{1}b_{3}+4b_{2}b_{4}-3b_{4}-2b_{2}b_{5}\label{eq:oneSubExampleCase1}\\
+3{\color{red}{\color{green}{\color{red}{\color{blue}b_{3}}}}}-2b_{1}b_{2}-2b_{1}b_{3}+4b_{2}b_{4}-3b_{4}-2b_{2}b_{5}.\label{eq:oneSubExampleCase2}
 \end{align}
 
 \end_inset
@@ -2857,10 +2857,11 @@ Running the optimization procedure (for example QPBO or quantum annealing)
 \end_layout
 
 \begin_layout Standard
+\align left
 \begin_inset Formula 
 \begin{align}
-\text{\negthinspace\negthinspace\negthinspace Eq.\ref{eq:oneSubExampleCase1}}\negthinspace\,\,\,\hspace{-0.25mm}: & \text{\,{\color{blue}-}\,}{\color{blue}5}\,\,\,\,\text{at\,\,\, \ensuremath{b_{1}\hspace{-0.25mm},\hspace{-0.25mm}b_{2}\hspace{-0.25mm},\hspace{-0.25mm}b_{3}\hspace{-0.25mm},\hspace{-0.25mm}b_{4}\hspace{-0.25mm},\hspace{-0.25mm}b_{5}\hspace{-0.25mm}={\color{blue}10110}\,\,\text{\&\,\,{\color{blue}10111}}}}\\
-\negthinspace\negthinspace\negthinspace\text{Eq.\ref{eq:oneSubExampleCase2}}\negthinspace\hspace{-0.25mm}: & \text{\,{\color{blue}-}\,}{\color{blue}5}\,\,\,\,\text{at\,\,\, \ensuremath{b_{1}\hspace{-0.25mm},\hspace{-0.25mm}b_{2}\hspace{-0.25mm},\hspace{-0.25mm}b_{3}\hspace{-0.25mm},\hspace{-0.25mm}b_{4}\hspace{-0.25mm},\hspace{-0.25mm}b_{5}\hspace{-0.25mm}={\color{blue}11001}.}}
+\text{ Eq.\ref{eq:oneSubExampleCase1}}\,\hspace{-0.25mm}: & \,\text{\,{\color{blue}-}\,}{\color{blue}5}\,\,\,\,\text{at\,\,\, \ensuremath{b_{1}\hspace{-0.25mm},\hspace{-0.25mm}b_{2}\hspace{-0.25mm},\hspace{-0.25mm}b_{3}\hspace{-0.25mm},\hspace{-0.25mm}b_{4}\hspace{-0.25mm},\hspace{-0.25mm}b_{5}\hspace{-0.25mm}={\color{blue}10110}\,\,\text{\&\,\,{\color{blue}10111}}}}\\
+\text{Eq.\ref{eq:oneSubExampleCase2}}\negthinspace\hspace{-0.25mm}: & \,\text{\,-\,}4\,\,\,\,\text{at\,\,\, \ensuremath{b_{1}\hspace{-0.25mm},\hspace{-0.25mm}b_{2}\hspace{-0.25mm},\hspace{-0.25mm}b_{3}\hspace{-0.25mm},\hspace{-0.25mm}b_{4}\hspace{-0.25mm},\hspace{-0.25mm}b_{5}\hspace{-0.25mm}=11001.}}
 \end{align}
 
 \end_inset
@@ -3123,7 +3124,7 @@ Here we quadratize
 \lang british
 \begin_inset Formula 
 \begin{align}
-\negthinspace\negthinspace\negthinspace\negthinspace2{\color{red}{\color{green}{\color{red}{\color{blue}b_{1}b_{2}}}}}-3b_{2}b_{4}+3{\color{blue}{\color{red}b_{1}b_{4}}}-2b_{3}b_{6}-3b_{1}b_{5}+b_{5}+b_{6}-b_{3}\label{eq:2subCase1}
+\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace2{\color{red}{\color{green}{\color{red}{\color{blue}b_{1}b_{2}}}}}-3b_{2}b_{4}+3{\color{blue}{\color{red}b_{1}b_{4}}}-2b_{3}b_{6}-3b_{1}b_{5}+b_{5}+b_{6}-b_{3}\label{eq:2subCase1}
 \end{align}
 
 \end_inset
@@ -3185,10 +3186,10 @@ Running the optimization procedure on all four functions would result in
 \begin_layout Standard
 \begin_inset Formula 
 \begin{align}
-\text{\negthinspace\negthinspace\negthinspace Eq.\ref{eq:2subCase1}}\negthinspace\,\,\,\hspace{-0.25mm}: & \text{\,{\color{blue}-}\,}{\color{blue}5}\,\,\,\,\text{at\,\,\, \ensuremath{b_{1}\hspace{-0.25mm},\hspace{-0.25mm}b_{2}\hspace{-0.25mm},\hspace{-0.25mm}b_{3}\hspace{-0.25mm},\hspace{-0.25mm}b_{4}\hspace{-0.25mm},\hspace{-0.25mm}b_{5}\hspace{-0.25mm},\hspace{-0.25mm}b_{6}={\color{blue}011101}}}\\
-\negthinspace\negthinspace\negthinspace\text{Eq.\ref{eq:2subCase2}}\negthinspace\hspace{-0.25mm}: & \text{\,-\,}4\,\,\,\,\text{at\,\,\, \ensuremath{b_{1}\hspace{-0.25mm},\hspace{-0.25mm}b_{2}\hspace{-0.25mm},\hspace{-0.25mm}b_{3}\hspace{-0.25mm},\hspace{-0.25mm}b_{4}\hspace{-0.25mm},\hspace{-0.25mm}b_{5}\hspace{-0.25mm},\hspace{-0.25mm}b_{6}=011100\,\,\text{\&\,\,\ensuremath{111110}}}}\\
-\negthinspace\negthinspace\negthinspace\text{Eq.}\ref{eq:2subCase3}\negthinspace\hspace{-0.25mm}: & \text{\,-}\,4\,\,\,\,\text{at\,\,\, \ensuremath{b_{1}\hspace{-0.25mm},\hspace{-0.25mm}b_{2}\hspace{-0.25mm},\hspace{-0.25mm}b_{3}\hspace{-0.25mm},\hspace{-0.25mm}b_{4}\hspace{-0.25mm},\hspace{-0.25mm}b_{5}\hspace{-0.25mm},\hspace{-0.25mm}b_{6}=101011\,\,\text{\&\,\,\ensuremath{111011}}}}\\
-\negthinspace\negthinspace\negthinspace\text{Eq.}\ref{eq:2subCase4}\negthinspace\hspace{-0.25mm}: & \text{\,{\color{blue}-}}\,{\color{blue}5}\,\,\,\,\text{at\,\,\, \ensuremath{b_{1}\hspace{-0.25mm},\hspace{-0.25mm}b_{2}\hspace{-0.25mm},\hspace{-0.25mm}b_{3}\hspace{-0.25mm},\hspace{-0.25mm}b_{4}\hspace{-0.25mm},\hspace{-0.25mm}b_{5}\hspace{-0.25mm},\hspace{-0.25mm}b_{6}={\color{blue}111011}.}}
+\text{\negthinspace\negthinspace\negthinspace\negthinspace Eq.\ref{eq:2subCase1}}\,\hspace{-0.25mm}: & \text{\,{\color{blue}-}\,}{\color{blue}5}\,\,\,\,\text{at\,\,\, \ensuremath{b_{1}\hspace{-0.25mm},\hspace{-0.25mm}b_{2}\hspace{-0.25mm},\hspace{-0.25mm}b_{3}\hspace{-0.25mm},\hspace{-0.25mm}b_{4}\hspace{-0.25mm},\hspace{-0.25mm}b_{5}\hspace{-0.25mm},\hspace{-0.25mm}b_{6}={\color{blue}011101}}}\\
+\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\text{Eq.\ref{eq:2subCase2}}\negthinspace\hspace{-0.25mm}: & \text{\,-\,}4\,\,\,\,\text{at\,\,\, \ensuremath{b_{1}\hspace{-0.25mm},\hspace{-0.25mm}b_{2}\hspace{-0.25mm},\hspace{-0.25mm}b_{3}\hspace{-0.25mm},\hspace{-0.25mm}b_{4}\hspace{-0.25mm},\hspace{-0.25mm}b_{5}\hspace{-0.25mm},\hspace{-0.25mm}b_{6}=011100\,\,\text{\&\,\,\ensuremath{111110}}}}\\
+\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\text{Eq.}\ref{eq:2subCase3}\negthinspace\hspace{-0.25mm}: & \text{\,-}\,4\,\,\,\,\text{at\,\,\, \ensuremath{b_{1}\hspace{-0.25mm},\hspace{-0.25mm}b_{2}\hspace{-0.25mm},\hspace{-0.25mm}b_{3}\hspace{-0.25mm},\hspace{-0.25mm}b_{4}\hspace{-0.25mm},\hspace{-0.25mm}b_{5}\hspace{-0.25mm},\hspace{-0.25mm}b_{6}=101011\,\,\text{\&\,\,\ensuremath{111011}}}}\\
+\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\text{Eq.}\ref{eq:2subCase4}\negthinspace\hspace{-0.25mm}: & \text{\,{\color{blue}-}}\,{\color{blue}5}\,\,\,\,\text{at\,\,\, \ensuremath{b_{1}\hspace{-0.25mm},\hspace{-0.25mm}b_{2}\hspace{-0.25mm},\hspace{-0.25mm}b_{3}\hspace{-0.25mm},\hspace{-0.25mm}b_{4}\hspace{-0.25mm},\hspace{-0.25mm}b_{5}\hspace{-0.25mm},\hspace{-0.25mm}b_{6}={\color{blue}111011}.}}
 \end{align}
 
 \end_inset
@@ -4579,16 +4580,48 @@ b_{1}b_{2}b_{3}b_{4}+b_{3}b_{4}b_{5}b_{6}=\min\left(b_{2}b_{3}+b_{3}b_{6},b_{1}b
 
 \begin_layout Standard
 \align left
-3-runs/0-aux case:
+Likewise we have an envelope quadratization for trinomials (Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:trinomialComputerVision"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ equals the minimum over the three functions given in Eqs.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:trinomial1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+-
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:trinomial3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+):
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{flalign}
-\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace & \negthickspace\negthickspace\negthickspace\negthickspace\negthickspace b_{1}b_{2}b_{3}b_{4}+b_{2}b_{3}b_{4}b_{5}+b_{3}b_{4}b_{5}b_{6}:\\
-\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\longrightarrow & \,3b_{3}b_{4}+b_{3}b_{5}+b_{4}b_{5}-b_{3}-b_{4}-b_{5}+1\\
-\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\longrightarrow & \,b_{1}b_{4}+b_{3}b_{5}+b_{4}b_{5}\\
-\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\longrightarrow & \,b_{1}b_{2}\negthinspace+\negthinspace b_{2}b_{6}\negthinspace+\negthinspace b_{3}b_{5}\negthinspace+\negthinspace b_{5}b_{6}\negthinspace+\negthinspace b_{2}\negthinspace-\negthinspace b_{3}\negthinspace-\negthinspace b_{4}\negthinspace-\negthinspace b_{5}\negthinspace+\negthinspace2
+\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace & \negthickspace\negthickspace\negthickspace\negthickspace\negthickspace b_{1}b_{2}b_{3}b_{4}+b_{2}b_{3}b_{4}b_{5}+b_{3}b_{4}b_{5}b_{6}:\label{eq:trinomialComputerVision}\\
+\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\longrightarrow & \,3b_{3}b_{4}+b_{3}b_{5}+b_{4}b_{5}-b_{3}-b_{4}-b_{5}+1\label{eq:trinomial1}\\
+\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\longrightarrow & \,b_{1}b_{4}+b_{3}b_{5}+b_{4}b_{5}\label{eq:trinomial2}\\
+\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\longrightarrow & \,b_{1}b_{2}\negthinspace+\negthinspace b_{2}b_{6}\negthinspace+\negthinspace b_{3}b_{5}\negthinspace+\negthinspace b_{5}b_{6}\negthinspace+\negthinspace b_{2}\negthinspace-\negthinspace b_{3}\negthinspace-\negthinspace b_{4}\negthinspace-\negthinspace b_{5}\negthinspace+\negthinspace2\label{eq:trinomial3}
 \end{flalign}
 
 \end_inset
@@ -4597,7 +4630,41 @@ b_{1}b_{2}b_{3}b_{4}+b_{3}b_{4}b_{5}b_{6}=\min\left(b_{2}b_{3}+b_{3}b_{6},b_{1}b
 \end_layout
 
 \begin_layout Subsection
-One more example which is the best one we can come up with for cost savings.
+Envelope quadratization with a factor of 4 reduction in cost compared to
+ the previous state-of-the-art
+\end_layout
+
+\begin_layout Standard
+We discovered the concept of envelope quadratizations on 3 September 2019,
+ so the number of functions for which we have searched for envelope quadratizati
+ons so far has been limited by the amount of time available.
+ However the best reduction in cost (in the spirit of Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:cost"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) we have found with envelope quadratizations compared to the previous state-of-
+the-art, was for the function:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{flalign}
+\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace & \negthickspace\negthickspace\negthickspace\negthickspace\negthickspace b_{1}b_{2}b_{3}b_{4}b_{5}b_{6}+b_{2}b_{3}b_{4}b_{5}b_{6}b_{7}:\label{eq:trinomialComputerVision-1}\\
+\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\longrightarrow & \,3b_{3}b_{4}+b_{3}b_{5}+b_{4}b_{5}-b_{3}-b_{4}-b_{5}+1\label{eq:trinomial1-1}\\
+\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\longrightarrow & \,b_{1}b_{4}+b_{3}b_{5}+b_{4}b_{5}\label{eq:trinomial2-1}\\
+\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\longrightarrow & \,b_{1}b_{2}\negthinspace+\negthinspace b_{2}b_{6}\negthinspace+\negthinspace b_{3}b_{5}\negthinspace+\negthinspace b_{5}b_{6}\negthinspace+\negthinspace b_{2}\negthinspace-\negthinspace b_{3}\negthinspace-\negthinspace b_{4}\negthinspace-\negthinspace b_{5}\negthinspace+\negthinspace2\label{eq:trinomial3-1}
+\end{flalign}
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -4606,14 +4673,169 @@ One more example which is the best one we can come up with for cost savings.
 Discussion
 \end_layout
 
+\begin_layout Subsection
+Speed of finding multi-run envelope quadratizations vs single-run quadratization
+s
+\end_layout
+
+\begin_layout Standard
+Perhaps the only published algorithm for finding quadratizations of arbitrary
+ functions, is the method of enumerating all vertices of a certain polyhedron.
+ Gruber mentioned in his thesis that this would take several months for
+ 6-variables and 1-aux or 5-variables and 2-aux.
+ Here we did 8-variabels 1-aux in 3.52 seconds because we no longer have
+ to search through everything, it's much more likely to find a heuristic
+ gadget than an exact one.
+ Many methods can be conceived for finding COMIGs, for example random searches,
+ but we have found a reinforcement learning algorithm to work best.
+ We explain this in a subsequent paper.
+\end_layout
+
+\begin_layout Subsection
+Conjecture about 0-aux and superiority
+\end_layout
+
+\begin_layout Standard
+We have already mentioned in the abstract, Section X and in the introducton?
+ that we have not yet found anything where SOTA is better than our multi-run
+ quads.
+ A proof of this appears to be impossible right now except for by contradiction,
+ because the RL can always be improved and find missing COMIGs that weren't
+ found before.
+ Furthermore we've found that auxes are never necessary in the best costs,
+ they just might give alternative COMIGs with the same cost.
+\end_layout
+
+\begin_layout Subsection
+Not the end of our journey
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Envelope quadratizations are not 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+or should not be 
+\end_layout
+
+\end_inset
+
+the end of the journey
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We originally wanted to find `heuristic quadratizations', 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+for some simple functions such as the positive degree-
+\begin_inset Formula $k$
+\end_inset
+
+ monomial, and some binomials and trinomials such as those appearing in
+ the above-mentioned image de-blurring algorithm.
+ 
+\end_layout
+
+\end_inset
+
+which would be quadratizations that do not necessarily need to reproduce
+ a full spectrum, or even a ground state (optimum) of the original function,
+ but would come very close (for example by finding the next lowest-energy
+ state above the global minimum).
+ This is because often we do not even need the 
+\emph on
+exact 
+\emph default
+ground state of a function, and all we seek is a good approximation to it,
+ for example the true ground state is not being sought in the above-mentioned
+ image de-blurring algorithm: it is an algorithm in which the closer we
+ get to the optimum solution, the better the de-blurring will be, but eventually
+ the difference between one de-blurring and a de-blurring closer to the
+ optimal solution will hardly be noticable, and eventually we may even reach
+ the limitations of the de-blurring algorithm itself, meaning that reaching
+ a lower-energy solution will no longer even guarantee a better de-blurring.
+ When we are not seeking the absolute ground state of a function, then it
+ would be overkill to demand that the quadratization exactly preserves the
+ ground state, and this extra and unnecessary demand ought to be limiting
+ us in terms of the efficiency of quadratizations available for us to find
+ (for example we must be able to find quadratizations that do not require
+ as many auxiliary variables, do not require such large coefficients, do
+ not have such dense connectivity in the graph describing the quadratic
+ terms, and do not have so many non-submodular terms, as our currently known
+ quadratizations which do more than we need).
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Furthermore, while there exist methods to quadratize a full function without
+ using any auxiliary variables, such as in 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Ishikawa2014"
+literal "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Tanburn2015d"
+literal "false"
+
+\end_inset
+
+, these two methods in particular only 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Envelope quadratizations not only reproduce the ground state perfectly (which
+ is more than what we usually want), they actually reproduce the entire
+ spectrum which contains 
+\begin_inset Formula $2^{n}$
+\end_inset
+
+ states and their corresponding energies (which is 
+\emph on
+far
+\emph default
+ more than what we seek in almost all real-world applications).
+ We accidentally found something better than what we were looking for, but
+ ultimately we should be able to reduce costs even more......
+\end_layout
+
 \begin_layout Standard
 
 \lang british
-Negative variables.
- Reinforcement learning.
- Conjecture about this always being better than other methods.
- This is still not the end of the journey because we're reproducing the
- full spectrum which is too much.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\lang british
+Section about negative terms ???
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
