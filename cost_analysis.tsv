@@ -1,0 +1,35 @@
+COMIG eq.#	COST			
+	COMIG 	PREVIOUS SOTA	SPLIT-REDUC	
+monomials				
+3	2	2(BCR,Tin)	4	
+4	4	4(BCR)	64	
+binomials				
+7	3	4(BCR,Tin,S-R)	4	
+8	4	4(BCR,Tin,S-R)	4	
+9	3	4(BCR,Tin)	8	
+13	6	8(S-R,Combo*)	8	*combo of pairwise covers with S-R/BCR/Tin
+17	4	16(BCR,S-R,Combos*)	16	*combo of pairwise covers with S-R/BCR/Tin
+27	7	8(Combo*)	16	*combo of pairwise covers and Tin
+32	8	16(BCR,S-R,Combos*)	16	*combo of pairwise covers with S-R/BCR/Tin or S-R with BCR/Tin
+38	8	16(BCR)	32	
+44	8	4(BCR/Tin)	16	
+49	16	16(BCR)	64	
+58	12	16(Combo*)	64	*combo of S-R and BCR/Tin
+65	11	16(BCR)	64	
+73	14	16(BCR)	64	
+81	12	13(Combo*)	128	*Combo of S-R and BCR (split on b1,b10 then quad the deg-8 term with 2-aux) we have 3 runs of 2-aux and 1 run of 0-aux
+trinomials				
+89	3	4(S-R)	4	
+93	5	8(BCR,Tin,Combo*)	16	*Combo of S-R and BCR/Tin
+99	9*	8(S-R)	8	*same thing with the aux's
+106	10	16(S-R,Combo*)	16	*Combo of pairwise covers with S-R
+114	10	64(BCR,S-R,Combo*)	64	*Combo of pariwise covers with S-R
+123	18**	11(Combo*)	64	*Combo of S-R with BCR/Tin (split on b5,b6), we have 3 runs with 0-aux and 1 run with 3-aux
+133	17**	8(BCR,Tin)	16	
+143	7	16(S-R,Combo*)	16	*Combo of S-R with BCR/Tin
+Quadrinomials				
+149	2	2(Tin)	4	
+152	18**	64(S-R)	64	**incomplete (preserve > 99.6% of the states), used to have a restriction on number of runs so it didn’t finish to get the whole spectrum. But again same issue with the useless aux's that just add to the cost, 9-runs/1-aux, it can definitely be done with no aux's for less than 17/18 runs! Can we match the SOTA though? maybe we need some more improvements on the RL first.
+162	2	2(Tin)	4	
+165	2	2(Tin)	4	
+168	2	2(Tin)	4	
