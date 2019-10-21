@@ -239,19 +239,11 @@ envelope quadratizations
 \emph default
 .
  We are able to quadratize positive monomials with quadratic functions that
- have exponentially
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\lang british
-double check this
-\end_layout
-
-\end_inset
-
- smaller coefficients than in [Boros 
+ have 
+\emph on
+much smaller
+\emph default
+ coefficients than in [Boros 
 \emph on
 et al.
  
@@ -269,8 +261,8 @@ Compact quadratizations of symmetric pseudo-Boolean functions: sub-linear
 \emph on
 far
 \emph default
- less connectivity between the variables of the quadratics, in addition
- to requiring fewer auxiliary variables.
+ less connectivity between the variables of the quadratics, and requiring
+ fewer auxiliary variables.
  We will show an example in which an envelope of quadratic functions, each
  with 
 \emph on
@@ -2842,6 +2834,7 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
+\align left
 
 \lang british
 \begin_inset Formula 
@@ -2860,8 +2853,8 @@ Running the optimization procedure (for example QPBO or quantum annealing)
 \align left
 \begin_inset Formula 
 \begin{align}
-\text{ Eq.\ref{eq:oneSubExampleCase1}}\,\hspace{-0.25mm}: & \,\text{\,{\color{blue}-}\,}{\color{blue}5}\,\,\,\,\text{at\,\,\, \ensuremath{b_{1}\hspace{-0.25mm},\hspace{-0.25mm}b_{2}\hspace{-0.25mm},\hspace{-0.25mm}b_{3}\hspace{-0.25mm},\hspace{-0.25mm}b_{4}\hspace{-0.25mm},\hspace{-0.25mm}b_{5}\hspace{-0.25mm}={\color{blue}10110}\,\,\text{\&\,\,{\color{blue}10111}}}}\\
-\text{Eq.\ref{eq:oneSubExampleCase2}}\negthinspace\hspace{-0.25mm}: & \,\text{\,-\,}4\,\,\,\,\text{at\,\,\, \ensuremath{b_{1}\hspace{-0.25mm},\hspace{-0.25mm}b_{2}\hspace{-0.25mm},\hspace{-0.25mm}b_{3}\hspace{-0.25mm},\hspace{-0.25mm}b_{4}\hspace{-0.25mm},\hspace{-0.25mm}b_{5}\hspace{-0.25mm}=11001.}}
+\text{Eq.}\ref{eq:oneSubExampleCase1}\hspace{-0.25mm}\hspace{-0.25mm}\hspace{-0.25mm}: & \,\text{\,{\color{blue}-}\,}{\color{blue}5}\,\,\,\,\text{at\,\,\, \ensuremath{b_{1}\hspace{-0.25mm},\hspace{-0.25mm}b_{2}\hspace{-0.25mm},\hspace{-0.25mm}b_{3}\hspace{-0.25mm},\hspace{-0.25mm}b_{4}\hspace{-0.25mm},\hspace{-0.25mm}b_{5}\hspace{-0.25mm}={\color{blue}10110}\,\,\text{\&\,\,{\color{blue}10111}}}}\\
+\text{Eq.}\ref{eq:oneSubExampleCase2}\hspace{-0.25mm}\hspace{-0.25mm}\hspace{-0.25mm}: & \,\text{\,-\,}4\,\,\,\,\text{at\,\,\, \ensuremath{b_{1}\hspace{-0.25mm},\hspace{-0.25mm}b_{2}\hspace{-0.25mm},\hspace{-0.25mm}b_{3}\hspace{-0.25mm},\hspace{-0.25mm}b_{4}\hspace{-0.25mm},\hspace{-0.25mm}b_{5}\hspace{-0.25mm}=11001.}}
 \end{align}
 
 \end_inset
@@ -3186,10 +3179,10 @@ Running the optimization procedure on all four functions would result in
 \begin_layout Standard
 \begin_inset Formula 
 \begin{align}
-\text{\negthinspace\negthinspace\negthinspace\negthinspace Eq.\ref{eq:2subCase1}}\,\hspace{-0.25mm}: & \text{\,{\color{blue}-}\,}{\color{blue}5}\,\,\,\,\text{at\,\,\, \ensuremath{b_{1}\hspace{-0.25mm},\hspace{-0.25mm}b_{2}\hspace{-0.25mm},\hspace{-0.25mm}b_{3}\hspace{-0.25mm},\hspace{-0.25mm}b_{4}\hspace{-0.25mm},\hspace{-0.25mm}b_{5}\hspace{-0.25mm},\hspace{-0.25mm}b_{6}={\color{blue}011101}}}\\
-\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\text{Eq.\ref{eq:2subCase2}}\negthinspace\hspace{-0.25mm}: & \text{\,-\,}4\,\,\,\,\text{at\,\,\, \ensuremath{b_{1}\hspace{-0.25mm},\hspace{-0.25mm}b_{2}\hspace{-0.25mm},\hspace{-0.25mm}b_{3}\hspace{-0.25mm},\hspace{-0.25mm}b_{4}\hspace{-0.25mm},\hspace{-0.25mm}b_{5}\hspace{-0.25mm},\hspace{-0.25mm}b_{6}=011100\,\,\text{\&\,\,\ensuremath{111110}}}}\\
-\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\text{Eq.}\ref{eq:2subCase3}\negthinspace\hspace{-0.25mm}: & \text{\,-}\,4\,\,\,\,\text{at\,\,\, \ensuremath{b_{1}\hspace{-0.25mm},\hspace{-0.25mm}b_{2}\hspace{-0.25mm},\hspace{-0.25mm}b_{3}\hspace{-0.25mm},\hspace{-0.25mm}b_{4}\hspace{-0.25mm},\hspace{-0.25mm}b_{5}\hspace{-0.25mm},\hspace{-0.25mm}b_{6}=101011\,\,\text{\&\,\,\ensuremath{111011}}}}\\
-\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\text{Eq.}\ref{eq:2subCase4}\negthinspace\hspace{-0.25mm}: & \text{\,{\color{blue}-}}\,{\color{blue}5}\,\,\,\,\text{at\,\,\, \ensuremath{b_{1}\hspace{-0.25mm},\hspace{-0.25mm}b_{2}\hspace{-0.25mm},\hspace{-0.25mm}b_{3}\hspace{-0.25mm},\hspace{-0.25mm}b_{4}\hspace{-0.25mm},\hspace{-0.25mm}b_{5}\hspace{-0.25mm},\hspace{-0.25mm}b_{6}={\color{blue}111011}.}}
+\negthinspace\negthinspace\negthinspace\negthinspace\text{Eq.\ref{eq:2subCase1}}\hspace{-0.25mm}\hspace{-0.25mm}: & \text{\,\,{\color{blue}-}\,}{\color{blue}5}\,\,\,\,\text{at\,\,\, \ensuremath{b_{1}\hspace{-0.25mm},\hspace{-0.25mm}b_{2}\hspace{-0.25mm},\hspace{-0.25mm}b_{3}\hspace{-0.25mm},\hspace{-0.25mm}b_{4}\hspace{-0.25mm},\hspace{-0.25mm}b_{5}\hspace{-0.25mm},\hspace{-0.25mm}b_{6}={\color{blue}011101}}}\\
+\text{\negthinspace\negthinspace\negthinspace\negthinspace Eq.\ref{eq:2subCase2}}\hspace{-0.25mm}\hspace{-0.25mm}: & \text{\,\,-\,}4\,\,\,\,\text{at\,\,\, \ensuremath{b_{1}\hspace{-0.25mm},\hspace{-0.25mm}b_{2}\hspace{-0.25mm},\hspace{-0.25mm}b_{3}\hspace{-0.25mm},\hspace{-0.25mm}b_{4}\hspace{-0.25mm},\hspace{-0.25mm}b_{5}\hspace{-0.25mm},\hspace{-0.25mm}b_{6}=011100\,\,\text{\&\,\,\ensuremath{111110}}}}\\
+\text{\negthinspace\negthinspace\negthinspace\negthinspace Eq.\ref{eq:2subCase3}}\hspace{-0.25mm}\hspace{-0.25mm}: & \text{\,\,-}\,4\,\,\,\,\text{at\,\,\, \ensuremath{b_{1}\hspace{-0.25mm},\hspace{-0.25mm}b_{2}\hspace{-0.25mm},\hspace{-0.25mm}b_{3}\hspace{-0.25mm},\hspace{-0.25mm}b_{4}\hspace{-0.25mm},\hspace{-0.25mm}b_{5}\hspace{-0.25mm},\hspace{-0.25mm}b_{6}=101011\,\,\text{\&\,\,\ensuremath{111011}}}}\\
+\text{\negthinspace\negthinspace\negthinspace\negthinspace Eq.\ref{eq:2subCase4}}\hspace{-0.25mm}\hspace{-0.25mm}: & \text{\,\,{\color{blue}-}}\,{\color{blue}5}\,\,\,\,\text{at\,\,\, \ensuremath{b_{1}\hspace{-0.25mm},\hspace{-0.25mm}b_{2}\hspace{-0.25mm},\hspace{-0.25mm}b_{3}\hspace{-0.25mm},\hspace{-0.25mm}b_{4}\hspace{-0.25mm},\hspace{-0.25mm}b_{5}\hspace{-0.25mm},\hspace{-0.25mm}b_{6}={\color{blue}111011}.}}
 \end{align}
 
 \end_inset
@@ -3803,17 +3796,251 @@ For the positive degree-
 \begin_inset Formula $m=\lceil\log_{2}(\nicefrac{k}{2})\rceil$
 \end_inset
 
- auxiliary variables, which means that the added cost of optimization can
- be increased by up to a factor of 
+ auxiliary variables, which means that the added cost of optimization is
+ 
+\begin_inset Formula $C\in[\nicefrac{k}{2},k-1]$
+\end_inset
+
+ with 
+\begin_inset Formula $C=\nicefrac{k}{2}$
+\end_inset
+
+ if 
 \begin_inset Formula $k$
 \end_inset
 
- (see footnote: 
+ is a power of 2 and 
+\begin_inset Formula $C=k-1$
+\end_inset
+
+ if 
+\begin_inset Formula $k$
+\end_inset
+
+ is 1 less than the next power of 2, and in between otherwise (see footnote
 \begin_inset Foot
 status open
 
 \begin_layout Plain Layout
-If x is an integer then 
+If 
+\begin_inset Formula $x$
+\end_inset
+
+ is an integer then 
+\begin_inset Formula $\lceil x\rceil=x$
+\end_inset
+
+, otherwise we have 
+\begin_inset Formula $x<\lceil x\rceil<x+1$
+\end_inset
+
+.
+ So if we have 
+\begin_inset Formula $m=\lceil\log_{2}\nicefrac{k}{2}\rceil$
+\end_inset
+
+, then when 
+\begin_inset Formula $\lceil\log_{2}k\rceil$
+\end_inset
+
+ is an integer (i.e.
+ if 
+\begin_inset Formula $k$
+\end_inset
+
+ is a power of 2) we have 
+\begin_inset Formula $2^{m}=2^{\lceil\log_{2}\nicefrac{k}{2}\rceil}=\nicefrac{k}{2}$
+\end_inset
+
+.
+ When 
+\begin_inset Formula $k$
+\end_inset
+
+ is 
+\emph on
+not
+\emph default
+ a power of 2, we have 
+\begin_inset Formula $2^{\log_{2}\nicefrac{k}{2}}<2^{\lceil\log_{2}\nicefrac{k}{2}\rceil}<2^{\left(\log_{2}\nicefrac{k}{2}\right)+1}$
+\end_inset
+
+ which means 
+\begin_inset Formula $\nicefrac{k}{2}<2^{m}<k$
+\end_inset
+
+, but we actually can write 
+\emph on
+tighter 
+\emph default
+bounds because 
+\begin_inset Formula $k$
+\end_inset
+
+ and 
+\begin_inset Formula $2^{m}$
+\end_inset
+
+ must be integers; for example the last integer smaller than 
+\begin_inset Formula $k$
+\end_inset
+
+ is 
+\begin_inset Formula $k-1$
+\end_inset
+
+, so we can write a tighter upper bound of 
+\begin_inset Formula $2^{m}\le k-1$
+\end_inset
+
+.
+ At last we state that if 
+\begin_inset Formula $k$
+\end_inset
+
+ is a power of 2 we have 
+\begin_inset Formula $2^{m}=\nicefrac{k}{2}$
+\end_inset
+
+ and otherwise we have 
+\begin_inset Formula $2^{m}\le k-1$
+\end_inset
+
+, 
+\series bold
+so overall, quadratizing PTR-BCR-4 adds a cost of a factor of 
+\begin_inset Formula $2^{m}$
+\end_inset
+
+ which is somewhere in the range of 
+\begin_inset Formula $[\nicefrac{k}{2},k-1]$
+\end_inset
+
+ depending on how close 
+\begin_inset Formula $k$
+\end_inset
+
+ is to being an exact power of 2.
+
+\size normal
+\color blue
+ 
+\series default
+\size default
+\color inherit
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+k not a power of 2 means
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $2^{m}<k<2^{(m+1)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+which means
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $2^{m}+1<=k<=2^{(m+1)}-1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+because 
+\begin_inset Formula $m$
+\end_inset
+
+ and 
+\begin_inset Formula $2^{m}$
+\end_inset
+
+ are both integers
+\end_layout
+
+\begin_layout Plain Layout
+which gives by rearranging
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $(k+1)/2<=2^{m}<=k-1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\size normal
+\color blue
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+and 
+\begin_inset Formula $2^{m}$
+\end_inset
+
+ is exactly 
+\begin_inset Formula $\frac{k+1}{2}$
+\end_inset
+
+ if 
+\begin_inset Formula $k$
+\end_inset
+
+ is exactly 1 bigger than a power of 2, and 
+\begin_inset Formula $2^{m}$
+\end_inset
+
+ is exactly 
+\begin_inset Formula $k-1$
+\end_inset
+
+ if 
+\begin_inset Formula $2^{m}$
+\end_inset
+
+ is 1 smaller than a power of 2.
+ 
+\size normal
+\color blue
+Where 
+\begin_inset Formula $\frac{k+1}{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $k-1$
+\end_inset
+
+ come from can still use some clarity.
+ Perhaps we don't even need to say this part? Up to but not including, a
+ factor of k, is enough?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+If 
+\begin_inset Formula $x$
+\end_inset
+
+ is an integer then 
 \begin_inset Formula $\lceil x\rceil=x$
 \end_inset
 
@@ -3826,24 +4053,25 @@ If x is an integer then
 \begin_inset Formula $m=\lceil\log_{2}\nicefrac{k}{2}\rceil=\lceil\log_{2}k\rceil-1$
 \end_inset
 
- and we are interested in 
-\begin_inset Formula $2^{m}$
-\end_inset
-
-, we have 
-\begin_inset Formula $2^{m}=2^{\lceil\log_{2}k\rceil-1}=2^{\log_{2}k-1}=\nicefrac{k}{2}$
-\end_inset
-
- if 
+, then when 
 \begin_inset Formula $\lceil\log_{2}k\rceil$
 \end_inset
 
  is an integer (i.e.
- k is a power of 2), otherwise we have 
+ if 
+\begin_inset Formula $k$
+\end_inset
+
+ is a power of 2) we have 
+\begin_inset Formula $2^{m}=2^{\lceil\log_{2}k\rceil-1}=2^{\log_{2}k-1}=\nicefrac{k}{2}$
+\end_inset
+
+, and otherwise we have 
 \begin_inset Formula $2^{\log_{2}k-1}<2^{\lceil\log_{2}k\rceil-1}<2^{1+\log_{2}k-1}$
 \end_inset
 
- and hence 
+.
+ Hence 
 \begin_inset Formula $\nicefrac{k}{2}<2^{m}<k$
 \end_inset
 
@@ -3852,7 +4080,16 @@ If x is an integer then
 \begin_inset Formula $\frac{k+1}{2}\leq2^{m}\leq k-1$
 \end_inset
 
- where the equalities hold when k is a power of 2 plus or minus 1.
+ where the equalities hold when 
+\begin_inset Formula $k$
+\end_inset
+
+ is a power of 2 plus or minus 1.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -4031,11 +4268,284 @@ status open
 
 \end_inset
 
+
+\end_layout
+
+\end_inset
+
 ).
  
 \end_layout
 
 \begin_layout Standard
+Envelope quadratizations are always capable of providing quadratizations
+ for the positive degree-
+\begin_inset Formula $k$
+\end_inset
+
+ monomial with an added cost factor of 
+\begin_inset Formula $C=\lceil\nicefrac{k}{2}\rceil$
+\end_inset
+
+ for all 
+\begin_inset Formula $k$
+\end_inset
+
+ (using Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:general"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ we can factor the monomial into 
+\begin_inset Formula $\nicefrac{k}{2}$
+\end_inset
+
+ quadratic monomials if 
+\begin_inset Formula $k$
+\end_inset
+
+ is even, and one extra linear monomial if 
+\begin_inset Formula $k$
+\end_inset
+
+ is odd).
+ If 
+\begin_inset Formula $k$
+\end_inset
+
+ is even , 
+\begin_inset Formula $C=\nicefrac{k}{2}$
+\end_inset
+
+ which PTR-BCR-4 matches 
+\emph on
+only if 
+\begin_inset Formula $k$
+\end_inset
+
+ is a power of 2
+\emph default
+.
+ If 
+\begin_inset Formula $k$
+\end_inset
+
+ is odd, then 
+\begin_inset Formula $C=\lceil\nicefrac{k}{2}\rceil=\frac{k+1}{2}$
+\end_inset
+
+ and PTR-BCR-4 
+\emph on
+only if 
+\begin_inset Formula $k$
+\end_inset
+
+ is one less than a power of 2.
+ 
+\emph default
+In the only two cases in which the cost of the envelope quadratization and
+ PTR-BCR-4 are the same, we note that with the envelope quadratization the
+ quadratic functions obtained are just monomials with no change to the coefficie
+nt 
+\begin_inset Formula $c$
+\end_inset
+
+ of the original degree-
+\begin_inset Formula $k$
+\end_inset
+
+ monomial being quadratized; whereas with PTR the quadratic function obtained
+ has all possible quadratic terms for 
+\begin_inset Formula $k+\lceil\log\nicefrac{k}{2}\rceil$
+\end_inset
+
+ variables, and the coefficients range (in the very best possible case)
+ from 
+\begin_inset Formula $-\frac{ck}{4}$
+\end_inset
+
+ to 
+\begin_inset Formula $\frac{ck^{2}}{8}$
+\end_inset
+
+ (see the PTR-BCR-4 page of 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Dattani2019"
+literal "false"
+
+\end_inset
+
+).
+ The enormous number of quadratic terms and the enormous range of coefficients
+ in the quadratic function generated by PTR-BCR-4 make envelope quadratizations
+ a superior choice even in these cases where the added cost factor estimated
+ by Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:cost"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ is the same.
+\end_layout
+
+\begin_layout Standard
+For all other values of 
+\begin_inset Formula $k$
+\end_inset
+
+ (anything not a power of 
+\begin_inset Formula $2$
+\end_inset
+
+ or one less than a power of 2, which constitutes the vast majority of the
+ possible values of 
+\begin_inset Formula $k$
+\end_inset
+
+), 
+\lang british
+the added cost factor 
+\begin_inset Formula $C$
+\end_inset
+
+ is strictly smaller than for PTR-BCR-4 by up to a factor of 
+\begin_inset Formula $\frac{2(k-1)}{(k+1)}$
+\end_inset
+
+ (which is realized when 
+\begin_inset Formula $k$
+\end_inset
+
+ is the odd number that is one less than a power of 2).
+ As 
+\begin_inset Formula $k$
+\end_inset
+
+ gets large, 
+\begin_inset Formula $(k-1)$
+\end_inset
+
+ and 
+\begin_inset Formula $(k+1)$
+\end_inset
+
+ become more and more similar, and the envelope quadratizations become roughly
+ half has costly as PTR-BCR-4.
+ We can think of envelope quadratizations as adding a cost factor that is
+ equivalent to effectively giving, instead of many quadratic functions with
+ zero auxiliary variables, just one quadratic function with 
+\begin_inset Formula $\lceil\log\nicefrac{k}{4}\rceil<m\le\lfloor\log\nicefrac{k}{2}\rfloor$
+\end_inset
+
+ auxiliary variables (e.g.
+ when 
+\begin_inset Formula $k=7$
+\end_inset
+
+ which is 1 less than a power of 2, we have 
+\begin_inset Formula $(r,m)=(4,1)$
+\end_inset
+
+ but 
+\begin_inset Formula $(r,m)=(1,\lfloor\log\nicefrac{7}{2}\rfloor)$
+\end_inset
+
+ which both lead to 
+\begin_inset Formula $C=4;$
+\end_inset
+
+ and when 
+\begin_inset Formula $k=9$
+\end_inset
+
+ which is 1 more than a power of 2, we have 
+\begin_inset Formula $(r,m)=(5,1)$
+\end_inset
+
+ leading to an added cost factor of 
+\begin_inset Formula $C=5$
+\end_inset
+
+ which is only slightly larger than 
+\begin_inset Formula $(r,m)=(1,\lceil\log\nicefrac{9}{4}\rceil)$
+\end_inset
+
+ for which 
+\begin_inset Formula $C$
+\end_inset
+
+ would be 4.
+ The strict inequality 
+\begin_inset Formula $\lceil\log\nicefrac{k}{4}\rceil<m$
+\end_inset
+
+ can get closer and closer to being an equality as 
+\begin_inset Formula $k$
+\end_inset
+
+ gets large (for 
+\begin_inset Formula $k=33$
+\end_inset
+
+ we have 
+\begin_inset Formula $C=17$
+\end_inset
+
+ and 
+\begin_inset Formula $2^{\lceil\log\nicefrac{k}{4}\rceil}=16$
+\end_inset
+
+).
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\lang british
+by a factor between 
+\begin_inset Formula $\frac{k+2}{k}$
+\end_inset
+
+ (if 
+\begin_inset Formula $k$
+\end_inset
+
+ is the even number that is two less than a power of 2) and 
+\begin_inset Formula $\frac{2(k-1)}{(k+1)}$
+\end_inset
+
+ (if 
+\begin_inset Formula $k$
+\end_inset
+
+ is the odd number that is one less than a power of 2).
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang british
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
 
 \lang british
 Using Eq.
@@ -4084,44 +4594,10 @@ noprefix "false"
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Standard
-
-\lang british
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\lang british
-, instead of just 
-\begin_inset Formula $2^{n}$
-\end_inset
-
- which is what would be required if working with only the pre-quadratized
- function, so the quadratization adds a cost of 
-\begin_inset Formula $\lceil\nicefrac{k}{2}\rceil$
-\end_inset
-
- or 
-\begin_inset Formula $2^{m}$
-\end_inset
-
- where 
-\begin_inset Formula $m$
-\end_inset
-
- is the number of auxiliary variables.
  
 \end_layout
 
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \lang british
 For example if we wish to optimize a function in which we quadratize a positive
@@ -4237,20 +4713,67 @@ and then quadratized each degree-8 term using PTR-BCR-4 with only 2 auxiliary
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
+
+\lang british
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\lang british
+, instead of just 
+\begin_inset Formula $2^{n}$
+\end_inset
+
+ which is what would be required if working with only the pre-quadratized
+ function, so the quadratization adds a cost of 
+\begin_inset Formula $\lceil\nicefrac{k}{2}\rceil$
+\end_inset
+
+ or 
+\begin_inset Formula $2^{m}$
+\end_inset
+
+ where 
+\begin_inset Formula $m$
+\end_inset
+
+ is the number of auxiliary variables.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\color blue
+\lang british
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 
 \color blue
 \lang british
 In general we can get up to a factor of 2 improvement over PTR-BCR-4 (see
  footnote:
-\end_layout
-
-\begin_layout Standard
+\color inherit
+\lang english
+ 
 \begin_inset Foot
 status open
 
 \begin_layout Plain Layout
-Our envelope quadratisations have a cost of 
+Our envelope quadratizations have a cost of 
 \begin_inset Formula $\lceil\nicefrac{k}{2}\rceil$
 \end_inset
 
@@ -4293,7 +4816,7 @@ Our envelope quadratisations have a cost of
 )
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \color blue
 \lang british
@@ -4375,7 +4898,7 @@ ative coefficients of other terms in the full Hamiltonian.
 .
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \color blue
 \lang british
@@ -4388,6 +4911,11 @@ strictly better in terms of the added cost in the spirit of Equation..., for
  same as PTR-BCR-4, but in that case our number of quadratic terms is, and
  our gadget graph is, and the coefficients are.....
  
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -4411,8 +4939,8 @@ We have shown that when quadratizing a positive degree-
 \begin_inset Formula $b_{1}b_{2}b_{3}b_{4}b_{5}+b_{2}b_{3}b_{4}b_{5}b_{6}$
 \end_inset
 
- would require 4 auxiliary variables, but Rosenberg's substitution would
- only need two auxiliary variables: 
+ would require 4 auxiliary variables (2 for each term), but Rosenberg's
+ substitution would only need two auxiliary variables: 
 \begin_inset Formula $b_{a_{1}}=b_{2}b_{3}$
 \end_inset
 
@@ -4436,7 +4964,7 @@ on in which
 \end_inset
 
  that is strictly better than the previous state-of-the-art quadratization.
- There are some cases in which the cost, in the spirit of Eq.
+ There are some cases in which the added cost factor of Eq.
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -12182,6 +12710,8 @@ noprefix "false"
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 0
 \end_layout
 
@@ -12192,18 +12722,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 0
 \end_layout
 
@@ -12436,18 +12955,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 1
 \end_layout
 
@@ -12458,18 +12966,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 1
 \end_layout
 
@@ -12689,18 +13186,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 1
 \end_layout
 
@@ -12711,18 +13197,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 1
 \end_layout
 
@@ -12955,18 +13430,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 2
 \end_layout
 
@@ -12977,18 +13441,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 2
 \end_layout
 
@@ -13221,18 +13674,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 0
 \end_layout
 
@@ -13243,18 +13685,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 0
 \end_layout
 
@@ -13487,18 +13918,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 1
 \end_layout
 
@@ -13509,18 +13929,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 1
 \end_layout
 
@@ -13753,18 +14162,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 1
 \end_layout
 
@@ -13775,18 +14173,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 1
 \end_layout
 
@@ -14019,18 +14406,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 2
 \end_layout
 
@@ -14041,18 +14417,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 2
 \end_layout
 
@@ -14285,18 +14650,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 -1
 \end_layout
 
@@ -14307,18 +14661,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 -1
 \end_layout
 
@@ -14551,18 +14894,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 -2
 \end_layout
 
@@ -14573,18 +14905,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 -2
 \end_layout
 
@@ -14817,18 +15138,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 0
 \end_layout
 
@@ -14839,18 +15149,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 0
 \end_layout
 
@@ -15083,18 +15382,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 -1
 \end_layout
 
@@ -15105,18 +15393,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 -1
 \end_layout
 
@@ -15349,18 +15626,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 -1
 \end_layout
 
@@ -15371,18 +15637,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 -1
 \end_layout
 
@@ -15615,18 +15870,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 -2
 \end_layout
 
@@ -15637,18 +15881,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 -2
 \end_layout
 
@@ -15881,18 +16114,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 0
 \end_layout
 
@@ -15903,18 +16125,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 0
 \end_layout
 
@@ -16147,18 +16358,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 -1
 \end_layout
 
@@ -16169,18 +16369,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 -1
 \end_layout
 
@@ -16413,18 +16602,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 0
 \end_layout
 
@@ -16435,18 +16613,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 0
 \end_layout
 
@@ -16679,18 +16846,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 1
 \end_layout
 
@@ -16701,18 +16857,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 1
 \end_layout
 
@@ -16945,18 +17090,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 1
 \end_layout
 
@@ -16967,18 +17101,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 1
 \end_layout
 
@@ -17211,18 +17334,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 2
 \end_layout
 
@@ -17233,18 +17345,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 2
 \end_layout
 
@@ -17477,18 +17578,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 -3
 \end_layout
 
@@ -17499,18 +17589,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 -3
 \end_layout
 
@@ -17743,18 +17822,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 -2
 \end_layout
 
@@ -17765,18 +17833,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 -2
 \end_layout
 
@@ -18009,18 +18066,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 -2
 \end_layout
 
@@ -18031,18 +18077,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 -2
 \end_layout
 
@@ -18275,18 +18310,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 -1
 \end_layout
 
@@ -18297,18 +18321,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 -1
 \end_layout
 
@@ -18541,18 +18554,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 -1
 \end_layout
 
@@ -18563,18 +18565,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 -1
 \end_layout
 
@@ -18807,18 +18798,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 -2
 \end_layout
 
@@ -18829,18 +18809,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 -2
 \end_layout
 
@@ -19073,18 +19042,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 0
 \end_layout
 
@@ -19095,18 +19053,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 0
 \end_layout
 
@@ -19339,18 +19286,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 -1
 \end_layout
 
@@ -19361,18 +19297,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 -1
 \end_layout
 
@@ -19605,18 +19530,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 -4
 \end_layout
 
@@ -19627,18 +19541,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 -4
 \end_layout
 
@@ -19871,18 +19774,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 -5
 \end_layout
 
@@ -19893,18 +19785,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 -5
 \end_layout
 
@@ -20137,18 +20018,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 -3
 \end_layout
 
@@ -20159,18 +20029,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 -3
 \end_layout
 
@@ -20403,18 +20262,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 -4
 \end_layout
 
@@ -20425,18 +20273,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 -4
 \end_layout
 
@@ -20669,18 +20506,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 0
 \end_layout
 
@@ -20691,18 +20517,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 0
 \end_layout
 
@@ -20935,18 +20750,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 1
 \end_layout
 
@@ -20957,18 +20761,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 1
 \end_layout
 
@@ -21201,18 +20994,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 -2
 \end_layout
 
@@ -21223,18 +21005,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 -2
 \end_layout
 
@@ -21467,18 +21238,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 -1
 \end_layout
 
@@ -21489,18 +21249,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 -1
 \end_layout
 
@@ -21733,18 +21482,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 0
 \end_layout
 
@@ -21755,18 +21493,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 0
 \end_layout
 
@@ -21999,18 +21726,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 4
 \end_layout
 
@@ -22021,18 +21737,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 4
 \end_layout
 
@@ -22265,18 +21970,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 -2
 \end_layout
 
@@ -22287,18 +21981,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 -2
 \end_layout
 
@@ -22531,18 +22214,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 2
 \end_layout
 
@@ -22553,18 +22225,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 2
 \end_layout
 
@@ -22797,18 +22458,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 -1
 \end_layout
 
@@ -22819,18 +22469,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 -1
 \end_layout
 
@@ -23063,18 +22702,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 -2
 \end_layout
 
@@ -23085,18 +22713,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 -2
 \end_layout
 
@@ -23329,18 +22946,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 -3
 \end_layout
 
@@ -23351,18 +22957,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 -3
 \end_layout
 
@@ -23595,18 +23190,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 -4
 \end_layout
 
@@ -23617,18 +23201,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 -4
 \end_layout
 
@@ -23861,18 +23434,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 -1
 \end_layout
 
@@ -23883,18 +23445,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 -1
 \end_layout
 
@@ -24127,18 +23678,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 1
 \end_layout
 
@@ -24149,18 +23689,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 1
 \end_layout
 
@@ -24393,18 +23922,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 -3
 \end_layout
 
@@ -24415,18 +23933,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 -3
 \end_layout
 
@@ -24659,18 +24166,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 -1
 \end_layout
 
@@ -24681,18 +24177,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 -1
 \end_layout
 
@@ -24925,18 +24410,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 0
 \end_layout
 
@@ -24947,18 +24421,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 0
 \end_layout
 
@@ -25191,18 +24654,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 1
 \end_layout
 
@@ -25213,18 +24665,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 1
 \end_layout
 
@@ -25457,18 +24898,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 -2
 \end_layout
 
@@ -25479,18 +24909,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 -2
 \end_layout
 
@@ -25723,18 +25142,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 -1
 \end_layout
 
@@ -25745,18 +25153,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 -1
 \end_layout
 
@@ -25989,18 +25386,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 -3
 \end_layout
 
@@ -26011,18 +25397,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 -3
 \end_layout
 
@@ -26255,18 +25630,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 1
 \end_layout
 
@@ -26277,18 +25641,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 1
 \end_layout
 
@@ -26521,18 +25874,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 -5
 \end_layout
 
@@ -26543,18 +25885,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 -5
 \end_layout
 
@@ -26787,18 +26118,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 -1
 \end_layout
 
@@ -26809,18 +26129,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 -1
 \end_layout
 
@@ -27053,18 +26362,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 -1
 \end_layout
 
@@ -27075,18 +26373,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 -1
 \end_layout
 
@@ -27319,18 +26606,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 -2
 \end_layout
 
@@ -27341,18 +26617,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 -2
 \end_layout
 
@@ -27585,18 +26850,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 -3
 \end_layout
 
@@ -27607,18 +26861,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 -3
 \end_layout
 
@@ -27851,18 +27094,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 -4
 \end_layout
 
@@ -27873,18 +27105,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 -4
 \end_layout
 
@@ -28117,18 +27338,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 -2
 \end_layout
 
@@ -28139,18 +27349,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 -2
 \end_layout
 
@@ -28383,18 +27582,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 0
 \end_layout
 
@@ -28405,18 +27593,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 0
 \end_layout
 
@@ -28649,18 +27826,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 -4
 \end_layout
 
@@ -28671,18 +27837,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 -4
 \end_layout
 
@@ -28915,18 +28070,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 -2
 \end_layout
 
@@ -28937,18 +28081,7 @@ noprefix "false"
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 -2
 \end_layout
 
@@ -28985,6 +28118,44 @@ restoregeometry
 
 
 \end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang american
+\begin_inset Formula 
+\begin{align}
+b_{1}b_{2}b_{3}b_{4}b_{5}b_{6}b_{7}b_{8}+b_{2}b_{3}b_{4}b_{5}b_{6}b_{7}b_{8}b_{9}+b_{3}b_{4}b_{5}b_{6}b_{7}b_{8}b_{9}b_{10}\\
+(1-\bar{b}_{1})b_{2}b_{3}b_{4}b_{5}b_{6}b_{7}b_{8}+(1-\bar{b}_{9})b_{3}b_{4}b_{5}b_{6}b_{7}b_{8}+b_{3}b_{4}b_{5}b_{6}b_{7}b_{8}(1-\bar{b}_{9})(1-\bar{b}_{10})\\
+(1-\bar{b}_{1}+1-\bar{b}_{9})b_{2}b_{3}b_{4}b_{5}b_{6}b_{7}b_{8}+(1-\bar{b}_{9})(1-\bar{b}_{10})b_{3}b_{4}b_{5}b_{6}b_{7}b_{8}\\
+(2-\bar{b}_{1}-\bar{b}_{9})(1-\bar{b}_{2})b_{3}b_{4}b_{5}b_{6}b_{7}b_{8}+(1-\bar{b}_{9})(1-\bar{b}_{10})b_{3}b_{4}b_{5}b_{6}b_{7}b_{8}\\
+((2-\bar{b}_{1}-\bar{b}_{9})(1-\bar{b}_{2})+(1-\bar{b}_{9})(1-\bar{b}_{10}))b_{3}b_{4}b_{5}b_{6}b_{7}b_{8}\\
+\text{(quadratic)(3\text{comigsToQuadratize})}\\
+\rightarrow\bar{b}_{1}\bar{b}_{2}b_{3}b_{4}+\bar{b}_{9}\bar{b}_{2}b_{3}b_{4}+\bar{b}_{9}\bar{b}_{10}b_{3}b_{4}+\text{easier terms}\\
+\rightarrow\bar{b}_{1}\bar{b}_{2}b_{5}b_{6}+\bar{b}_{9}\bar{b}_{2}b_{5}b_{6}+\bar{b}_{9}\bar{b}_{10}b_{5}b_{6}+\text{easier terms}\\
+\rightarrow\bar{b}_{1}\bar{b}_{2}b_{7}b_{8}+\bar{b}_{9}\bar{b}_{2}b_{7}b_{8}+\bar{b}_{9}\bar{b}_{10}b_{7}b_{8}+\text{easier terms}\\
+(3\text{comigs \ensuremath{\times}3 comigs)?}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang american
+\begin_inset Formula 
+\begin{align}
+b_{1}b_{2}b_{3}b_{4}b_{5}b_{6}b_{7}b_{8}+b_{2}b_{3}b_{4}b_{5}b_{6}b_{7}b_{8}b_{9}+b_{3}b_{4}b_{5}b_{6}b_{7}b_{8}b_{9}b_{10}\\
+(b_{1}b_{2}+b_{2}b_{9}+b_{9}b_{10})b_{3}b_{4}b_{5}b_{6}b_{7}b_{8}\\
+\text{quartic trinomial=(quadratic)(3\text{comigsToQuadratize})}\\
+\text{(3comigs to quadratize degre-4 trinomial?)\ensuremath{\times}(original 3 comigs)}=9
+\end{align}
 
 \end_inset
 
