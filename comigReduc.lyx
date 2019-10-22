@@ -180,7 +180,8 @@ Andreas Soteriou
 \begin_layout Affiliation
 
 \lang british
-Surrey University, Department of Mathematics, UK
+Surrey University, Department of Electrical and Electronic Engineering,
+ UK
 \end_layout
 
 \begin_layout Abstract
@@ -4428,7 +4429,7 @@ the added cost factor
 \begin_inset Formula $k$
 \end_inset
 
- is the odd number that is one less than a power of 2).
+ is the odd number that is one more than a power of 2).
  As 
 \begin_inset Formula $k$
 \end_inset
@@ -4442,7 +4443,7 @@ the added cost factor
 \end_inset
 
  become more and more similar, and the envelope quadratizations become roughly
- half has costly as PTR-BCR-4.
+ half as costly as PTR-BCR-4.
  We can think of envelope quadratizations as adding a cost factor that is
  equivalent to effectively giving, instead of many quadratic functions with
  zero auxiliary variables, just one quadratic function with 
