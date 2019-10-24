@@ -5228,15 +5228,7 @@ or filter?
 
 \end_inset
 
-) 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Ishikawa2011,Fix2011"
-literal "false"
-
-\end_inset
-
-.
+).
  In all known applications so far, 
 \begin_inset Formula $d=2$
 \end_inset
