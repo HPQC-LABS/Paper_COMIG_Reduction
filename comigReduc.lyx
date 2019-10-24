@@ -5194,7 +5194,15 @@ We now apply the idea of envelope quadratizations to a possible real-world
 
 \end_inset
 
-The image deblurring algorithm of [] 
+The image deblurring algorithm of 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Roth2005,Ishikawa2011"
+literal "false"
+
+\end_inset
+
+ 
 \lang british
 involves degree-
 \begin_inset Formula $k$
