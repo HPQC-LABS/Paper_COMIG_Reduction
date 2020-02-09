@@ -3867,8 +3867,12 @@ strictly
 \end_inset
 
  monomial.
- The state-of-the-art method for this was the 2018 method requiring only
- 
+ In 2018, Boros 
+\emph on
+et al.
+
+\emph default
+ published a new method that requires only 
 \begin_inset Formula $\log_{2}(\nicefrac{k}{2})$
 \end_inset
 
@@ -3888,7 +3892,7 @@ literal "false"
 
 \end_inset
 
- it was called 
+ this method was called 
 \series bold
 PTR-BCR-4
 \series default
@@ -4571,8 +4575,19 @@ the added cost factor
  become more and more similar, and the envelope quadratizations become roughly
  half as costly as PTR-BCR-4.
  We can think of envelope quadratizations as adding a cost factor that is
- equivalent to effectively giving, instead of many quadratic functions with
- zero auxiliary variables, just one quadratic function with:
+ equivalent to effectively giving, instead of 
+\begin_inset Formula $r>1$
+\end_inset
+
+ quadratic functions with 
+\begin_inset Formula $m=0$
+\end_inset
+
+ auxiliary variables, only 
+\begin_inset Formula $\tilde{r}=1$
+\end_inset
+
+ effective quadratic function with:
 \end_layout
 
 \begin_layout Standard
@@ -4580,25 +4595,29 @@ the added cost factor
 \lang british
 \begin_inset Formula 
 \begin{equation}
-\lceil\log_{2}\nicefrac{k}{4}\rceil<m\le\lfloor\log_{2}\nicefrac{k}{2}\rfloor
+\lceil\log_{2}\nicefrac{k}{4}\rceil<\tilde{m}\le\lfloor\log_{2}\nicefrac{k}{2}\rfloor
 \end{equation}
 
 \end_inset
 
-auxiliary variables (e.g.
- when 
+auxiliary variables.
+ For example, when 
 \begin_inset Formula $k=7$
 \end_inset
 
- which is 1 less than a power of 2, we have 
+, which is 1 less than a power of 2, we have 
 \begin_inset Formula $(r,m)=(4,1)$
 \end_inset
 
- but 
-\begin_inset Formula $(r,m)=(1,\lfloor\log_{2}\nicefrac{7}{2}\rfloor)$
+ and therefore 
+\begin_inset Formula $C=1$
 \end_inset
 
- which both lead to 
+, but 
+\begin_inset Formula $(\tilde{r},\tilde{m})=(1,\lfloor\log_{2}\nicefrac{7}{2}\rfloor)$
+\end_inset
+
+ also leads to 
 \begin_inset Formula $C=4;$
 \end_inset
 
@@ -4624,7 +4643,7 @@ auxiliary variables (e.g.
 
  would be 4.
  The strict inequality 
-\begin_inset Formula $\lceil\log_{2}\nicefrac{k}{4}\rceil<m$
+\begin_inset Formula $\lceil\log_{2}\nicefrac{k}{4}\rceil<\tilde{m}$
 \end_inset
 
  can get closer and closer to being an equality as 
@@ -4643,7 +4662,7 @@ auxiliary variables (e.g.
 \begin_inset Formula $2^{\lceil\log_{2}\nicefrac{k}{4}\rceil}=16$
 \end_inset
 
-).
+.
  
 \begin_inset Note Note
 status open
@@ -5111,9 +5130,19 @@ noprefix "false"
 
 \end_inset
 
- can be matched by previously known methods, but in those cases we have
- fewer quadratic terms and smaller coefficients and fewer non-submodular
- terms, see below:
+ can be matched by previously known methods, but in those cases envelope
+ quadratizations still have fewer quadratic terms and smaller coefficients
+ and fewer non-submodular terms (for example, see Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Positive-degree-8-monimial"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ below).
 \end_layout
 
 \begin_layout Section
@@ -5732,7 +5761,7 @@ real
  This is in contrast to the ~1 hour of CPU time it takes to do this for
  6 total variables (for example 5 original variables and 1 auxiliary variable).
  Therefore, finding quadratizations with 1-auxiliary variable for a 7-variable
- function could take several years, and finding quadratizations for 1-auxiliary
+ function could take several years, and finding quadratizations with 1-auxiliary
  variable for an 8-variable function could take several centuries.
  However Section 
 \begin_inset CommandInset ref
@@ -5962,9 +5991,9 @@ Envelope quadratizations not only reproduce the ground state perfectly (which
 far
 \emph default
  more than what we seek in almost all real-world applications).
- We accidentally found something better than what we were looking for, but
- ultimately we should be able to reduce costs even more when we (successfully!)
- relax the requirement that all 
+ Therefore we have accidentally found something better than what we were
+ looking for, but ultimately we should be able to reduce costs even more
+ when we (successfully!) relax the requirement that all 
 \begin_inset Formula $2^{n}$
 \end_inset
 
@@ -5978,9 +6007,50 @@ born
 \begin_inset Formula $2^{n}$
 \end_inset
 
- are reproduced, and while we were very happy to discover envelope quadratizatio
-ns, they turned out to satisfy the requirement that we were originally hoping
- to relax).
+ states are reproduced, and while we were very happy to discover envelope
+ quadratizations, they turned out to satisfy the requirement that we were
+ originally hoping to relax).
+\end_layout
+
+\begin_layout Standard
+We hope that by relaxing the requirement that a quadratization of an 
+\begin_inset Formula $n$
+\end_inset
+
+-variable function must reproduce all 
+\begin_inset Formula $2^{n}$
+\end_inset
+
+ states after minimizing over all runs, we may 
+\emph on
+further
+\emph default
+ improve the cost factor that our new state-of-the-art quadratizations add
+ to the solving of degree-
+\begin_inset Formula $k$
+\end_inset
+
+ binary optimization problems when turning them into quadratic optimization
+ problems.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+, so that it becomes lower than 
+\begin_inset Formula $\lceil\log_{2}\nicefrac{k}{4}\rceil$
+\end_inset
+
+ for the degree-
+\begin_inset Formula $k$
+\end_inset
+
+ monomial, and lower than what we have achieved in this paper for polynomials
+ with more terms
+\end_layout
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -6027,20 +6097,23 @@ mperfect
 g
 \series default
 adgets) since our method uses multiple quadratic gadgets which are imperfect
- in that they do not on their own reproduce the spectrum of the original
- degree-
+ in that they do not on their own reproduce the 
+\emph on
+full 
+\emph default
+spectrum of the original degree-
 \begin_inset Formula $k$
 \end_inset
 
  function, but they are complimentary in that we can reproduce the desired
- spectrum when all imperfect gadgets complementing each other are combined
+ full spectrum when all imperfect gadgets complementing each other are combined
  and we minimize over them).
- Overall we like the term 
+ Overall we prefer the term 
 \emph on
 envelope quadratizations 
 \emph default
 the most since it is the envelope of many quadratic functions which is our
- final quadratization which exactly reproduces the original degree-
+ final quadratization that exactly reproduces the original degree-
 \begin_inset Formula $k$
 \end_inset
 
