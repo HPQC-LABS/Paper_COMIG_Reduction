@@ -265,8 +265,29 @@ Compact quadratizations of symmetric pseudo-Boolean functions: sub-linear
 far
 \emph default
  less connectivity between the variables of the quadratics, and requiring
- fewer auxiliary variables: We will also show an example in which an envelope
- of quadratic functions, each with 
+ fewer auxiliary variables: Specifically, the number of auxiliaries required
+ is between 
+\lang english
+
+\begin_inset Formula $\lceil\log_{2}\nicefrac{k}{4}\rceil$
+\end_inset
+
+and 
+\begin_inset Formula $\lfloor\log_{2}\nicefrac{k}{2}\rfloor$
+\end_inset
+
+ while the previous
+\lang british
+ state-of-the-art
+\lang english
+ required 
+\begin_inset Formula $\lceil\log_{2}\nicefrac{k}{2}\rceil$
+\end_inset
+
+
+\lang british
+.We will also show an example in which an envelope of quadratic functions,
+ each with 
 \emph on
 fewer
 \emph default
@@ -5875,8 +5896,34 @@ Envelope quadratizations with effectively a `negative' number of auxiliary
 \begin_layout Standard
 
 \lang british
-Two ways: quadratize the whole thing, or quadratize pieces such that other
- terms don't have the same variable in positive linear term?
+There are two ways that we can achieve that.
+ One way is to quadratize the whole Hamiltonian using our RL algorithm and
+ obtain an envelope of quadratic functions, each with 
+\emph on
+fewer
+\emph default
+ total variables than the original degree-
+\begin_inset Formula $k$
+\end_inset
+
+ function, which effectively gives a 'negative' number of auxiliary variables
+ for each run.
+ Another way is to quadratize sub-fuctions of the Hamiltonian such that
+ the variables of each sub-fuction don't appear in the other terms more
+ than once; or if they do, they appear on terms with only positive or only
+ negative coefficients.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\lang british
+Maybe add an example here?
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
