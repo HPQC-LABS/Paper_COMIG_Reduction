@@ -72,7 +72,7 @@
 \color #008000
 \end_index
 \leftmargin 2cm
-\topmargin 2cm
+\topmargin 1.6cm
 \rightmargin 2cm
 \bottommargin 2cm
 \secnumdepth 3
@@ -161,20 +161,27 @@ Envelope Quadratizations: A method that can quadratize with a negative number
 Nike Dattani
 \end_layout
 
+\begin_layout Author Email
+
+ndattani@uwaterloo.ca
+\end_layout
+
 \begin_layout Affiliation
 
 \lang british
-Harvard-Smithsonian 
-\lang english
-Center
-\lang british
- for Astrophysics, USA
+University of Waterloo, Department of Electrical and Computer Engineering,
+ Canada
 \end_layout
 
 \begin_layout Author
 
 \lang british
 Andreas Soteriou
+\end_layout
+
+\begin_layout Author Email
+
+as03205@surrey.ac.uk
 \end_layout
 
 \begin_layout Affiliation
@@ -272,21 +279,30 @@ far
 \begin_inset Formula $\lceil\log_{2}\nicefrac{k}{4}\rceil$
 \end_inset
 
-and 
+ and 
 \begin_inset Formula $\lfloor\log_{2}\nicefrac{k}{2}\rfloor$
 \end_inset
 
- while the previous
+ depending on the value of 
+\begin_inset Formula $k$
+\end_inset
+
+, while the previous
 \lang british
  state-of-the-art
 \lang english
- required 
+ was 
 \begin_inset Formula $\lceil\log_{2}\nicefrac{k}{2}\rceil$
 \end_inset
 
 
 \lang british
-.We will also show an example in which an envelope of quadratic functions,
+ for all 
+\begin_inset Formula $k$
+\end_inset
+
+.
+ We will also show an example in which an envelope of quadratic functions,
  each with 
 \emph on
 fewer
@@ -312,6 +328,15 @@ fewer
 
 \lang british
 Introduction
+\end_layout
+
+\begin_layout Standard
+
+\lang british
+\begin_inset VSpace -2mm
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -5889,11 +5914,91 @@ We have already mentioned in the abstract, Section X and in the introduction?
 \begin_layout Subsection
 
 \lang british
-Envelope quadratizations with effectively a `negative' number of auxiliary
- variables
+The quadratic functions in an envelope quadratization can (and usually do)
+ have a `negative' number of auxiliary variables compared to the original
+ degree-
+\begin_inset Formula $k$
+\end_inset
+
+ function
 \end_layout
 
 \begin_layout Standard
+
+\lang british
+Observe that in almost every example we have given, the quadratic functions
+ have fewer variables than the original degree-
+\begin_inset Formula $k$
+\end_inset
+
+ function.
+ We found this to be very astonishing, because perfect quadratizations are
+ usually thought to require the introduction of new variables (and a lot
+ of new variables!)
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\lang british
+ELC, deduc-reduc, and Grubner? are not perfect quads, so split-reduc is
+ the only exception...
+ but it's almost exponential in number of cases
+\end_layout
+
+\end_inset
+
+.
+ In the case of Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:trinomial"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, we have a 10-variable, degree-8 function of three terms, that is transformed
+ into 9 quadratic problems that each have 
+\emph on
+at most
+\emph default
+ 6 variables (and in 3 of the 9 cases, only have 3 variables).
+ In fact solving each of the 9 quadratic problems by brute force (trying
+ all possible combinations of 0 and 1 for the binary variables and finding
+ the configuration that gives the lowest energy for the function), surprisingly
+ would amount to fewer such brute force attempts than needed for the original
+ 10-variable problem, which we find interesting from a 
+\begin_inset Quotes eld
+\end_inset
+
+query complexity
+\begin_inset Quotes erd
+\end_inset
+
+ or 
+\begin_inset Quotes eld
+\end_inset
+
+computational complexity
+\begin_inset Quotes erd
+\end_inset
+
+ perspective, though the original function has a lot of symmetry and in
+ the envelope quadratization case there is an additional (but very easy)
+ minimization over the 9 quadratic functions that has to be done.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang british
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 
 \lang british
 There are two ways that we can achieve that.
@@ -5919,6 +6024,11 @@ status open
 
 \lang british
 Maybe add an example here?
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
