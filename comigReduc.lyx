@@ -3983,463 +3983,8 @@ For the positive degree-
 \begin_inset Formula $k$
 \end_inset
 
- is 1 less than the next power of 2, and in between otherwise (see footnote
-\begin_inset Foot
-status open
-
-\begin_layout Plain Layout
-If 
-\begin_inset Formula $x$
-\end_inset
-
- is an integer then 
-\begin_inset Formula $\lceil x\rceil=x$
-\end_inset
-
-, otherwise we have 
-\begin_inset Formula $x<\lceil x\rceil<x+1$
-\end_inset
-
-.
- So if we have 
-\begin_inset Formula $m=\lceil\log_{2}\nicefrac{k}{2}\rceil$
-\end_inset
-
-, then when 
-\begin_inset Formula $\lceil\log_{2}k\rceil$
-\end_inset
-
- is an integer (i.e.
- when 
-\begin_inset Formula $k$
-\end_inset
-
- is a power of 2) we have 
-\begin_inset Formula $2^{m}=2^{\lceil\log_{2}\nicefrac{k}{2}\rceil}=\nicefrac{k}{2}$
-\end_inset
-
-.
- When 
-\begin_inset Formula $k$
-\end_inset
-
- is 
-\emph on
-not
-\emph default
- a power of 2, we have 
-\begin_inset Formula $2^{\log_{2}\nicefrac{k}{2}}<2^{\lceil\log_{2}\nicefrac{k}{2}\rceil}<2^{\left(\log_{2}\nicefrac{k}{2}\right)+1}$
-\end_inset
-
- which means 
-\begin_inset Formula $\nicefrac{k}{2}<2^{m}<k$
-\end_inset
-
-, but we actually can write 
-\emph on
-tighter 
-\emph default
-bounds because 
-\begin_inset Formula $k$
-\end_inset
-
- and 
-\begin_inset Formula $2^{m}$
-\end_inset
-
- must be integers; for example the last integer smaller than 
-\begin_inset Formula $k$
-\end_inset
-
- is 
-\begin_inset Formula $k-1$
-\end_inset
-
-, so we can write a tighter upper bound of 
-\begin_inset Formula $2^{m}\le k-1$
-\end_inset
-
-.
- At last we state that if 
-\begin_inset Formula $k$
-\end_inset
-
- is a power of 2 we have 
-\begin_inset Formula $2^{m}=\nicefrac{k}{2}$
-\end_inset
-
- and otherwise we have 
-\begin_inset Formula $2^{m}\le k-1$
-\end_inset
-
-, 
-\series bold
-so overall, quadratizing PTR-BCR-4 adds a cost of a factor of 
-\begin_inset Formula $2^{m}$
-\end_inset
-
- which is somewhere in the range of 
-\begin_inset Formula $[\nicefrac{k}{2},k-1]$
-\end_inset
-
- depending on how close 
-\begin_inset Formula $k$
-\end_inset
-
- is to being an exact power of 2.
-
-\size normal
-\color blue
- 
-\series default
-\size default
-\color inherit
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-k not a power of 2 means
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Formula $2^{m}<k<2^{(m+1)}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-which means
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Formula $2^{m}+1<=k<=2^{(m+1)}-1$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-because 
-\begin_inset Formula $m$
-\end_inset
-
- and 
-\begin_inset Formula $2^{m}$
-\end_inset
-
- are both integers
-\end_layout
-
-\begin_layout Plain Layout
-which gives by rearranging
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Formula $(k+1)/2<=2^{m}<=k-1$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\size normal
-\color blue
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-and 
-\begin_inset Formula $2^{m}$
-\end_inset
-
- is exactly 
-\begin_inset Formula $\frac{k+1}{2}$
-\end_inset
-
- if 
-\begin_inset Formula $k$
-\end_inset
-
- is exactly 1 bigger than a power of 2, and 
-\begin_inset Formula $2^{m}$
-\end_inset
-
- is exactly 
-\begin_inset Formula $k-1$
-\end_inset
-
- if 
-\begin_inset Formula $2^{m}$
-\end_inset
-
- is 1 smaller than a power of 2.
- 
-\size normal
-\color blue
-Where 
-\begin_inset Formula $\frac{k+1}{2}$
-\end_inset
-
- and 
-\begin_inset Formula $k-1$
-\end_inset
-
- come from can still use some clarity.
- Perhaps we don't even need to say this part? Up to but not including, a
- factor of k, is enough?
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-If 
-\begin_inset Formula $x$
-\end_inset
-
- is an integer then 
-\begin_inset Formula $\lceil x\rceil=x$
-\end_inset
-
-, otherwise we have 
-\begin_inset Formula $x<\lceil x\rceil<1+x$
-\end_inset
-
-.
- So if we have 
-\begin_inset Formula $m=\lceil\log_{2}\nicefrac{k}{2}\rceil=\lceil\log_{2}k\rceil-1$
-\end_inset
-
-, then when 
-\begin_inset Formula $\lceil\log_{2}k\rceil$
-\end_inset
-
- is an integer (i.e.
- if 
-\begin_inset Formula $k$
-\end_inset
-
- is a power of 2) we have 
-\begin_inset Formula $2^{m}=2^{\lceil\log_{2}k\rceil-1}=2^{\log_{2}k-1}=\nicefrac{k}{2}$
-\end_inset
-
-, and otherwise we have 
-\begin_inset Formula $2^{\log_{2}k-1}<2^{\lceil\log_{2}k\rceil-1}<2^{1+\log_{2}k-1}$
-\end_inset
-
-.
- Hence 
-\begin_inset Formula $\nicefrac{k}{2}<2^{m}<k$
-\end_inset
-
-.
- We can get the non-strict inequality 
-\begin_inset Formula $\frac{k+1}{2}\leq2^{m}\leq k-1$
-\end_inset
-
- where the equalities hold when 
-\begin_inset Formula $k$
-\end_inset
-
- is a power of 2 plus or minus 1.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-\begin_inset Formula $x\le\lceil x\rceil\le1+\lfloor x\rfloor$
-\end_inset
-
-, because if 
-\begin_inset Formula $x$
-\end_inset
-
- is an integer then 
-\begin_inset Formula $\lceil x\rceil=x=\min\lceil x\rceil$
-\end_inset
-
- and if 
-\begin_inset Formula $x$
-\end_inset
-
- is not an integer then we have 
-\begin_inset Formula $\lceil x\rceil=1+\lfloor x\rfloor=\max\lceil x\rceil$
-\end_inset
-
-.
- So if we have 
-\begin_inset Formula $m=\lceil\log_{2}\nicefrac{k}{2}\rceil=\lceil\log_{2}k\rceil-1$
-\end_inset
-
- and we are interested in 
-\begin_inset Formula $2^{m}$
-\end_inset
-
-, we have 
-\begin_inset Formula $\min\left(2^{m}\right)=2^{\min\lceil\log_{2}k\rceil-1}=2^{\log_{2}k-1}=\nicefrac{k}{2}$
-\end_inset
-
- in the case of 
-\begin_inset Formula $k$
-\end_inset
-
- being a power of 2, and 
-\begin_inset Formula ${\rm \max}\left(2^{m}\right)$
-\end_inset
-
-=
-\begin_inset Formula $2^{\max\lceil\log_{2}k\rceil-1}=2^{1+\lfloor\log_{2}k\rfloor-1}=2^{\lfloor\log_{2}k\rfloor}=$
-\end_inset
-
-.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-\begin_inset Formula $2^{\lfloor\log_{2}x\rfloor}=2^{\log_{2}x}\le2^{\lceil\log_{2}x\rceil}\le2^{1+\lfloor\log_{2}x\rfloor}=2\times2^{\lfloor\log_{2}x\rfloor}$
-\end_inset
-
-.
- This is because 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-\begin_inset Formula $\log\lceil x\rceil$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset Formula $\lceil\log x\rceil=\log x=\lfloor\log x\rfloor$
-\end_inset
-
- if 
-\begin_inset Formula $\log x$
-\end_inset
-
- is an integer, but if 
-\begin_inset Formula $\log x$
-\end_inset
-
- is not an integer then we have 
-\begin_inset Formula $\lceil\log x\rceil=1+\lfloor\log x\rfloor$
-\end_inset
-
-.
- So in the worst case we have 
-\begin_inset Formula $m=1+\lfloor\log_{2}\nicefrac{k}{2}\rfloor$
-\end_inset
-
- and 
-\begin_inset Formula $2^{m}=2\times2^{\lfloor\log_{2}\nicefrac{k}{2}\rfloor}\le k.$
-\end_inset
-
- which leads to 
-\begin_inset Formula $\max\left(2^{m}\right)=\max\left(2^{1+\lfloor\log_{2}\nicefrac{k}{2}\rfloor}\right)=\max\left(2\times2^{\lfloor\log_{2}\nicefrac{k}{2}\rfloor}\right)<k.$
-\end_inset
-
- 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-\begin_inset Formula $x\le\lceil x\rceil\le1+\lfloor x\rfloor$
-\end_inset
-
-, because if 
-\begin_inset Formula $x$
-\end_inset
-
- is an integer then 
-\begin_inset Formula $\lceil x\rceil=x=\min\lceil x\rceil$
-\end_inset
-
- and if 
-\begin_inset Formula $x$
-\end_inset
-
- is not an integer then we have 
-\begin_inset Formula $\lceil x\rceil=1+\lfloor x\rfloor=\max\lceil x\rceil$
-\end_inset
-
-.
- So if we have 
-\begin_inset Formula $m=\lceil\log_{2}\nicefrac{k}{2}\rceil$
-\end_inset
-
- and we are interested in 
-\begin_inset Formula $2^{m}$
-\end_inset
-
-, we have 
-\begin_inset Formula $\min\left(2^{m}\right)=2^{\min\lceil\log_{2}\nicefrac{k}{2}\rceil}=2^{\log_{2}\nicefrac{k}{2}}=\nicefrac{k}{2}$
-\end_inset
-
- in the case of 
-\begin_inset Formula $k>1$
-\end_inset
-
- being a power of 2, and 
-\begin_inset Formula ${\rm \max}\left(2^{m}\right)$
-\end_inset
-
-=
-\begin_inset Formula $2^{\max\lceil\log_{2}\nicefrac{k}{2}\rceil}=2^{1+\lfloor\log_{2}\nicefrac{k}{2}\rfloor}=2\times2^{\lfloor\log_{2}\nicefrac{k}{2}\rfloor}=$
-\end_inset
-
-.
- 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-).
+ is 1 less than the next power of 2, and in between otherwise (see Appendix
+ C).
  
 \end_layout
 
@@ -5377,7 +4922,7 @@ or filter?
 \end_inset
 
 ).
- In all known applications so far, 
+ In all applications we know so far, 
 \begin_inset Formula $d=2$
 \end_inset
 
@@ -5385,31 +4930,97 @@ or filter?
 \begin_inset Formula $k=4$
 \end_inset
 
- (though larger masks can be used, it would just be more difficult since
- the optimization problem would involve terms of degree at least 9).
- With 
-\begin_inset Formula $d=2$
-\end_inset
+ (though larger masks can in theory be used, resulting in an optimization
+ problem with terms of degree at least 9).
+ Each pixel is represented by a binary variable which during the deblurring
+ of the image, will attain a value of 1 if it changes and 0 if it does not.
+ 
+\end_layout
 
-, this optimization problem involves degree-4 terms for every set of pixels
- that can be covered by the 
+\begin_layout Standard
+
+\lang british
+For each 
 \begin_inset Formula $2\times2$
 \end_inset
 
- pixel mask, so we can have neighboring degree-4 terms such as: 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\lang british
-In this algorithm each pixel is represented by a binary variable and ....
- well there's the conversion from 255 to binary
-\end_layout
+ array of pixels that has no contact with an edge of the overall image,
+ 9 degree-4 terms and 41 degree-3 terms appear in the initial function to
+ be optimized.
+ After applying the ELC procedure of 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Ishikawa2014"
+literal "false"
 
 \end_inset
 
+, on the same image (of a stone statue) used in that paper, the 50 super-quadrat
+ic terms associated with the 
+\begin_inset Formula $2\times2$
+\end_inset
 
+ patch of the pixels 169, 170, 329, 330, reduce to just the trinomial: 
+\begin_inset Formula $b_{1}b_{2}b_{3}b_{4}+b_{2}b_{3}b_{4}-b_{3}b_{4}b_{5}$
+\end_inset
+
+.
+ In 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Ishikawa2014"
+literal "false"
+
+\end_inset
+
+ (published in 2014), these three super-quadratic terms were then quadratized
+ with one auxiliary variable for each super-quadratic term (three auxiliary
+ variables).
+ Since 2014, new methods were introduced which could quadratize the same
+ three terms with only two auxiliary variables: In 2017 the 
+\begin_inset Quotes eld
+\end_inset
+
+pairwise covers
+\begin_inset Quotes erd
+\end_inset
+
+ technique was introduced in 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Anthony2017"
+literal "false"
+
+\end_inset
+
+ which would only require one auxiliary variable to cover 
+\begin_inset Formula $b_{2}b_{3}b_{4}$
+\end_inset
+
+ and one to cover 
+\begin_inset Formula $b_{3}b_{4}$
+\end_inset
+
+, and in 2019 it was proven in 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Dattani2019d"
+literal "false"
+
+\end_inset
+
+ that all 4-variable functions can be quadratized with only one auxiliary
+ variable, so the first two terms can be quadratized with the same auxiliary
+ variable, then only one auxiliary variable would be needed for the remaining
+ cubic term.
+\end_layout
+
+\begin_layout Standard
+
+\color red
+\lang british
+Need to try ELCs and Deduc-Reduc and Grubner basis and mention Split-Reduc
+ before saying that we have SOTA.
 \end_layout
 
 \begin_layout Standard
@@ -5509,60 +5120,10 @@ b_{1}b_{2}b_{3}b_{4}+b_{3}b_{4}b_{5}b_{6}=\min\left(b_{2}b_{3}+b_{3}b_{6},b_{1}b
 
 \begin_layout Standard
 \begin_inset Formula 
-\begin{align}
-\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace b_{1}b_{2}b_{3}b_{4}+b_{3}b_{4}b_{5}b_{6}= & \min\left(b_{2}b_{3}+b_{3}b_{6},b_{1}b_{4}+b_{4}b_{5},\right.\\
- & \left.b_{1}b_{2}+b_{5}b_{6}-b_{3}-b_{4}+2\right)
-\end{align}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\align left
-Likewise we have an envelope quadratization for trinomials (Eq.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:trinomialComputerVision"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- equals the minimum over the three functions given in Eqs.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:trinomial1"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
--
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:trinomial3"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-):
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
 \begin{flalign}
-\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace & \negthickspace\negthickspace\negthickspace\negthickspace\negthickspace b_{1}b_{2}b_{3}b_{4}+b_{2}b_{3}b_{4}b_{5}+b_{3}b_{4}b_{5}b_{6}:\label{eq:trinomialComputerVision}\\
-\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\longrightarrow & \,3b_{3}b_{4}+b_{3}b_{5}+b_{4}b_{5}-b_{3}-b_{4}-b_{5}+1\label{eq:trinomial1}\\
-\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\longrightarrow & \,b_{1}b_{4}+b_{3}b_{5}+b_{4}b_{5}\label{eq:trinomial2}\\
-\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\longrightarrow & \,b_{1}b_{2}\negthinspace+\negthinspace b_{2}b_{6}\negthinspace+\negthinspace b_{3}b_{5}\negthinspace+\negthinspace b_{5}b_{6}\negthinspace+\negthinspace b_{2}\negthinspace-\negthinspace b_{3}\negthinspace-\negthinspace b_{4}\negthinspace-\negthinspace b_{5}\negthinspace+\negthinspace2.\label{eq:trinomial3}
+\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace & \negthickspace\negthickspace\negthickspace\negthickspace\negthickspace b_{1}b_{2}b_{3}b_{4}+b_{2}b_{3}b_{4}-b_{3}b_{4}b_{5}:\label{eq:trinomialComputerVision-2}\\
+\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\longrightarrow & \,b_{1}b_{4}+b_{2}b_{4}-b_{3}b_{4}-b_{4}b_{5}+b_{4}\label{eq:trinomial2-2}\\
+\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\longrightarrow & \,2b_{2}b_{3}-b_{3}b_{5}-b_{4}b_{5}+b_{5}.\label{eq:trinomial3-2}
 \end{flalign}
 
 \end_inset
@@ -5710,19 +5271,41 @@ noprefix "false"
 
 \end_inset
 
-Each of these cases is a function which can be split by the envelope quadratizat
-ion of Eq.
+Each of these cases is a trinomial of the following form:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{flalign}
+\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace & \negthickspace\negthickspace\negthickspace\negthickspace\negthickspace b_{1}b_{2}b_{3}b_{4}+b_{2}b_{3}b_{4}b_{5}+b_{3}b_{4}b_{5}b_{6},\label{eq:trinomialComputerVision}
+\end{flalign}
+
+\end_inset
+
+which itself has the envelope quadratization:
+\begin_inset Formula 
+\begin{align}
+\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace & \longrightarrow\,3b_{3}b_{4}+b_{3}b_{5}+b_{4}b_{5}-b_{3}-b_{4}-b_{5}+1\\
+\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace & \longrightarrow\,b_{1}b_{4}+b_{3}b_{5}+b_{4}b_{5}\\
+\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace & \longrightarrow\,b_{1}b_{2}\negthinspace+\negthinspace b_{2}b_{6}\negthinspace+\negthinspace b_{3}b_{5}\negthinspace+\negthinspace b_{5}b_{6}\negthinspace+\negthinspace b_{2}\negthinspace-\negthinspace b_{3}\negthinspace-\negthinspace b_{4}\negthinspace-\negthinspace b_{5}\negthinspace+\negthinspace2.
+\end{align}
+
+\end_inset
+
+
+\lang american
+So Eq.
  
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:trinomialComputerVision"
+reference "eq:trinomial"
 plural "false"
 caps "false"
 noprefix "false"
 
 \end_inset
 
-, so we have 
+ can be quadratized with 
 \begin_inset Formula $(r,m)=(9,0)$
 \end_inset
 
@@ -5730,7 +5313,8 @@ noprefix "false"
 \begin_inset Formula $C=9\times2^{0}=9$
 \end_inset
 
-.
+, and this is more than 7 times better than the cost factor of 64 which
+ was the best cost factor we were able to obtain with any other method.
 \end_layout
 
 \begin_layout Standard
@@ -25513,6 +25097,502 @@ b_{1}b_{2}b_{3}b_{4}b_{5}b_{6}b_{7}b_{8}+b_{2}b_{3}b_{4}b_{5}b_{6}b_{7}b_{8}b_{9
 \rightarrow\bar{b}_{1}\bar{b}_{2}b_{7}b_{8}+\bar{b}_{9}\bar{b}_{2}b_{7}b_{8}+\bar{b}_{9}\bar{b}_{10}b_{7}b_{8}+\text{easier terms}\\
 (3\text{comigs \ensuremath{\times}3 comigs)?}
 \end{align}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+
+\lang british
+Cost factor for PTR-BCR-4
+\end_layout
+
+\begin_layout Standard
+If 
+\begin_inset Formula $x$
+\end_inset
+
+ is an integer then 
+\begin_inset Formula $\lceil x\rceil=x$
+\end_inset
+
+, otherwise we have 
+\begin_inset Formula $x<\lceil x\rceil<x+1$
+\end_inset
+
+.
+ So if we have 
+\begin_inset Formula $m\equiv\lceil\log_{2}\nicefrac{k}{2}\rceil$
+\end_inset
+
+, then when 
+\begin_inset Formula $\lceil\log_{2}k\rceil$
+\end_inset
+
+ is an integer (i.e.
+ when 
+\begin_inset Formula $k$
+\end_inset
+
+ is a power of 2) we have 
+\begin_inset Formula $2^{m}\equiv2^{\lceil\log_{2}\nicefrac{k}{2}\rceil}=\nicefrac{k}{2}$
+\end_inset
+
+.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+When 
+\begin_inset Formula $k$
+\end_inset
+
+ is 
+\emph on
+not
+\emph default
+ a positive power of 2, we have 
+\begin_inset Formula $2^{\log_{2}\nicefrac{k}{2}}<2^{\lceil\log_{2}\nicefrac{k}{2}\rceil}<2^{\left(\log_{2}\nicefrac{k}{2}\right)+1}$
+\end_inset
+
+ which means 
+\begin_inset Formula $\nicefrac{k}{2}<2^{m}<k$
+\end_inset
+
+, but we actually can write 
+\emph on
+tighter 
+\emph default
+bounds because 
+\begin_inset Formula $k$
+\end_inset
+
+ and 
+\begin_inset Formula $2^{m}$
+\end_inset
+
+ must be integers: The last integer smaller than 
+\begin_inset Formula $k$
+\end_inset
+
+ is 
+\begin_inset Formula $k-1$
+\end_inset
+
+, so we can write a tighter upper bound of 
+\begin_inset Formula $2^{m}\le k-1$
+\end_inset
+
+; likewise the first integer bigger than 
+\begin_inset Formula $\nicefrac{k}{2}$
+\end_inset
+
+ is 
+\begin_inset Formula $\lceil\nicefrac{k}{2}\rceil$
+\end_inset
+
+ if 
+\begin_inset Formula $k$
+\end_inset
+
+ is odd and 
+\begin_inset Formula $\nicefrac{k}{2}+1$
+\end_inset
+
+ if 
+\begin_inset Formula $k$
+\end_inset
+
+ is even.
+ We then have 
+\begin_inset Formula $\lceil\nicefrac{k}{2}\rceil<2^{m}<k-1$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+At last we state that if 
+\begin_inset Formula $k$
+\end_inset
+
+ is a power of 2 we have 
+\begin_inset Formula $2^{m}=\nicefrac{k}{2}$
+\end_inset
+
+ and otherwise we have 
+\begin_inset Formula $2^{m}\le k-1$
+\end_inset
+
+, 
+\series bold
+so overall, quadratizing PTR-BCR-4 adds a cost of a factor of 
+\begin_inset Formula $2^{m}$
+\end_inset
+
+ which is somewhere in the range of 
+\begin_inset Formula $[\nicefrac{k}{2},k-1]$
+\end_inset
+
+ depending on how close 
+\begin_inset Formula $k$
+\end_inset
+
+ is to being an exact power of 2.
+
+\size normal
+\color blue
+ 
+\series default
+\size default
+\color inherit
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+k not a power of 2 means
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $2^{m}<k<2^{(m+1)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+which means
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $2^{m}+1<=k<=2^{(m+1)}-1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+because 
+\begin_inset Formula $m$
+\end_inset
+
+ and 
+\begin_inset Formula $2^{m}$
+\end_inset
+
+ are both integers
+\end_layout
+
+\begin_layout Plain Layout
+which gives by rearranging
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $(k+1)/2<=2^{m}<=k-1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\size normal
+\color blue
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+and 
+\begin_inset Formula $2^{m}$
+\end_inset
+
+ is exactly 
+\begin_inset Formula $\frac{k+1}{2}$
+\end_inset
+
+ if 
+\begin_inset Formula $k$
+\end_inset
+
+ is exactly 1 bigger than a power of 2, and 
+\begin_inset Formula $2^{m}$
+\end_inset
+
+ is exactly 
+\begin_inset Formula $k-1$
+\end_inset
+
+ if 
+\begin_inset Formula $2^{m}$
+\end_inset
+
+ is 1 smaller than a power of 2.
+ 
+\size normal
+\color blue
+Where 
+\begin_inset Formula $\frac{k+1}{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $k-1$
+\end_inset
+
+ come from can still use some clarity.
+ Perhaps we don't even need to say this part? Up to but not including, a
+ factor of k, is enough?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+If 
+\begin_inset Formula $x$
+\end_inset
+
+ is an integer then 
+\begin_inset Formula $\lceil x\rceil=x$
+\end_inset
+
+, otherwise we have 
+\begin_inset Formula $x<\lceil x\rceil<1+x$
+\end_inset
+
+.
+ So if we have 
+\begin_inset Formula $m=\lceil\log_{2}\nicefrac{k}{2}\rceil=\lceil\log_{2}k\rceil-1$
+\end_inset
+
+, then when 
+\begin_inset Formula $\lceil\log_{2}k\rceil$
+\end_inset
+
+ is an integer (i.e.
+ if 
+\begin_inset Formula $k$
+\end_inset
+
+ is a power of 2) we have 
+\begin_inset Formula $2^{m}=2^{\lceil\log_{2}k\rceil-1}=2^{\log_{2}k-1}=\nicefrac{k}{2}$
+\end_inset
+
+, and otherwise we have 
+\begin_inset Formula $2^{\log_{2}k-1}<2^{\lceil\log_{2}k\rceil-1}<2^{1+\log_{2}k-1}$
+\end_inset
+
+.
+ Hence 
+\begin_inset Formula $\nicefrac{k}{2}<2^{m}<k$
+\end_inset
+
+.
+ We can get the non-strict inequality 
+\begin_inset Formula $\frac{k+1}{2}\leq2^{m}\leq k-1$
+\end_inset
+
+ where the equalities hold when 
+\begin_inset Formula $k$
+\end_inset
+
+ is a power of 2 plus or minus 1.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $x\le\lceil x\rceil\le1+\lfloor x\rfloor$
+\end_inset
+
+, because if 
+\begin_inset Formula $x$
+\end_inset
+
+ is an integer then 
+\begin_inset Formula $\lceil x\rceil=x=\min\lceil x\rceil$
+\end_inset
+
+ and if 
+\begin_inset Formula $x$
+\end_inset
+
+ is not an integer then we have 
+\begin_inset Formula $\lceil x\rceil=1+\lfloor x\rfloor=\max\lceil x\rceil$
+\end_inset
+
+.
+ So if we have 
+\begin_inset Formula $m=\lceil\log_{2}\nicefrac{k}{2}\rceil=\lceil\log_{2}k\rceil-1$
+\end_inset
+
+ and we are interested in 
+\begin_inset Formula $2^{m}$
+\end_inset
+
+, we have 
+\begin_inset Formula $\min\left(2^{m}\right)=2^{\min\lceil\log_{2}k\rceil-1}=2^{\log_{2}k-1}=\nicefrac{k}{2}$
+\end_inset
+
+ in the case of 
+\begin_inset Formula $k$
+\end_inset
+
+ being a power of 2, and 
+\begin_inset Formula ${\rm \max}\left(2^{m}\right)$
+\end_inset
+
+=
+\begin_inset Formula $2^{\max\lceil\log_{2}k\rceil-1}=2^{1+\lfloor\log_{2}k\rfloor-1}=2^{\lfloor\log_{2}k\rfloor}=$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $2^{\lfloor\log_{2}x\rfloor}=2^{\log_{2}x}\le2^{\lceil\log_{2}x\rceil}\le2^{1+\lfloor\log_{2}x\rfloor}=2\times2^{\lfloor\log_{2}x\rfloor}$
+\end_inset
+
+.
+ This is because 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\log\lceil x\rceil$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\lceil\log x\rceil=\log x=\lfloor\log x\rfloor$
+\end_inset
+
+ if 
+\begin_inset Formula $\log x$
+\end_inset
+
+ is an integer, but if 
+\begin_inset Formula $\log x$
+\end_inset
+
+ is not an integer then we have 
+\begin_inset Formula $\lceil\log x\rceil=1+\lfloor\log x\rfloor$
+\end_inset
+
+.
+ So in the worst case we have 
+\begin_inset Formula $m=1+\lfloor\log_{2}\nicefrac{k}{2}\rfloor$
+\end_inset
+
+ and 
+\begin_inset Formula $2^{m}=2\times2^{\lfloor\log_{2}\nicefrac{k}{2}\rfloor}\le k.$
+\end_inset
+
+ which leads to 
+\begin_inset Formula $\max\left(2^{m}\right)=\max\left(2^{1+\lfloor\log_{2}\nicefrac{k}{2}\rfloor}\right)=\max\left(2\times2^{\lfloor\log_{2}\nicefrac{k}{2}\rfloor}\right)<k.$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $x\le\lceil x\rceil\le1+\lfloor x\rfloor$
+\end_inset
+
+, because if 
+\begin_inset Formula $x$
+\end_inset
+
+ is an integer then 
+\begin_inset Formula $\lceil x\rceil=x=\min\lceil x\rceil$
+\end_inset
+
+ and if 
+\begin_inset Formula $x$
+\end_inset
+
+ is not an integer then we have 
+\begin_inset Formula $\lceil x\rceil=1+\lfloor x\rfloor=\max\lceil x\rceil$
+\end_inset
+
+.
+ So if we have 
+\begin_inset Formula $m=\lceil\log_{2}\nicefrac{k}{2}\rceil$
+\end_inset
+
+ and we are interested in 
+\begin_inset Formula $2^{m}$
+\end_inset
+
+, we have 
+\begin_inset Formula $\min\left(2^{m}\right)=2^{\min\lceil\log_{2}\nicefrac{k}{2}\rceil}=2^{\log_{2}\nicefrac{k}{2}}=\nicefrac{k}{2}$
+\end_inset
+
+ in the case of 
+\begin_inset Formula $k>1$
+\end_inset
+
+ being a power of 2, and 
+\begin_inset Formula ${\rm \max}\left(2^{m}\right)$
+\end_inset
+
+=
+\begin_inset Formula $2^{\max\lceil\log_{2}\nicefrac{k}{2}\rceil}=2^{1+\lfloor\log_{2}\nicefrac{k}{2}\rfloor}=2\times2^{\lfloor\log_{2}\nicefrac{k}{2}\rfloor}=$
+\end_inset
+
+.
+ 
+\end_layout
 
 \end_inset
 
