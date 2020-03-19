@@ -1,8 +1,8 @@
-Insert the function you want to quadratise on the first line of "LHS.txt" in the format:
+Insert the function you want to quadratize on the first line of "LHS.txt" in the format:
 
 a1bibj....bk +/- a2blbm....bn +/- ...
 
-On the second line insert a single number n, the number of auxiliaries you want to have in the quadratisation.
+On the second line insert a single number n, the number of auxiliaries you want to have in the quadratization.
 
 for example:
 
@@ -21,4 +21,4 @@ line6: 0
 .
 .
 
-The results for each quadratisation are stored in the folder Quads in the files Quad0.txt, Quad1.txt, ...
+The results for each quadratization are stored in the folder Quads in the files Quad0.txt, Quad1.txt, ...
