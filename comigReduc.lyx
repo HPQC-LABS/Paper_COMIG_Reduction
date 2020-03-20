@@ -5120,7 +5120,7 @@ b_{1}b_{2}b_{3}b_{4}+b_{3}b_{4}b_{5}b_{6}=\min\left(b_{2}b_{3}+b_{3}b_{6},b_{1}b
 
 \begin_layout Standard
 However it is easy to construct an envelope quadratization that effectively
- has the cost of adding only one auxiliary qubit:
+ has the cost of adding only one auxiliary variable:
 \end_layout
 
 \begin_layout Standard
@@ -5191,8 +5191,8 @@ status open
 \end_layout
 
 \begin_layout Subsection
-Envelope quadratization with a reduction in added cost factor of more than
- 7 compared to the previous state-of-the-art
+Envelope quadratization with a reduction in added cost factor of 16 compared
+ to the previous state-of-the-art
 \end_layout
 
 \begin_layout Standard
@@ -5271,11 +5271,11 @@ literal "false"
  using techniques known to us before writing this paper.
  Below we show that with envelope quadratizations we can reduce the added
  cost factor down to 
-\begin_inset Formula $C=9$
+\begin_inset Formula $C=4$
 \end_inset
 
  which is a factor of 
-\begin_inset Formula $7.1$
+\begin_inset Formula $16$
 \end_inset
 
  times smaller than 64.
@@ -5290,7 +5290,13 @@ noprefix "false"
 
 \end_inset
 
- into the product of a quadratic function and a degree-6 function:
+ into the product of a quadratic function and a degree-6 function, then
+ we apply Eq.
+ [
+\color red
+Andreas
+\color inherit
+]:
 \end_layout
 
 \begin_layout Standard
@@ -5298,11 +5304,38 @@ noprefix "false"
 \lang american
 \begin_inset Formula 
 \begin{align}
-(b_{1}b_{2}+b_{2}b_{9}+b_{9}b_{10})b_{3}b_{4}b_{5}b_{6}b_{7}b_{8}.
+ & (b_{1}b_{2}+b_{2}b_{9}+b_{9}b_{10})b_{3}b_{4}b_{5}b_{6}b_{7}b_{8}\\
+ & =\min\left(b_{1}b_{2}+b_{2}b_{9}+b_{9}b_{10},3b_{3}b_{4},3b_{5}b_{6},3b_{7}b_{8}\right).\label{eq:16xfaster}
 \end{align}
 
 \end_inset
 
+Since Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:16xfaster"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ involves 0 auxiliary variables and only 4 runs, we have an added cost factor
+ of 
+\begin_inset Formula $C=4$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\lang american
 Using Eq.
  
 \begin_inset CommandInset ref
@@ -5318,7 +5351,7 @@ noprefix "false"
  3 cases overall:
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \lang american
 \begin_inset Formula 
@@ -5331,10 +5364,7 @@ noprefix "false"
 \end_inset
 
 
-\lang english
-
-\begin_inset Note Note
-status open
+\end_layout
 
 \begin_layout Plain Layout
 
@@ -5363,8 +5393,7 @@ which itself has the envelope quadratization:
 
 \end_layout
 
-\end_inset
-
+\begin_layout Plain Layout
 
 \lang american
 So Eq.
@@ -5388,6 +5417,11 @@ noprefix "false"
 
 , and this is more than 7 times better than the cost factor of 64 which
  was the best cost factor we were able to obtain with any other method.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -5420,8 +5454,8 @@ Discussion
 \end_layout
 
 \begin_layout Subsection
-Speed of finding multi-run envelope quadratizations verus single-run quadratizat
-ions
+Speed of finding multi-run envelope quadratizations versus single-run quadratiza
+tions
 \end_layout
 
 \begin_layout Standard
