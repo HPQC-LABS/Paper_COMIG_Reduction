@@ -5119,12 +5119,71 @@ b_{1}b_{2}b_{3}b_{4}+b_{3}b_{4}b_{5}b_{6}=\min\left(b_{2}b_{3}+b_{3}b_{6},b_{1}b
 \end_layout
 
 \begin_layout Standard
+However it is easy to construct an envelope quadratization that effectively
+ has the cost of adding only one auxiliary qubit:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+ & b_{1}b_{2}b_{3}b_{4}+b_{2}b_{3}b_{4}-b_{3}b_{4}b_{5}\\
+= & b_{3}b_{4}\left(b_{1}b_{2}+b_{2}-b_{5}\right)\label{eq:trinomial2}\\
+= & \min\left(2b_{3}b_{4},b_{1}b_{2}+b_{2}-b_{5}\right).\label{eq:trinomialCOMIG}
+\end{align}
+
+\end_inset
+
+In Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:trinomial2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ we have simply factored out 
+\begin_inset Formula $b_{3}b_{4}$
+\end_inset
+
+ since it was in all three terms, and in Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:trinomialCOMIG"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ we have applied Eq.
+ [
+\color red
+Andreas
+\color inherit
+] which results in only 2 runs and 0 auxiliary variables.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 \begin_inset Formula 
 \begin{flalign}
 \negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace & \negthickspace\negthickspace\negthickspace\negthickspace\negthickspace b_{1}b_{2}b_{3}b_{4}+b_{2}b_{3}b_{4}-b_{3}b_{4}b_{5}:\label{eq:trinomialComputerVision-2}\\
 \negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\longrightarrow & \,b_{1}b_{4}+b_{2}b_{4}-b_{3}b_{4}-b_{4}b_{5}+b_{4}\label{eq:trinomial2-2}\\
 \negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\longrightarrow & \,2b_{2}b_{3}-b_{3}b_{5}-b_{4}b_{5}+b_{5}.\label{eq:trinomial3-2}
 \end{flalign}
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -5271,10 +5330,19 @@ noprefix "false"
 
 \end_inset
 
+
+\lang english
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\lang american
 Each of these cases is a trinomial of the following form:
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula 
 \begin{flalign}
 \negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace & \negthickspace\negthickspace\negthickspace\negthickspace\negthickspace b_{1}b_{2}b_{3}b_{4}+b_{2}b_{3}b_{4}b_{5}+b_{3}b_{4}b_{5}b_{6},\label{eq:trinomialComputerVision}
@@ -5289,6 +5357,11 @@ which itself has the envelope quadratization:
 \negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace & \longrightarrow\,b_{1}b_{4}+b_{3}b_{5}+b_{4}b_{5}\\
 \negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace & \longrightarrow\,b_{1}b_{2}\negthinspace+\negthinspace b_{2}b_{6}\negthinspace+\negthinspace b_{3}b_{5}\negthinspace+\negthinspace b_{5}b_{6}\negthinspace+\negthinspace b_{2}\negthinspace-\negthinspace b_{3}\negthinspace-\negthinspace b_{4}\negthinspace-\negthinspace b_{5}\negthinspace+\negthinspace2.
 \end{align}
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -25133,7 +25206,7 @@ If
 \end_inset
 
 , then when 
-\begin_inset Formula $\lceil\log_{2}k\rceil$
+\begin_inset Formula $\log_{2}\nicefrac{k}{2}$
 \end_inset
 
  is an integer (i.e.
@@ -25141,7 +25214,7 @@ If
 \begin_inset Formula $k$
 \end_inset
 
- is a power of 2) we have 
+ is an integer power of 2) we have 
 \begin_inset Formula $2^{m}\equiv2^{\lceil\log_{2}\nicefrac{k}{2}\rceil}=\nicefrac{k}{2}$
 \end_inset
 
@@ -25216,7 +25289,7 @@ bounds because
 
  is even.
  We then have 
-\begin_inset Formula $\lceil\nicefrac{k}{2}\rceil<2^{m}<k-1$
+\begin_inset Formula $\lceil\nicefrac{k}{2}\rceil<2^{m}\le k-1$
 \end_inset
 
 .
