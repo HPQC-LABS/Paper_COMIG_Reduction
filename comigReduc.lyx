@@ -4863,7 +4863,8 @@ literal "false"
 \end_inset
 
 Running the optimization procedure (for example QPBO or quantum annealing)
- on both functions would result in the following minima:
+ on both functions would (if it succeeds in finding the true ground states)
+ result in the following minima:
 \end_layout
 
 \begin_layout Standard
@@ -4877,6 +4878,100 @@ Running the optimization procedure (for example QPBO or quantum annealing)
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+The function with the lowest minima has a minimum value of 
+\begin_inset Formula $-5$
+\end_inset
+
+ at both 
+\begin_inset Formula $10110$
+\end_inset
+
+ and 
+\begin_inset Formula $10111$
+\end_inset
+
+, so these are the global minima of the original degree-
+\begin_inset Formula $k$
+\end_inset
+
+ function (this can be verified by simply optimizing the original quartic
+ function, and indeed in Appendix A we have evaluated the quartic functions
+ for all possible inputs, but for more complicated functions it is not possible
+ to evaluate the for all possible inputs, and the algorithms to optimize
+ a super-quadratic function can be much more costly than optimizing several
+ quadratic functions, or one quadratic function with auxiliary variables,
+ or even several quadratic functions that each contain auxiliary variables).
+\end_layout
+
+\begin_layout Standard
+We note that it is not only the global minima (or ground states), that are
+ reproduced by our envelope quadratization.
+ The full spectrum is actually reproduced, meaning that for each of the
+ 
+\begin_inset Formula $2^{5}=32$
+\end_inset
+
+ combinations for: 
+\begin_inset Formula $(b_{1},b_{2},b_{3},b_{4},b_{5})$
+\end_inset
+
+, we have 
+\begin_inset Formula $f={\displaystyle \min_{f_{1},f_{2}}}(f_{1},f_{2})$
+\end_inset
+
+, where 
+\begin_inset Formula $f$
+\end_inset
+
+ is the function in Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:oneSubExample"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and 
+\begin_inset Formula $f_{1},f_{2}$
+\end_inset
+
+ are the functions in Eqs.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:oneSubExampleCase1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+-
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:oneSubExampleCase2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ respectively.
+ The 32-row table showing that 
+\begin_inset Formula $f={\displaystyle \min_{f_{1},f_{2}}}(f_{1},f_{2})$
+\end_inset
+
+ for all 32 possible configurations 
+\begin_inset Formula $(b_{1},b_{2},b_{3},b_{4},b_{5})$
+\end_inset
+
+ is given in Appendix A.
 \end_layout
 
 \begin_layout Standard
@@ -5224,8 +5319,11 @@ status open
 \end_layout
 
 \begin_layout Standard
-Running the optimization procedure on all four functions would result in
- the following minima:
+Running the optimization procedure on all four functions
+\lang british
+ would (if it succeeds in finding the true ground states)
+\lang english
+ result in the following minima:
 \end_layout
 
 \begin_layout Standard
@@ -5490,7 +5588,7 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
-The functions which have the lowest minima have values of 
+The functions which have the lowest minima have minimum values of 
 \begin_inset Formula $-5$
 \end_inset
 
@@ -5506,16 +5604,28 @@ The functions which have the lowest minima have values of
 \begin_inset Formula $k$
 \end_inset
 
- function (again, this can be verified by simply optimizing the original
- quartic function, but for more complicated functions, the algorithms to
- optimize a super-quadratic function can be much more costly than optimizing
- several quadratic functions, or one quadratic function with auxiliary variables
-, or even several quadratic functions that each contain auxiliary variables).
+ function, and again this can be verified by simply optimizing the original
+ quartic function or evaluating it for all possible inputs (which we have
+ done in Appendix B).
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+ (again, this can be verified by simply optimizing the original quartic
+ function, but for more complicated functions, the algorithms to optimize
+ a super-quadratic function can be much more costly than optimizing several
+ quadratic functions, or one quadratic function with auxiliary variables,
+ or even several quadratic functions that each contain auxiliary variables)
+\end_layout
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
-We note that it is not only the global minima (or ground states), that are
- reproduced by our envelope quadratization.
+Again we note that it is not only the global minima (or ground states),
+ that are reproduced by our envelope quadratization.
  The full spectrum is actually reproduced, meaning that for each of the
  
 \begin_inset Formula $2^{6}=64$
@@ -5578,7 +5688,7 @@ noprefix "false"
 \begin_inset Formula $(b_{1},b_{2},b_{3},b_{4},b_{5},b_{6})$
 \end_inset
 
- is given in our Appendix.
+ is given in Appendix B.
 \end_layout
 
 \begin_layout Section
@@ -27244,8 +27354,8 @@ status open
 \end_inset
 
 .
- Since the base-2 logarithm is a monotonic function, we can exponentiate
- both sides of either inequality and obtain:
+ Since exponential is a monotonic function, we can exponentiate both sides
+ of either inequality and obtain:
 \end_layout
 
 \begin_layout Standard
