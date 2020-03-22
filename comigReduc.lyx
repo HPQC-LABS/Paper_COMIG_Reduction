@@ -194,10 +194,10 @@ Surrey University, Department of Electrical and Electronic Engineering,
 \begin_layout Abstract
 
 \lang british
-We present a quadratization method that we have found to be superior to
- all previously known quadratization methods for every case tested so far,
- in terms of requiring fewer auxiliary variables, less connectivity between
- the variables, and/or smaller coefficients
+We present a quadratization method that we have found to have advantages
+ over all previously known quadratization methods for every case tested
+ so far, in terms of requiring fewer auxiliary variables, less connectivity
+ between the variables, and/or smaller coefficients
 \begin_inset Note Note
 status open
 
@@ -205,7 +205,8 @@ status open
 
 \lang british
 , and/or fewer non-submodular terms, and number of runs, in the case of
- split-reduc
+ split-reduc.
+ or in the case of its comparison to split-reduction: fewer required cases
 \end_layout
 
 \end_inset
@@ -225,7 +226,7 @@ reproduce a degree-
 \begin_inset Formula $k$
 \end_inset
 
- function perfectly, but each of these 
+ function perfectly, and each of these 
 \emph on
 almost
 \emph default
@@ -272,8 +273,8 @@ Compact quadratizations of symmetric pseudo-Boolean functions: sub-linear
 far
 \emph default
  less connectivity between the variables of the quadratics, and requiring
- fewer auxiliary variables: Specifically, the number of auxiliaries required
- is between 
+ fewer auxiliary variables: Specifically, the number of auxiliary variables
+ required is between 
 \lang english
 
 \begin_inset Formula $\lceil\log_{2}\nicefrac{k}{4}\rceil$
@@ -322,6 +323,15 @@ fewer
 \end_inset
 
  functions arising in a computer vision algorithm for image deblurring.
+\end_layout
+
+\begin_layout Standard
+
+\lang british
+\begin_inset VSpace -5mm
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -532,7 +542,15 @@ literal "false"
 \emph on
 envelope quadratization
 \emph default
- method: While split-reduc can be very powerful when simultaneously quadratizing
+ method.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\lang british
+: While split-reduc can be very powerful when simultaneously quadratizing
  multiple terms that have common variables, its application can be far more
  costly than the methods described in the previous paragraph when quadratizing
  functions such as the degree-
@@ -540,6 +558,10 @@ envelope quadratization
 \end_inset
 
  positive monomial.
+\end_layout
+
+\end_inset
+
  
 \begin_inset Note Note
 status open
@@ -573,9 +595,82 @@ status open
 \begin_layout Standard
 
 \lang british
-In this work we introduce the concept of envelope quadratizations, which
- seem to be capable of `perfectly' quadratizing functions more efficiently
- than any of the above methods (by `perfectly' we mean, reproducing the
+In this work we introduce the concept of envelope quadratizations, and we
+ will compare their efficacy to previously known methods.
+ For the purpose of comparing the efficacy of different quadratization methods,
+ throughout this paper we will assume that the final 
+\begin_inset Formula $n$
+\end_inset
+
+-variable quadratic discrete optimization problems being solved are still
+ rather difficult, with the cost of solving them being roughly 
+\begin_inset Formula $c2^{n}$
+\end_inset
+
+ for some constant 
+\begin_inset Formula $c$
+\end_inset
+
+ that is very close to 1, and 
+\begin_inset Formula $c=1$
+\end_inset
+
+ representing the cost of solving the quadratic problem by testing all possible
+ inputs
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\lang british
+(this is not true for every discrete optimization problem, but it can be
+ considered a signature of 
+\begin_inset Quotes eld
+\end_inset
+
+hard
+\begin_inset Quotes erd
+\end_inset
+
+ optimization problems)
+\end_layout
+
+\end_inset
+
+.
+ We will introduce our concept of an 
+\emph on
+added cost factor
+\emph default
+ that arises from quadratizing a function (whether with envelope quadratizations
+ or any of the previously known quadratization methods) to capture much
+ of what we desire when comparing the efficacy of quadratization methods
+ under the assumption that the cost of solving the problem after quadratization
+ is still close to 
+\begin_inset Formula $2^{n}$
+\end_inset
+
+.
+ Envelope quadratizations 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\lang british
+This is quite a realistic assumption if the variables are very highly connected,
+ the coefficients span a very wide range, or the exact ground state is sought
+ and there's only 1 or 2 of them in a space of 2^1000.
+\end_layout
+
+\end_inset
+
+ turn out to be capable of `perfectly' quadratizing functions with a smaller
+ 
+\emph on
+added cost factor
+\emph default
+ than any previously known method (by `perfectly' we mean, reproducing the
  whole spectrum of possible input/output pairs for the degree-
 \begin_inset Formula $k$
 \end_inset
@@ -590,16 +685,26 @@ literal "false"
 
  that might be more efficient when the goal is only to reproduce the ground
  state).
- Even when the goal is only to preserve the ground state, envelope quadratizatio
-ns are often the most efficient way to quadratize a function; and in other
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang british
+Even when the goal is only to preserve the ground state, envelope quadratization
+s are often the most efficient way to quadratize a function; and in other
  cases they should likely always be considered in combination with other
  methods in order to achieve the most efficient quadratization possible.
  We have not yet found a single case in which the envelope of more than
- one quadratic function is not 
+ one quadratic function does not introduce a 
 \emph on
 strictly 
 \emph default
-more efficient than 
+smaller 
+\emph on
+added cost factor 
+\emph default
+than 
 \emph on
 all
 \emph default
@@ -2175,7 +2280,11 @@ For the right side we have:
 \begin_layout Standard
 
 \lang british
-It is impossible to construct a single quadratic function without any auxiliary
+It is 
+\emph on
+not 
+\emph default
+possible to construct a single quadratic function without any auxiliary
  variables, that reproduces the spectrum as seen in the tables above.
  However, minimizing over the quadratic function 
 \begin_inset Formula $b_{1}b_{2}$
@@ -2252,7 +2361,18 @@ end{spacing}{0.05}
 
 \lang british
 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\lang british
 \begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
 \end_inset
 
 
@@ -2272,7 +2392,7 @@ height "0.4pt"
 \end_layout
 
 \begin_layout Standard
-\begin_inset VSpace -1.5mm
+\begin_inset VSpace 0.1mm
 \end_inset
 
 
@@ -4706,6 +4826,10 @@ Generalizations of the quick example, and cost comparison with the previous
 Generalizations of the quick example
 \end_layout
 
+\begin_layout Subsection
+Any product of variables
+\end_layout
+
 \begin_layout Standard
 The simple example from the previous section, of a quadratic envelope reproducin
 g 
@@ -4741,7 +4865,7 @@ where
 \end_inset
 
  then it is an envelope quadratization.
- One interesting envelope quadratization which is an example of Eq.
+ A specific case of Eq.
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -4777,6 +4901,163 @@ linearization
  
 \end_layout
 
+\begin_layout Subsection
+Any product of polynomials
+\end_layout
+
+\begin_layout Standard
+Even more generally than what we presented in the preceding section, we
+ have:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+f_{1}f_{2}\ldots f_{\kappa} & =\min\left(f_{1}\textcolor{blue}{\boldsymbol{,}}f_{2}\textcolor{red}{\textcolor{blue}{\boldsymbol{,}}}...\textcolor{red}{\textcolor{blue}{\boldsymbol{,}}}f_{\kappa}\right),\,\text{if}\label{eq:general-1}\\
+f_{i}\left(b_{k_{i}},b_{k_{i}+1},\ldots,b_{k_{i+1}-1}\right) & \ge0,
+\end{align}
+
+\end_inset
+
+which means that any product of polynomials is equivalent to the right-hand
+ side of Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:general-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ if each polynomial 
+\begin_inset Formula $f_{i}\ge0$
+\end_inset
+
+ for any input.
+ Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:general"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, and therefore all envelope quadratizations presented so far, are special
+ cases of Eq\SpecialChar endofsentence
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:general-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ in which all 
+\begin_inset Formula $f_{i}$
+\end_inset
+
+ are quadratic.
+\end_layout
+
+\begin_layout Standard
+Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:general-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ can be further generalized to any product of polynomials whether or not
+ they satisfy 
+\begin_inset Formula $f_{i}\ge0$
+\end_inset
+
+, for example:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+f_{1}f_{2}\ldots f_{\kappa} & =\min\left(f_{1}f_{2}\ldots f_{\kappa-1}\max f_{\kappa}\textcolor{red}{\textcolor{blue}{\boldsymbol{,}}}\right.\label{eq:general-1-1}\\
+ & \,\,\,\,\,\,\,\,\,\,\,\,\left.f_{\kappa}-\min f_{\kappa}+f_{1}f_{2}\ldots f_{\kappa-1}\right),\,\text{if}\nonumber 
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace f_{i<\kappa}\left(b_{k_{i}},b_{k_{i}+1},\ldots,b_{k_{i+1}-1}\right)\ge0,\,\min f_{\kappa}<0,
+\end{equation}
+
+\end_inset
+
+which means that if one factor (call it 
+\begin_inset Formula $f_{\kappa})$
+\end_inset
+
+ has a minimum value less than 0, and all other factors satisfy 
+\begin_inset Formula $f_{i<\kappa}\ge0$
+\end_inset
+
+ for any input, Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:general-1-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ is satisfied.
+ Again, when all 
+\begin_inset Formula $f_{i}$
+\end_inset
+
+ are quadratic, we have a quadratization, and in 
+\lang british
+Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:computerVision"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\lang english
+ we will use Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:general-1-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ to quadratize a trinomial appearing in a computer vision application.
+\end_layout
+
 \begin_layout Section
 
 \lang british
@@ -4784,14 +5065,13 @@ Usage
 \end_layout
 
 \begin_layout Subsection
-Quadratizing part of a function using envelope quadratizations
 \begin_inset CommandInset label
 LatexCommand label
 name "subsec:1subExample"
 
 \end_inset
 
-
+Quadratizing part of a function using envelope quadratizations
 \end_layout
 
 \begin_layout Standard
@@ -5620,7 +5900,7 @@ status open
 
 \end_inset
 
-.
+
 \end_layout
 
 \begin_layout Standard
@@ -5731,11 +6011,11 @@ Unless there is some property of the function making it easier, optimizing
 
  increase in cost!), all general-purpose methods for optimizing such functions
  that are at least quadratic, still cost 
-\begin_inset Formula $\mathcal{O}(2^{x})$
+\begin_inset Formula $\mathcal{O}(2^{p})$
 \end_inset
 
  for 
-\begin_inset Formula $x$
+\begin_inset Formula $p$
 \end_inset
 
  binary variables (this includes quantum annealing, where the exponential
@@ -5765,7 +6045,59 @@ literal "false"
 \end_inset
 
  auxiliary variables (especially in the absence of any better measure for
- the added cost to the optimization due to adding auxiliary variables) .
+ the added cost to the optimization 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\lang british
+due to adding auxiliary variables
+\end_layout
+
+\end_inset
+
+ in the situation described).
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang british
+Often the cost of minimizing a quadratic function of 
+\begin_inset Formula $n$
+\end_inset
+
+ binary variables would be 
+\begin_inset Formula $c2^{n}$
+\end_inset
+
+ for some positive constant 
+\begin_inset Formula $c$
+\end_inset
+
+, and 
+\begin_inset Formula $2^{n}$
+\end_inset
+
+ being the cost of evaluating the function for all 
+\begin_inset Formula $2^{n}$
+\end_inset
+
+ possible inputs, and if the function is a difficult one to optimize (two
+ examples of ways it can be difficult is if it has very many quadratic terms,
+ or coefficients spanning several orders of magnitude) the constant 
+\begin_inset Formula $c$
+\end_inset
+
+ can be very close to 1.
+ We are going to assume throughout this paper that our final quadratic functions
+ are difficult to optimize, meaning that 
+\begin_inset Formula $c$
+\end_inset
+
+ is very close to 1.
+ 
 \begin_inset Note Note
 status open
 
@@ -6876,6 +7208,12 @@ Submodularity? Well in both cases (COMIGs and BCR) we have positive terms
 \begin_layout Subsection
 
 \lang british
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:computerVision"
+
+\end_inset
+
 Application to a computer vision algorithm
 \end_layout
 
@@ -7164,11 +7502,17 @@ noprefix "false"
 \end_inset
 
  we have applied Eq.
- [
-\color red
-Andreas
-\color inherit
-] which results in only 2 runs and 0 auxiliary variables.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:general-1-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ which results in only 2 runs and 0 auxiliary variables.
  
 \end_layout
 
@@ -7296,11 +7640,17 @@ noprefix "false"
 
  into the product of a quadratic function and a degree-6 function, then
  we apply Eq.
- [
-\color red
-Andreas
-\color inherit
-]:
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:general-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+:
 \end_layout
 
 \begin_layout Standard
