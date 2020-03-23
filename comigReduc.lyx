@@ -599,12 +599,12 @@ In this work we introduce the concept of envelope quadratizations, and we
  will compare their efficacy to previously known methods.
  For the purpose of comparing the efficacy of different quadratization methods,
  throughout this paper we will assume that the final 
-\begin_inset Formula $n$
+\begin_inset Formula $\eta$
 \end_inset
 
 -variable quadratic discrete optimization problems being solved are still
  rather difficult, with the cost of solving them being roughly 
-\begin_inset Formula $c2^{n}$
+\begin_inset Formula $c2^{\eta}$
 \end_inset
 
  for some constant 
@@ -647,11 +647,17 @@ added cost factor
  of what we desire when comparing the efficacy of quadratization methods
  under the assumption that the cost of solving the problem after quadratization
  is still close to 
-\begin_inset Formula $2^{n}$
+\begin_inset Formula $2^{\eta}$
 \end_inset
 
 .
- Envelope quadratizations 
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang british
+Envelope quadratizations 
 \begin_inset Note Note
 status open
 
@@ -6018,14 +6024,14 @@ Unless there is some property of the function making it easier, optimizing
 
  increase in cost!), all general-purpose methods for optimizing such functions
  that are at least quadratic, still cost 
-\begin_inset Formula $\mathcal{O}(2^{p})$
+\begin_inset Formula $\mathcal{O}(2^{\eta})$
 \end_inset
 
  for 
-\begin_inset Formula $p$
+\begin_inset Formula $\eta$
 \end_inset
 
- binary variables (this includes quantum annealing, where the exponential
+ total binary variables (this includes quantum annealing, where the exponential
  scaling up to ~1000 variables can be seen in the figures of 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -6042,7 +6048,7 @@ literal "false"
 
 \end_inset
 
-), so we claim that a factor of 
+), so claiming that a factor of 
 \begin_inset Formula $2^{m}$
 \end_inset
 
@@ -6064,19 +6070,30 @@ due to adding auxiliary variables
 
 \end_inset
 
- in the situation described).
- 
-\end_layout
+ in the situation described
+\begin_inset Note Note
+status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \lang british
-Often the cost of minimizing a quadratic function of 
-\begin_inset Formula $n$
+; and the assumption we described in the Introduction section
+\end_layout
+
 \end_inset
 
- binary variables would be 
-\begin_inset Formula $c2^{n}$
+) might not be strongly disputed, but there is still the issue of the constant
+ hidden under the 
+\begin_inset Formula $\mathcal{O}$
+\end_inset
+
+.
+ If the cost of minimizing a quadratic function of 
+\begin_inset Formula $\eta$
+\end_inset
+
+ binary variables is 
+\begin_inset Formula $c2^{\eta}$
 \end_inset
 
  for some positive constant 
@@ -6084,16 +6101,17 @@ Often the cost of minimizing a quadratic function of
 \end_inset
 
 , and 
-\begin_inset Formula $2^{n}$
+\begin_inset Formula $2^{\eta}$
 \end_inset
 
  being the cost of evaluating the function for all 
-\begin_inset Formula $2^{n}$
+\begin_inset Formula $2^{\eta}$
 \end_inset
 
- possible inputs, and if the function is a difficult one to optimize (two
- examples of ways it can be difficult is if it has very many quadratic terms,
- or coefficients spanning several orders of magnitude) the constant 
+ possible inputs, and if the function is a comparatively difficult one to
+ optimize (two examples of ways it can be difficult is if it has very many
+ quadratic terms, or coefficients spanning several orders of magnitude)
+ the constant 
 \begin_inset Formula $c$
 \end_inset
 
@@ -6217,17 +6235,434 @@ added cost factor
 \lang british
 \begin_inset Formula 
 \begin{equation}
-C\le r2^{m}.\label{eq:cost}
+C=r2^{m}.\label{eq:cost}
 \end{equation}
 
 \end_inset
 
-In practice, some runs may require fewer auxiliary variables than others
- (or none at all), so the added cost can be lower than 
-\begin_inset Formula $r2^{m}$
+In practice, many runs usually require fewer auxiliary variables than others
+ (or no auxiliary variables at all), so in this sense Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:cost"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ over-estimates the cost for multi-run quadratizations (envelope quadratizations
+) where 
+\begin_inset Formula $r>1$
+\end_inset
+
+; but since we are introducing a new method and comparing it to the state-of-the
+-art existing methods, it is okay for our notion of added cost factor to
+ be overly harsh to the method we are introducing.
+ Likewise, we discuss below the fact that envelope quadratizations may result
+ in the final quadratic problem having 
+\emph on
+fewer 
+\emph default
+total variables than the original degree-
+\begin_inset Formula $k$
+\end_inset
+
+ function, meaning that 
+\begin_inset Formula $m$
+\end_inset
+
+ is effectively negative, which would be very favorable in terms of evaluating
+ 
+\begin_inset Formula $C$
 \end_inset
 
 .
+ However, to show that envelope quadratizations have advantages over all
+ previously known quadratization methods according to Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:cost"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, we never even need to make use of the fact that they can be considered
+ to involve a negative value of 
+\begin_inset Formula $m$
+\end_inset
+
+, even though a negative value of 
+\begin_inset Formula $m$
+\end_inset
+
+ will always contribute favorably to the added cost factor 
+\begin_inset Formula $C$
+\end_inset
+
+.
+ For envelope quadratizations where 
+\begin_inset Formula $m$
+\end_inset
+
+ is effectively negative, we simply say treat 
+\begin_inset Formula $m$
+\end_inset
+
+ to be zero, which is less favorable to our method when comparing it to
+ other methods, but we are content with this because despite this, and the
+ fact mentioned earlier in this paragraph which is also less favorable to
+ our method, we still do not find any cases where our envelope quadratizations
+ have an added cost factor greater than the previous state-of-the-art quadratiza
+tion method!
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\lang british
+ Therefore Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:cost"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ can be overly harsh to envelope quadratizations in at least two different
+ ways.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang british
+We also mentioned that better algorithms exist for optimizing a quadratic
+ function of binary variables than evaluating the function for all possible
+ inputs at 
+\begin_inset Formula $2^{\eta}$
+\end_inset
+
+ cost, so the 
+\begin_inset Formula $2^{m}$
+\end_inset
+
+ factor in Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:cost"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ might unfairly penalize quadratizations involving a large number 
+\begin_inset Formula $m$
+\end_inset
+
+ of auxiliary variables: This is why all analysis in this paper assumes
+ that the final quadratic function is hard enough to optimize that 2
+\begin_inset Formula $^{m}$
+\end_inset
+
+ is a fair approximation of the true added cost of adding 
+\begin_inset Formula $m$
+\end_inset
+
+ auxiliary variables.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\lang british
+In cases where the final quadratic functions after quadratization are easy
+ enough to solve such that 
+\begin_inset Formula $2^{m}$
+\end_inset
+
+ is a poor approximation of the true added cost of adding 
+\begin_inset Formula $m$
+\end_inset
+
+ auxiliary variables, further analysis may be desired on a case-by-case
+ basis when deciding which quadratization method to use.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang british
+Finally we note that the split-reduc method of 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Okada2015b"
+literal "false"
+
+\end_inset
+
+ is an example of an envelope quadratization because it can be written in
+ the form 
+\begin_inset Formula $f=\min\left(q_{1},q_{2}\ldots,q_{r}\right)$
+\end_inset
+
+ where the 
+\begin_inset Formula $r$
+\end_inset
+
+ quadratic functions 
+\begin_inset Formula $q_{i}$
+\end_inset
+
+ are the cases resulting from the split-reduc method and 
+\begin_inset Formula $f$
+\end_inset
+
+ is the original degree-
+\begin_inset Formula $k$
+\end_inset
+
+ function.
+ It was not written in this way at that time.
+ All functions 
+\begin_inset Formula $q_{i}$
+\end_inset
+
+ coming from the split-reduc method have fewer total variables than 
+\begin_inset Formula $f$
+\end_inset
+
+, which means that the 
+\begin_inset Formula $m$
+\end_inset
+
+ in Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:cost"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ would be effectively negative (as is often also the case in the envelope
+ quadratizations shown in the examples below, but it is much more extreme
+ in the special case of a split-reduc envelope quadratization).
+ This means that the fact that we are approximating the true cost of 
+\begin_inset Formula $\mathcal{\mathcal{O}}(2^{\eta})=c2^{\eta}$
+\end_inset
+
+ to be exactly equal to 
+\begin_inset Formula $2^{\eta}$
+\end_inset
+
+, will give an unfair advantage to split-reduc when using Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:cost"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ to compare quadratization methods.
+ In this paper we show that envelope quadratizations have advantages over
+ all other quadratization methods without ever mentioning split-reduc in
+ the analysis, so this unfair advantage to split-reduc does not indicate
+ any problem with using Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:cost"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ for the purpose of this paper.
+ However it is interesting to consider how the split-reduc envelope quadratizati
+on compares to other envelope quadratizations such as the other ones introduced
+ in this paper.
+ In many cases 
+\color red
+(all of them?)
+\color inherit
+, split-reduc and our other envelope quadratization, both have the same
+ value of 
+\begin_inset Formula $C$
+\end_inset
+
+ according to Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:cost"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, but split-reduc always has a much larger value of 
+\begin_inset Formula $r$
+\end_inset
+
+ and a much lower value of 
+\begin_inset Formula $m$
+\end_inset
+
+.
+ We note that we have made the approximation that 
+\begin_inset Formula $2^{\eta}\approx c2^{\eta}$
+\end_inset
+
+ (and since 
+\begin_inset Formula $2^{\eta}\equiv2^{n}2^{m}$
+\end_inset
+
+, this means the 
+\begin_inset Formula $2^{m}$
+\end_inset
+
+ part of Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:cost"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ is the part that is not exact), but the dependence of 
+\begin_inset Formula $r$
+\end_inset
+
+ in Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:cost"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ is much more accurate: This means that Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:cost"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ penalizes quadratization methods quite fairly in terms of 
+\begin_inset Formula $r$
+\end_inset
+
+ and 
+\emph on
+when the two methods being compared have the same value for 
+\begin_inset Formula $C$
+\end_inset
+
+
+\emph default
+, the value of 
+\begin_inset Formula $c$
+\end_inset
+
+ can be important in assessing which method leads to a quadratization that
+ is easier to solve.
+ The specific value for 
+\begin_inset Formula $c$
+\end_inset
+
+ will depend on the properties of the quadratic function being optimized
+ (such as the number of quadratic terms and the range of coefficients),
+ which can be very different for different quadratization methods.
+ A thorough comparison between split-reduc and other types of envelope quadratiz
+ations such as the ones presented in this work, will need to await further
+ work, but what we can say at present is that split-reduc may be at a disadvanta
+ge since it tends to require larger values of 
+\begin_inset Formula $r$
+\end_inset
+
+ in lieu of values of 
+\begin_inset Formula $m$
+\end_inset
+
+ that are more negative, so in 
+\begin_inset Formula $C=r2^{m}$
+\end_inset
+
+ it is penalized fairly for the large value of 
+\begin_inset Formula $r$
+\end_inset
+
+ and may have an unfair advantage from the factor 
+\begin_inset Formula $2^{m}$
+\end_inset
+
+.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\lang british
+ (since in reality 
+\begin_inset Formula $c>0$
+\end_inset
+
+ may be close to 1, but should always be less than 1, since 
+\begin_inset Formula $c=$
+\end_inset
+
+1 represents minimizing the quadratic function by evaluating it for all
+ possible inputs, which defeats the purpose of quadratization, which is
+ to allow the use of minimization algorithms that cost less than 
+\begin_inset Formula $2^{n}$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
