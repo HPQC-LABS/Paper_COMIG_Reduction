@@ -72,7 +72,7 @@
 \color #008000
 \end_index
 \leftmargin 2cm
-\topmargin 1.6cm
+\topmargin 1.7cm
 \rightmargin 2cm
 \bottommargin 2cm
 \secnumdepth 3
@@ -273,37 +273,24 @@ Compact quadratizations of symmetric pseudo-Boolean functions: sub-linear
 far
 \emph default
  less connectivity between the variables of the quadratics, and requiring
- fewer auxiliary variables: Specifically, the number of auxiliary variables
- required is between 
+ fewer auxiliary variables: The state-of-the-art was 
 \lang english
 
-\begin_inset Formula $\lceil\log_{2}\nicefrac{k}{4}\rceil$
-\end_inset
-
- and 
-\begin_inset Formula $\lfloor\log_{2}\nicefrac{k}{2}\rfloor$
-\end_inset
-
- depending on the value of 
-\begin_inset Formula $k$
-\end_inset
-
-, while the previous
-\lang british
- state-of-the-art
-\lang english
- was 
 \begin_inset Formula $\lceil\log_{2}\nicefrac{k}{2}\rceil$
 \end_inset
 
-
+ 
 \lang british
- for all 
-\begin_inset Formula $k$
+auxiliary variables and we in effect able to achieve 
+\lang english
+as low as 
+\begin_inset Formula $\lceil\log_{2}\nicefrac{k}{k}\rceil$
 \end_inset
 
+
+\lang british
 .
- We will also show an example in which an envelope of quadratic functions,
+ We will also show examples in which the envelope of quadratic functions,
  each with 
 \emph on
 fewer
@@ -403,11 +390,11 @@ literal "false"
 
  monomial).
  This was reduced by roughly one half in 2011 by Ishikawa, who introduced
- a quadratization for a positive degree-
+ a quadratization for positive degree-
 \begin_inset Formula $k$
 \end_inset
 
- monomial, which needed only 
+ monomials, which needs only 
 \begin_inset Formula $\frac{k-1}{2}$
 \end_inset
 
@@ -415,7 +402,15 @@ literal "false"
 \begin_inset Formula $k$
 \end_inset
 
- were even).
+ is even) 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Ishikawa2011"
+literal "false"
+
+\end_inset
+
+.
  In 2018 several new quadratizations were introduced for positive degree-
 \begin_inset Formula $k$
 \end_inset
@@ -676,8 +671,8 @@ This is quite a realistic assumption if the variables are very highly connected,
 \emph on
 added cost factor
 \emph default
- than any previously known method (by `perfectly' we mean, reproducing the
- whole spectrum of possible input/output pairs for the degree-
+ than any other known method (by `perfectly' we mean, reproducing the whole
+ spectrum of possible input/output pairs for the degree-
 \begin_inset Formula $k$
 \end_inset
 
@@ -714,7 +709,7 @@ than
 \emph on
 all
 \emph default
- of the previously known methods for perfect quadratization.
+ of the other known methods for perfect quadratization.
 \end_layout
 
 \begin_layout Section
@@ -752,8 +747,12 @@ where all
 \begin_inset Formula $b_{a}$
 \end_inset
 
- indicates that this is an `auxiliary' variable because it does not appear
- in the original cubic function on the left side.
+ indicates that 
+\begin_inset Formula $b_{a}$
+\end_inset
+
+ is an `auxiliary' variable because it does not appear in the original cubic
+ function on the left side.
  For clarity we explicitly show why Eq.
  
 \begin_inset CommandInset ref
@@ -4953,8 +4952,8 @@ noprefix "false"
 
 \end_inset
 
-, and therefore all envelope quadratizations presented so far, are special
- cases of Eq\SpecialChar endofsentence
+, and therefore all envelope reductions presented so far, are special cases
+ of Eq\SpecialChar endofsentence
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -4969,7 +4968,12 @@ noprefix "false"
 \begin_inset Formula $f_{i}$
 \end_inset
 
- are quadratic.
+ are monomials.
+ If all 
+\begin_inset Formula $f_{i}$
+\end_inset
+
+ are quadratic then we have a quadratization.
 \end_layout
 
 \begin_layout Standard
@@ -5186,10 +5190,14 @@ The function with the lowest minima has a minimum value of
  function (this can be verified by simply optimizing the original quartic
  function, and indeed in Appendix A we have evaluated the quartic functions
  for all possible inputs, but for more complicated functions it is not possible
- to evaluate the for all possible inputs, and the algorithms to optimize
- a super-quadratic function can be much more costly than optimizing several
- quadratic functions, or one quadratic function with auxiliary variables,
- or even several quadratic functions that each contain auxiliary variables).
+ to evaluate the degree-
+\begin_inset Formula $k$
+\end_inset
+
+ function for all possible inputs, and the algorithms to optimize a super-quadra
+tic function can be much more costly than optimizing several quadratic functions
+, or one quadratic function with auxiliary variables, or even several quadratic
+ functions that each contain auxiliary variables).
 \end_layout
 
 \begin_layout Standard
@@ -6023,7 +6031,7 @@ Unless there is some property of the function making it easier, optimizing
 \end_inset
 
  increase in cost!), all general-purpose methods for optimizing such functions
- that are at least quadratic, still cost 
+ that are at least quadratic, still have a cost of 
 \begin_inset Formula $\mathcal{O}(2^{\eta})$
 \end_inset
 
@@ -6309,16 +6317,20 @@ noprefix "false"
 \begin_inset Formula $m$
 \end_inset
 
- is effectively negative, we simply say treat 
+ is effectively negative, we simply treat 
 \begin_inset Formula $m$
 \end_inset
 
- to be zero, which is less favorable to our method when comparing it to
- other methods, but we are content with this because despite this, and the
- fact mentioned earlier in this paragraph which is also less favorable to
- our method, we still do not find any cases where our envelope quadratizations
- have an added cost factor greater than the previous state-of-the-art quadratiza
-tion method!
+ to be zero when calculating 
+\begin_inset Formula $C$
+\end_inset
+
+, which is less favorable to our method when comparing it to other methods,
+ but we are content with this because despite this, and the fact mentioned
+ earlier in this paragraph which is also less favorable to our method, we
+ still do not find any cases where our envelope quadratizations have an
+ added cost factor greater than the previous state-of-the-art quadratization
+ method!
 \begin_inset Note Note
 status open
 
@@ -6425,7 +6437,7 @@ literal "false"
 
  is an example of an envelope quadratization because it can be written in
  the form 
-\begin_inset Formula $f=\min\left(q_{1},q_{2}\ldots,q_{r}\right)$
+\begin_inset Formula $f=\min\left(f_{1},f_{2}\ldots,f_{r}\right)$
 \end_inset
 
  where the 
@@ -6433,7 +6445,7 @@ literal "false"
 \end_inset
 
  quadratic functions 
-\begin_inset Formula $q_{i}$
+\begin_inset Formula $f_{i}$
 \end_inset
 
  are the cases resulting from the split-reduc method and 
@@ -6445,9 +6457,18 @@ literal "false"
 \end_inset
 
  function.
- It was not written in this way at that time.
+ It was not written in this way when the split-reduc method was first introduced
+ in 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Okada2015b"
+literal "false"
+
+\end_inset
+
+.
  All functions 
-\begin_inset Formula $q_{i}$
+\begin_inset Formula $f_{i}$
 \end_inset
 
  coming from the split-reduc method have fewer total variables than 
@@ -6514,8 +6535,8 @@ on compares to other envelope quadratizations such as the other ones introduced
 \color red
 (all of them?)
 \color inherit
-, split-reduc and our other envelope quadratization, both have the same
- value of 
+, the envelope quadratization example presented in this work, and the best
+ possible application of split-reduc, both have the same value of 
 \begin_inset Formula $C$
 \end_inset
 
@@ -6636,7 +6657,11 @@ ge since it tends to require larger values of
 \begin_inset Formula $2^{m}$
 \end_inset
 
-.
+, so when two quadratization methods have the same value for 
+\begin_inset Formula $C$
+\end_inset
+
+, split-reduc seems to be slightly less favorable.
 \begin_inset Note Note
 status open
 
@@ -6885,8 +6910,8 @@ In these two unique cases, in which our added cost factor for the envelope
 \begin_inset Formula $k$
 \end_inset
 
- monomial being quadratized; whereas with PTR the quadratic function obtained
- has all possible quadratic terms for 
+ monomial being quadratized; whereas with PTR-BCR-4 the quadratic function
+ obtained has all possible quadratic terms for 
 \begin_inset Formula $k+\lceil\log_{2}\nicefrac{k}{2}\rceil$
 \end_inset
 
@@ -7485,15 +7510,24 @@ We have shown that when quadratizing a positive degree-
 \emph on
 added cost factor
 \emph default
-.
+ and the number of quadratic terms and sizes of coefficients in the quadratic
+ functions.
  What about when quadratizing not only a single monomial but multiple terms
  in a function? PTR-BCR-4 is no longer necessarily the best quadratization.
  For example, quadratizing 
 \begin_inset Formula $b_{1}b_{2}b_{3}b_{4}b_{5}+b_{2}b_{3}b_{4}b_{5}b_{6}$
 \end_inset
 
- would require 4 auxiliary variables (2 for each term), but Rosenberg's
- substitution would only need two auxiliary variables: 
+ would require 4 auxiliary variables (2 for each term), but the pairwise
+ covers method of 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Anthony2017,Dattani2019"
+literal "false"
+
+\end_inset
+
+ would only need two auxiliary variables: 
 \begin_inset Formula $b_{a_{1}}=b_{2}b_{3}$
 \end_inset
 
@@ -7512,7 +7546,7 @@ on in which
 .
  However, we have also found that for every case we have examined so far,
  we are also able to obtain an envelope quadratization with 
-\begin_inset Formula $r\ge1$
+\begin_inset Formula $r>1$
 \end_inset
 
  that is strictly better in terms of added cost factor or number of quadratic
@@ -7530,7 +7564,19 @@ noprefix "false"
 
  can be matched by previously known methods, but in those cases envelope
  quadratizations still have fewer quadratic terms and smaller coefficients
- and fewer non-submodular terms (for example, see Section 
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\lang british
+and fewer non-submodular terms 
+\end_layout
+
+\end_inset
+
+(for example, see Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "subsec:Positive-degree-8-monimial"
@@ -8469,8 +8515,9 @@ The quadratic functions in an envelope quadratization can (and usually do)
 \begin_layout Standard
 
 \lang british
-Observe that in almost every example we have given, the quadratic functions
- have fewer variables than the original degree-
+Observe that in every(?) envelope quadratization example we have given,
+ the many/most of? (if not all) quadratic functions have fewer variables
+ than the original degree-
 \begin_inset Formula $k$
 \end_inset
 
@@ -8524,7 +8571,7 @@ y' or `computational complexity' perspective, though the original function
 
 \lang british
 Even if an envelope quadratization aims only to quadratize some fraction
- of the complete set of terms in a degree-
+ of the complete set of super-quadratic terms in a degree-
 \begin_inset Formula $k$
 \end_inset
 
