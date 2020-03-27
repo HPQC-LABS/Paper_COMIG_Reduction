@@ -7528,11 +7528,37 @@ literal "false"
 \end_inset
 
  would only need two auxiliary variables: 
-\begin_inset Formula $b_{a_{1}}=b_{2}b_{3}$
+\begin_inset Formula $b_{a_{1}}$
+\end_inset
+
+ being a substitution for 
+\begin_inset Formula $b_{2}b_{3}b_{4}b_{5}$
 \end_inset
 
  and 
-\begin_inset Formula $b_{a_{2}}=b_{4}b_{5}$
+\begin_inset Formula $b_{a_{2}}$
+\end_inset
+
+ and being an auxiliary variable to quadratize 
+\begin_inset Formula $b_{2}b_{3}b_{4}b_{5}$
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\lang british
+You replace every b2b3b4b5 in the original function with ba, in this case
+ we get the b1ba and bab6 terms, and then you add the penalty terms which
+ constitute the rest of the quadratization.
+ There's no constant, it's easy to see that when ba is 0 the penalty terms
+ min is at b2b3b4b5 = 0 and when ba is 1 the min is at b2b3b4b5 = 1.
+ FULL QUADRATIZATION: b1ba + bab6 + ba(7 - 2b2 - 2b3 - 2b4 - 2b5) + b2b3b4b5,
+ then this last term is quadratized with 1-aux
+\end_layout
+
 \end_inset
 
 .
